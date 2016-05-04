@@ -1,0 +1,18 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-ng-click="close(false);">&times;</button>
+                <h4 class="modal-title" translate>Delete a conversation</h4>
+            </div>
+            <div class="modal-body">
+                <span translate>Are you sure you want to delete the conversation with</span> 
+                <strong>{{chat.username}}</strong><span translate>?</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-flat" data-dismiss="modal" data-ng-click="close(false);"  translate>Cancel</button>
+                <button type="button" class="btn btn-danger btn-flat" data-dismiss="modal" data-ng-click="close(true);" translate>Delete</button>
+            </div>
+        </div>  
+    </div>
+</div>

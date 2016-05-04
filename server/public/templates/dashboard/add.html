@@ -1,0 +1,167 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="panel panel-white card">
+            <div class="panel-heading" style="height: 45px;">
+                <div class="panel-title" style="padding: 10px;">
+                    <button type="button" class="close" ui-sref="home.dashboard.main">
+                        <i class="mdi-navigation-close"></i>
+                    </button>
+                    <a class="btn btn-primary btn-raised btn-breadcrumbs btn-arrow-panel" ui-sref="home.dashboard.main" style="color:#fff;">
+                        {{config.title}}
+                    </a>
+                    <a class="btn btn-white btn-breadcrumbs btn-raised btn-arrow-panel-second" style="opacity: 1!important" disabled translate>
+                        Add
+                    </a>
+                </div>
+            </div>
+            <form class="form-horizontal" data-ng-submit="add();">
+                <div class="panel-body">
+                    <div class="col-sm-offset-2 col-sm-8" style="float:none;">
+                        <div class="icons-group-selected" data-ng-repeat="button in radios.meal.buttons" style="padding: 0;" data-ng-show="config.name == 'meal'">
+                            <div class="row">
+                                <div class="col-xs-1" style="padding-left:0;">
+                                    <div data-ng-style="button.img" style="position: absolute;height: 53px;width: 32px;"></div>
+                                </div>
+                                <div class="col-xs-11" style="padding-right:0;height: 55px;">
+                                    <div class="row">
+                                        <div class="col-xs-7">
+                                            <h4 style="margin-bottom: 0px;margin-top:2px;">{{button.title}}</h4>
+                                        </div>
+                                        <div class="col-xs-5 text-right">
+                                            <h5 class="text-muted" style="margin-top: 5px;margin-bottom: 5px;">{{button.desc}}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 5px;">
+                                        <div class="row text-center">
+                                            <div style="display: inline-block;">
+                                                <strong class="pull-left" style="margin-right: 10px;">—</strong>
+                                                <div data-ng-repeat="level in radios.meal.levels" style="padding: 0;float: left;margin: 0;">
+                                                    <input type="radio" name="{{button.type}}" data-ng-model="button.value" data-ng-click="reset(button);"
+                                                           data-ng-value="level" data-ng-class="{'marginRight15': !$last}">
+                                                </div>
+                                                <strong class="pull-left" style="margin-left: 10px;">+</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="col-sm-12" style="margin-top: 0;margin-bottom: 0;">
+                        </div>
+                        <div class="icons-group-selected" data-ng-repeat="button in radios.mobility.buttons" style="padding: 0;" data-ng-show="config.name == 'mobility'">
+                            <div class="row">
+                                <div class="col-xs-1" style="padding-left:0;">
+                                    <div class="avatar" data-ng-style="{'background-color': button.color}" 
+                                         style="line-height: 67px;position: absolute;height: 67px;width: 32px;border-radius:0;margin-top: 1px;">
+                                        <i class="{{button.icon}}" style="padding-left: 0.5px;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <h4 style="margin-bottom: 0px;margin-top: 2px;">{{button.title}}</h4>
+                                </div>
+                                <div class="col-xs-2 text-right" style="padding-right:0;">
+                                    <h5 class="text-muted" style="margin-top: 5px;margin-bottom: 5px;">(<span translate>min.</span>)</h5>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div style="display: inline-block;margin-left: 32px;height: 40px;">
+                                    <div data-ng-repeat="level in radios.mobility.levels" style="padding: 0;float: left;margin: 0;">
+                                        <input type="radio" name="{{button.type}}" 
+                                               data-ng-class="{'marginRight15': !$last}" data-ng-model="button.value"
+                                               data-ng-value="level.value" data-ng-click="reset(button);">
+                                        <label style="display: block;width: 15px;">{{level.name}}'<small data-ng-if="$last">+</small></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="col-sm-12" style="margin-top: 0;margin-bottom: 0;" data-ng-if="!$last">
+                        </div>
+                        <div class="row text-center" data-ng-hide="config.name == 'sport' || config.name == 'meal' || config.name == 'mobility'">
+                            <div data-ng-class="{'col-xs-6': config.name == 'insulin'}" style="padding-left: 0;">
+                                <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
+                                    {{config.input}}
+                                </h4>
+                                <input type="number" class="form-control text-center" data-ng-model="value" placeholder="{{config.inputPlaceholder}}" step="0.1" min="0">
+                            </div>
+                            <div class="col-xs-6" style="padding-right: 0;" data-ng-show="config.name == 'insulin'">
+                                <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;" translate>
+                                    Acting
+                                </h4>
+                                <select class="form-control" data-ng-model="insulinType" 
+                                        data-ng-options="insulinType.value as insulinType.name for insulinType in config.insulinTypesList">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row text-center" data-ng-show="config.duration">
+                            <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">{{config.duration}}</h4>
+                            <div class="row" style="display: inline-block;" data-ng-hide="more">
+                                <div style="padding: 0;float: left;margin: 0;" data-ng-repeat="level in radios.sport.duration.levels">
+                                    <input data-ng-class="{'marginRight15': !$last}" type="radio" name="duration" 
+                                           data-ng-model="radios.sport.duration.value" data-ng-value="level.value">
+                                    <label style="display: block;width: 15px;">{{level.name}}'<small data-ng-if="$last">+</small></label>
+                                </div>
+                            </div>
+                            <div class="row" style="display: inline-block;margin-bottom: 10px;" data-ng-show="more">
+                                <input type="time" class="form-control text-center" data-ng-model="advancedDuration" data-ng-show="checkDateInput()">
+                                <input type="text" class="form-control text-center" pick-a-time="advancedDuration" pick-a-time-options="{ format: 'HH:i', interval: 1}" data-ng-hide="checkDateInput()">
+                            </div>
+                        </div>
+                        <div class="row text-center" data-ng-show="config.intensity">
+                            <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;">{{config.intensity}}</h4>
+                            <div class="row" style="display: inline-block;">
+                                <strong class="pull-left" style="margin-right: 10px;">—</strong>
+                                <div style="padding: 0;float: left;margin: 0;" data-ng-repeat="level in radios.sport.intensity.levels">
+                                    <input data-ng-class="{'marginRight15': !$last}" type="radio" name="intensity"
+                                           data-ng-model="radios.sport.intensity.value" data-ng-value="level">
+                                </div>
+                                <strong class="pull-left" style="margin-left: 10px;">+</strong>
+                            </div>
+                        </div>
+                        <div class="row text-center" style="margin-top:10px;">
+                            <div data-ng-hide="checkDateInput()">
+                                <div data-ng-class="{'col-xs-6': config.name != 'mobility', 'col-xs-12': config.name == 'mobility'}" style="padding-left: 0;">
+                                    <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;" translate>Date</h4>
+                                    <input type="text" class="form-control text-center" pick-a-date="myDate"
+                                           pick-a-date-options="{ format: 'dd/mm/yyyy'}" required>
+                                </div>
+                                <div class="col-xs-6" style="padding-right: 0;" data-ng-hide="config.name == 'mobility'">
+                                    <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;" translate>Time</h4>
+                                    <input type="text" class="form-control text-center" pick-a-time="myTime" 
+                                           pick-a-time-options="{ format: 'HH:i', interval: 1}">
+                                </div>
+                            </div>
+                            <div data-ng-show="checkDateInput()">
+                                <div data-ng-class="{'col-xs-6': config.name != 'mobility', 'col-xs-12': config.name == 'mobility'}" style="padding-left: 0;">
+                                    <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;" translate>Date</h4>
+                                    <input type="date" class="form-control text-center" data-ng-model="myDate" required>
+                                </div>
+                                <div class="col-xs-6" style="padding-right: 0;" data-ng-hide="config.name == 'mobility'">
+                                    <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;" translate>Time</h4>
+                                    <input type="time" class="form-control text-center" data-ng-model="myTime">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-8 text-center" style="float:none;" data-ng-show="more">
+                        <div class="row" style="margin-top:15px;">
+                            <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;"><span translate>Comments</span></h4>
+                            <input type="text" class="form-control" data-ng-model="comments"
+                                   placeholder="{{config.commentsPlaceholder}}">
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:0;">
+                    <div class="pull-left" style="padding-bottom: 5px;">
+                        <button type="button" class="btn btn-default btn-flat" style="margin: 0px 1px" data-ng-click="toggleMore();">
+                            <span translate data-ng-if="!more">More</span><span data-ng-if="more" translate>Less</span>
+                            <i data-ng-class="{'mdi-navigation-expand-more': !more,'mdi-navigation-expand-less': more}" style="font-size:18px;"></i>
+                        </button>
+                    </div>
+                    <div class="pull-right" style="padding-bottom: 5px;">
+                        <button type="button" class="btn btn-default btn-flat" style="margin: 0px 1px" ui-sref="home.dashboard.main" translate>Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-flat" style="margin: 0px 1px" 
+                                data-ng-disabled="!verify();" translate>Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="col-md-10 col-md-offset-1" style="padding: 0;">
+    <div class="card-group">
+        <div class="panel panel-default" style="border-bottom: none;">
+            <div class="panel-title" style=" line-height: inherit;" translate>Avatar</div>
+            <div class="panel-body">
+                <div class="avatar avatar-md" ng-style="{'background-color': profile.preferences.avatar}">
+                    {{profile.username.substr(0, 1).toUpperCase()}}
+                </div>
+            </div>
+            <div class="text-left" style="padding: 0px 15px 5px 15px;">
+                <a ui-sref="home.profile.avatar" class="btn btn-sm btn-primary btn-raised" translate>Edit</a>
+            </div>
+        </div>
+        <div class="panel panel-default" style="border-bottom: none;">
+            <div class="panel-title" style=" line-height: inherit;" translate>Informations</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Gender</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.gender | gender}}</div>
+                </div>
+                <div class="row" style="padding-top: 10px;" data-ng-show="profile.condition">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Condition</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.condition | condition}}</div>
+                </div>
+                <div class="row" style="padding-top: 10px;">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Birthday</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.birthdate}}</div>
+                </div>
+            </div>
+            <div class="text-left" style="padding: 0px 15px 5px 15px;">
+                <a ui-sref="home.profile.basic" class="btn btn-sm btn-primary btn-raised" translate>Edit</a>
+            </div>
+        </div>
+        <div class="panel panel-default" style="border-bottom: none;margin: 0;">
+            <div class="panel-title" style=" line-height: inherit;" translate>Contact</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Email</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.email | unknown}}</div>
+                </div>
+                <div class="row" style="padding-top: 10px;">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Phone</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.phone | phone}}</div>
+                </div>
+                <div class="row" style="padding-top: 10px;">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Address</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.homeAddress | unknown}}</div>
+                </div>
+            </div>
+            <div class="text-left" style="padding: 0px 15px 5px 15px;">
+                <a ui-sref="home.profile.contact" class="btn btn-sm btn-primary btn-raised" translate>Edit</a>
+            </div>
+        </div>
+    </div>
+</div>

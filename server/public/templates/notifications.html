@@ -1,0 +1,28 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="text-center helper text-muted"  data-ng-if="notifications.length == 0">
+            <i data-ng-class="{'mdi-social-notifications': notifications.length == 0}"></i>
+            <p class="lead">{{helper.msg1}}</p>
+        </div>
+        <div class="notification" data-ng-repeat="notification in notifications">
+            <ng-switch on="$first || (notification.datetime | dMMMM) != (notifications[$index-1].datetime | dMMMM)">
+                <div ng-switch-when="true">
+                    <h4>{{notification.datetime | dMMMM}}</h4>
+                </div>
+            </ng-switch>
+            <div data-ng-click="go(notification);" data-ng-class="{'opacity6': notification.datetimeRead}">
+                <div style="display: block;overflow: hidden;float: left;position: relative;width: 55px; height: 55px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2); cursor: pointer;">
+                    <div class="avatar-notification" ng-style="{'background-color': notification.avatar}" 
+                         data-ng-class="{'icon-notification': !notification.username}">
+                        {{notification.username.substr(0, 1).toUpperCase()}}
+                        <i data-ng-class="{'mdi-action-report-problem': !notification.username}"></i>
+                    </div>
+                </div>
+                <div class="nav-box-item" style="min-height: 55px;height: inherit;line-height: inherit;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2); cursor: pointer;">
+                    <div><strong>{{notification.username ? notification.username : typesMapping[notification.type].name}}</strong></div>
+                    {{notification.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

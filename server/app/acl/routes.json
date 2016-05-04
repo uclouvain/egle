@@ -1,0 +1,354 @@
+[
+    {
+        "id": 0,
+        "uri": "/api/users/signin",
+        "method": "POST"
+    },
+    {
+        "id": 1,
+        "uri": "/api/users/signup",
+        "method": "POST"
+    },
+    {
+        "id": 2,
+        "uri": "/api/users/signout",
+        "method": "GET"
+    },
+    {
+        "id": 3,
+        "uri": "/api/patients/:username",
+        "method": "GET",
+        "roles": [2]
+    },
+    {
+        "id": 4,
+        "uri": "/api/patients/:username/charts/:type/from/:from/to/:to",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 5,
+        "uri": "/api/chats/toArchives",
+        "method": "POST",
+        "roles": [2,3]
+    },
+    {
+        "id": 6,
+        "uri": "/api/entries",
+        "method": "POST",
+        "roles": [3]
+    },
+    {
+        "id": 7,
+        "uri": "/api/chats",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 8,
+        "uri": "/api/ui/audit",
+        "method": "POST",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 9,
+        "uri": "/api/chats",
+        "method": "POST",
+        "roles": [2,3]
+    },
+    {
+        "id": 10,
+        "uri": "/api/chats/:username",
+        "method": "DELETE",
+        "roles": [2,3]
+    },
+    {
+        "id": 11,
+        "uri": "*",
+        "method": "GET"
+    },
+    {
+        "id": 12,
+        "uri": "/api/users/username/:username/roles/:roles",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 13,
+        "uri": "/api/users/changePassword",
+        "method": "POST",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 14,
+        "uri": "/api/users/name/:name/roles/:roles",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 15,
+        "uri": "/api/chats/:username/after/:afterDate",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 16,
+        "uri": "/api/patients/:username/entries/type/:type/subtype/:subtype",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 17,
+        "uri": "/api/ui/nav",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 18,
+        "uri": "/api/ui/cards",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 19,
+        "uri": "/api/contacts/read/:username/light",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 20,
+        "uri": "/api/entries/:id",
+        "method": "DELETE",
+        "roles": [3]
+    },
+    {
+        "id": 21,
+        "uri": "/api/ui/todo",
+        "method": "GET",
+        "roles": [3]
+    },
+    {
+        "id": 22,
+        "uri": "/api/notifications",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 23,
+        "uri": "/api/charts/:type/from/:from/to/:to",
+        "method": "GET",
+        "roles": [3]
+    },
+    {
+        "id": 24,
+        "uri": "/api/notifications/limited",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 25,
+        "uri": "/api/users/profile",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 26,
+        "uri": "/api/ui/cards/settings",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 27,
+        "uri": "/api/audit/from/:from/to/:to",
+        "method": "GET",
+        "roles": [1]
+    },
+    {
+        "id": 28,
+        "uri": "/api/tips",
+        "method": "GET",
+        "roles": [3]
+    },
+    {
+        "id": 29,
+        "uri": "/api/contacts/search/:name",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 30,
+        "uri": "/api/contacts/relationships/accepted",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 31,
+        "uri": "/api/contacts",
+        "method": "PUT",
+        "roles": [2,3]
+    },
+    {
+        "id": 32,
+        "uri": "/api/notifications/:id",
+        "method": "PUT",
+        "roles": [2,3]
+    },
+    {
+        "id": 33,
+        "uri": "/api/users",
+        "method": "PUT",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 34,
+        "uri": "/api/tips/:id",
+        "method": "GET",
+        "roles": [3]
+    },
+    {
+        "id": 35,
+        "uri": "/api/contacts/frequent",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 36,
+        "uri": "/api/tips/bookmarks",
+        "method": "PUT",
+        "roles": [3]
+    },
+    {
+        "id": 37,
+        "uri": "/api/chats/signalingToken/for/:roomID",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 38,
+        "uri": "/api/contacts/:username",
+        "method": "DELETE",
+        "roles": [2,3]
+    },
+    {
+        "id": 39,
+        "uri": "/api/events/from/:from/to/:to",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 40,
+        "uri": "/api/events/:id",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 41,
+        "uri": "/api/events",
+        "method": "PUT",
+        "roles": [2,3]
+    },
+    {
+        "id": 42,
+        "uri": "/api/events/:id",
+        "method": "DELETE",
+        "roles": [2,3]
+    },
+    {
+        "id": 43,
+        "uri": "/api/contacts/relationships/sent",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 44,
+        "uri": "/api/contacts/relationships/received",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 45,
+        "uri": "/api/contacts/read/:username",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 46,
+        "uri": "/api/entries/type/:type/subtype/:subtype",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 47,
+        "uri": "/api/contacts/search/:name/relationships/accepted",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 48,
+        "uri": "/api/ui/asks",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 49,
+        "uri": "/api/users/:username/active",
+        "method": "PUT"
+    },
+    {
+        "id": 52,
+        "uri": "/api/objectives",
+        "method": "PUT",
+        "roles": [3]
+    },
+    {
+        "id": 53,
+        "uri": "/api/objectives/:type",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 54,
+        "uri": "/api/users/lostPassword",
+        "method": "POST"
+    },
+    {
+        "id": 55,
+        "uri": "/api/users/resetPassword",
+        "method": "POST"
+    },
+    {
+        "id": 56,
+        "uri": "/api/users/activation",
+        "method": "POST"
+    },
+    {
+        "id": 57,
+        "uri": "/api/objectives/:id",
+        "method": "DELETE",
+        "roles": [3]
+    },
+    {
+        "id": 58,
+        "uri": "/api/ui/cards/toggle",
+        "method": "POST",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 61,
+        "uri": "/api/ui/apptips",
+        "method": "POST",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 62,
+        "uri": "/api/ui/apptips/:name",
+        "method": "GET",
+        "roles": [1,2,3]
+    },
+    {
+        "id": 63,
+        "uri": "/api/chats/webrtc",
+        "method": "POST",
+        "roles": [2,3]
+    }
+]

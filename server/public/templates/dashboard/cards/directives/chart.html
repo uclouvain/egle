@@ -1,0 +1,102 @@
+<div class="panel panel-white card chart" style="border: solid #2196F3 2px;">
+    <div class="panel-heading" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+        <div class="panel-title">
+            <div data-ng-class="{'col-xs-5': objective, 'col-xs-7': !objective}" style="padding: 0;">{{title}}</div>
+            <div class="pull-right">
+                <button class="btn btn-primary btn-raised btn-objectives btn-xs" data-ng-if="objective" ui-sref="home.dashboard.objective({card: name})">
+                    {{objective}}
+                </button>
+                <button class="btn btn-primary btn-raised btn-objectives btn-xs" style="padding-right:5px;padding-left:5px;" 
+                        ui-sref="home.dashboard.add({card: name})" translate>
+                    New entry
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body" style="padding: 0px 10px;">
+        <div class="row" style="padding: 0px 15px;">
+            <div class="pull-left">
+                <div class="btn-group" data-ng-if="name != 'glycaemia' && name != 'insulin' && name != 'weight' && name != 'meal'">
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == ''}" data-ng-click="build('');" style="padding: 4px 10px;">
+                        1 <span translate>month</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '3m'}" data-ng-click="build('3m');" style="padding: 4px 10px;"> 
+                        3 <span translate>months</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '6m'}" data-ng-click="build('6m');" style="padding: 4px 10px;">
+                        6 <span translate>months</span>
+                    </button>
+                </div>
+                <div class="btn-group" data-ng-if="name == 'glycaemia' || name == 'meal'">
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == ''}" data-ng-click="build('');" style="padding: 4px 10px;">
+                        1 <span translate>month</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '2m'}" data-ng-click="build('2m');" style="padding: 4px 10px;">
+                        2 <span translate>months</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '3m'}" data-ng-click="build('3m');" style="padding: 4px 10px;">
+                        3 <span translate>months</span>
+                    </button>
+                </div>
+                <div class="btn-group" data-ng-if="name == 'weight'">
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == ''}" data-ng-click="build('');" style="padding: 4px 10px;">
+                        3 <span translate>months</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '6m'}" data-ng-click="build('6m');" style="padding: 4px 10px;">
+                        6 <span translate>months</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '1y'}" data-ng-click="build('1y');" style="padding: 4px 10px;">
+                        1 <span translate>year</span>
+                    </button>
+                </div>
+                <div data-ng-if="name == 'insulin'">
+                    <select class="form-control" data-ng-model="$parent.moment" style="width:165px;" data-ng-change="build('');"
+                            data-ng-options="moment.value as moment.name for moment in moments">
+                    </select>
+                </div>
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-xs btn-white btn-raised" data-ng-class="{'active': view == 'list'}" data-ng-click="build('list');" style="padding: 3px 10px;">
+                    <i class="mdi-action-delete" style="font-size: 17px;"></i>
+                </button>
+            </div>
+        </div>
+        <div data-ng-hide="view  == 'list'">
+            <div data-oc-lazy-load="['bower_components/highcharts-release/highcharts.js', 'additional_components/highcharts-ng/dist/highcharts-ng.min.js']">
+                <highchart id="chart" config="chart"></highchart>
+            </div>
+        </div>
+        <div data-ng-show="view  == 'list'" style="height:250px;overflow: scroll;width: 100%;">
+            <table class="table text-center" style="border-top: none;margin: 0;">
+                <thead>
+                    <tr>
+                        <th class="text-center" translate>Date</th>
+                        <th class="text-center" translate>Hour</th>
+                        <th class="text-center">
+                            <span data-ng-hide="meal" translate>Value</span>
+                            <span data-ng-show="meal">Score <small>(/20)</small></span>
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat = "entry in list | orderBy:'-datetimeAcquisition'">
+                        <td>{{entry.datetimeAcquisition | date: 'dd/MM/yy'}}</td>
+                        <td>{{entry.datetimeAcquisition | date: 'HH:mm'}}</td>
+                        <td class = "logValue">
+                            <span data-ng-if="!entry.isSkipped"><strong>{{entry.value | number : fractionSize}}</strong> <small>{{unit}}</small></span>
+                            <i data-ng-if="entry.isSkipped" translate>skipped</i>
+                            <i data-ng-repeat="icon in entry.icons" class="{{icon.i}}" style="font-size:16px;"></i>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-xs btn-danger btn-flat" style="margin: 0;padding: 0px 5px;width: 100%;" 
+                                    data-ng-click="$parent.$parent.deleteEntry(entry);">
+                                <i class="mdi-action-delete" style="font-size: 18px;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

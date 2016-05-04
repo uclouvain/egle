@@ -1,0 +1,58 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-dismissable alert-{{alert.type}} text-center header-alert animated slideInDown" data-ng-show="alert.msg" style="top: 0;">
+        <button type="button" class="close" data-ng-click="alert = {}"><i class="mdi-navigation-close"></i></button>
+        {{alert.msg}}
+    </div>
+</div>
+<div class="panel panel-default col-md-6 col-md-offset-3" style="margin-bottom: 10px;" data-oc-lazy-load="['https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit','bower_components/angular-recaptcha/release/angular-recaptcha.min.js']">
+    <div class="panel-title" translate>Having trouble signing in?</div>
+    <div class="panel-body" style="padding: 5px;">
+        <form style="margin:0;" name="form" class="form-horizontal" data-ng-submit="lost(form);">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" translate>Issue</label>
+                    <div class="col-xs-9" style="padding-top: 7px;" translate>
+                        I don't know my password
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-xs-3 control-label" translate>Email</label>
+                    <div class="col-xs-9">
+                        <input type="email" data-autofocus placeholder="{{'Email'|translate}}" name="email" data-ng-model="email" 
+                               id="email" class="form-control" data-ng-pattern="patEmail" required/>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label class="col-xs-3 control-label">Antispam</label>
+                    <div class="col-xs-9">
+                        <p style="padding-top: 7px;" translate>Don't forget to mark the verification box below.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div style="display: inline-block;" vc-recaptcha key="'6LfzkAkTAAAAAKEtbEQDCx9ZNhVJTFDuXkp_1_tP'" data-ng-model="response"></div>
+                </div>
+                <p data-ng-repeat="alert in smAlerts" class="{{alert.class}}">{{alert.msg}}</p>
+                <div class="form-group" style="margin-bottom:0;padding-right: 10px;padding-left: 10px;">
+                    <button class="btn btn-default btn-raised pull-left" ui-sref="signin" translate>Back</button>
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-primary btn-raised" style="margin-bottom: 0;" data-ng-disabled="loading">
+                            <span data-ng-hide="loading" translate>Validate</span> 
+                            <span data-ng-show="loading" translate>Loading</span> 
+                            <div data-ng-show="loading"  class="preloader-wrapper xs active" style=" margin: -3px -3px -5px 3px;">
+                              <div class="spinner-layer spinner-white-only">
+                                <div class="circle-clipper left">
+                                  <div class="circle"></div>
+                                </div><div class="gap-patch">
+                                  <div class="circle"></div>
+                                </div><div class="circle-clipper right">
+                                  <div class="circle"></div>
+                                </div>
+                              </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form> 
+    </div>
+</div>

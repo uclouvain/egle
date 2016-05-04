@@ -1,0 +1,72 @@
+<div class="panel panel-white card" style="border: solid #FFC107 2px;">
+    <div class="panel-heading" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+        <div class="panel-title">
+            <div class="col-xs-7" style="padding: 0;">Todo list</div>
+            <div class="pull-right">
+                <button class="btn btn-primary btn-raised btn-objectives btn-xs" style="padding-right:5px;padding-left:5px;" ui-sref="home.settings.main" translate>Settings</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body" style="padding: 2px;">
+        <div class="list-group hc-list-group list-todo panel" style="clear: both;box-shadow: none;margin-bottom: 0;">
+            <div data-ng-repeat="item in todoListOK">
+                <a class="list-group-item" href style="padding: 3px 10px;">
+                    <div class="row-action-primary" style="padding-top: 7px;">
+                        <i class="avatar mdi-action-done" style="line-height: 24px;font-size: 18px;background-color:#4caf50;"></i>
+                    </div>
+                    <div class="row-content" style="min-height: inherit;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                        <h4 class="list-group-item-heading" style="margin-top: 5px;margin-bottom: 0px;font-size: 18px;">
+                            {{item.title}}
+                        </h4>
+                    </div>
+                </a>
+            </div>
+            <hr style="margin-top: 0;margin-bottom: 0;" data-ng-if="todoListOK.length > 0 && todoListNOK.length > 0">
+            <div data-ng-repeat="item in todoListNOK">
+                <a class="list-group-item" href data-ng-click="more = !more;" style="padding: 3px 10px;">
+                    <div class="row-action-primary" style="padding-top: 7px;">
+                        <div class="avatar" style="font-size: 18px;background-color:#ff5722;">!</div>
+                    </div>
+                    <div class="row-content" style="min-height: inherit;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                        <h4 class="list-group-item-heading" style="margin-top: 5px;margin-bottom: 0px;font-size: 18px;">
+                            {{item.title}} <small><i data-ng-if="item.subitems">(x {{item.counter}})</i></small>
+                        </h4>
+                    </div>
+                </a>
+                <div class="item-options" style="top: 8px;">
+                    <a data-ng-class="{'btn-flat btn-default': item.subitems, 'btn-raised btn-primary': !item.subitems}" 
+                       href data-ng-click="go(item);more = !more;" class="btn btn-xs" style="margin: 0;padding: 5px 5px;">
+                        <i data-ng-if="item.subitems" style="font-size: 18px;"
+                           data-ng-class="{'mdi-navigation-expand-more': !more,'mdi-navigation-expand-less': more}"></i>
+                        <i data-ng-if="!item.subitems" class="mdi-content-add" style="font-size: 18px;"></i>
+                    </a>
+                </div>
+                <div style="padding-left: 20px;position: relative;" data-ng-if="item.subitems" data-ng-show="more" 
+                     data-ng-repeat="subitem in item.subitems">
+                    <a class="list-group-item" href style="padding: 3px 10px;">
+                        <div class="row-action-primary" style="padding-top: 7px;">
+                            <div data-ng-if="!subitem.done" class="avatar" style="background-color:#ff5722;">!</div>
+                            <i data-ng-if="subitem.done" class="avatar mdi-action-done" 
+                               style="line-height: 24px;font-size: 18px;background-color:#4caf50;"></i>
+                        </div>
+                        <div class="row-content" style="min-height: inherit;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                            <h4 class="list-group-item-heading" style="margin-top: 5px;margin-bottom: 0px;font-size: 18px;">
+                                {{subitem.title}}
+                            </h4>
+                        </div>
+                    </a>
+                    <div class="item-options" style="top: 8px;">
+                        <a href data-ng-click="skip(subitem);" class="btn btn-xs btn-raised btn-default" style="margin: 0px 10px 0px 0px;padding: 5px 5px;" 
+                           data-ng-if="!subitem.done">
+                            <i class="mdi-content-block" style="font-size: 18px;"></i>
+                        </a>
+                        <a href data-ng-click="go(subitem);" class="btn btn-xs btn-raised btn-primary" style="margin: 0;padding: 5px 5px;" 
+                           data-ng-if="!subitem.done">
+                            <i class="mdi-content-add" style="font-size: 18px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

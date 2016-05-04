@@ -1,0 +1,23 @@
+<div class="form-group searchBox panel panel-default card">
+    <div class="icon-addon addon-lg" style="margin: 5px 10px;">
+        <input class="form-control" type="text" placeholder="{{'Search for patients'|translate}}" data-ng-focus="in();" data-ng-blur="out();"
+               data-ng-model="searchText" data-ng-change="search();" style="margin-bottom: -1px;" >
+        <i class="mdi-action-search"></i>
+    </div>
+</div>
+<div class="text-center helper text-muted" data-ng-if="helper !== ''">{{helper}}</div>
+<div class="list-group hc-list-group panel" style="clear: both;">
+    <div class="panel panel-default" data-ng-repeat="patient in patients">
+        <a class="list-group-item" href style="padding: 0 10px;padding-top: 5px;height: 48px;" ui-sref="home.patients({username: patient.username})">
+            <div class="row-action-primary" style="padding-top: 5px;">
+                <div class="avatar avatar-sm" data-ng-style="{'background-color': patient.avatar}">{{patient.username.substr(0, 1).toUpperCase()}}</div>
+            </div>
+            <div class="row-content" style="min-height: inherit;">
+                <h4 class="list-group-item-heading" style="margin-top: 6px;margin-bottom: 0px;font-size: 18px;">
+                    {{patient.username}}
+                </h4>
+            </div>
+        </a>
+    </div>
+</div>
+<hr data-ng-show="patients.length > 0 || helper !== ''" style="border-top: 1px solid #E0E0E0 ;">

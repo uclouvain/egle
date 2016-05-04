@@ -1,0 +1,9 @@
+<div class="text-center helper text-muted"  data-ng-if="cards.length == 0">
+    <i data-ng-class="{'mdi-editor-insert-chart': cards.length == 0}"></i>
+    <p class="lead">{{helper.msg1}}</p>
+    <p>{{helper.msg2}}</p>
+</div>
+<div data-ng-repeat="ask in asks" data-ng-include="'templates/dashboard/asks/' + ask.name + '.html'" >
+</div>
+<div data-ng-repeat="card in cards" data-ng-include="'templates/dashboard/cards/' + card.name + '.html'" data-ng-class="{'height100': card.name == 'audit'}">
+</div>

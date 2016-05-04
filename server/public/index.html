@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<base href="/">
+		<title>Eglé</title>
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+        <link href="bower_components/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
+        <link href="bower_components/normalize.css/normalize.css" rel="stylesheet">
+        <link href="bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/templates/sign.css" rel="stylesheet">
+	</head>
+	<body data-ng-app="app">
+        <div ui-view="header"></div>
+        <div ui-view="content" class="my-content"></div>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" async></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+        <script src="bower_components/arrive/minified/arrive.min.js"></script>
+        <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/ocLazyLoad/dist/ocLazyLoad.min.js"></script>
+        <script src="bower_components/angular-gettext/dist/angular-gettext.min.js"></script>
+        <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+        <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
+        <script src="bower_components/pickadate/lib/compressed/picker.js"></script>
+        <script src="bower_components/pickadate/lib/compressed/picker.date.js"></script>
+        <script src="bower_components/pickadate/lib/compressed/picker.time.js"></script>
+        <script src="bower_components/ng-pickadate/ng-pickadate.js"></script>
+        <script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
+        <script src="js/services/TokenInterceptorService.js"></script>
+        <script src="js/directives/AutofocusDirective.js"></script>
+        <script src="js/appTranslations.js"></script>
+        <script src="js/appFilters.js"></script>
+		<script src="js/routes.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<div class="toggleFilter pull-right">
+    <div class="togglebutton text-left">
+        <label>
+            {{archivedViewText}} &nbsp;&nbsp;<input data-ng-model="archivedView" data-ng-change="toggleView();" type="checkbox" checked="">
+        </label>
+    </div>
+</div>
+<div class="panel-title pull-left" style="line-height: inherit;padding: 0px 0px 10px 0px;">{{titleText}}</div>
+    <div class="list-group hc-list-group panel" style="clear: both;">
+        <div class="alert alert-dismissable alert-{{alert.type}} widgetAlert" data-ng-repeat="alert in alerts">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{alert.title}}</strong> {{alert.msg}}
+    </div>
+    <div data-ng-repeat="chat in filteredChatsList = (chatsList | filter: chat.archived = archivedView)" 
+         class="panel panel-default chatItem">
+        <a class="list-group-item" ui-sref="home.chats.one({username: chat.participantID ? '_' + chat.participantID : chat.username})" 
+           style="padding: 10px 10px 0px 10px;">
+            <div class="row-action-primary" style="padding-top: 5px;">
+                <div class="avatar avatar-chat" data-ng-class="{'opacity6': archivedView}" data-ng-style="{'background-color': chat.avatar}">
+                    {{chat.participantID ? '/': chat.username.substr(0, 1).toUpperCase()}}
+                </div>
+            </div>
+            <div class="row-content">
+                <div class="least-content" style="top: 6px;">{{chat.date | smartDatetime}}</div>
+                <h4 class="list-group-item-heading" data-ng-class="{newMessage: chat.unreadCount>0}">
+                    {{(((chat.participantID ? ('Account deleted'|translate) : chat.username)) + ' ' + (chat.unreadCount>0 ? '(' + chat.unreadCount + ')' : '')) | limitSender}}
+                </h4>
+                <p class="list-group-item-text" style="height: 18px;overflow: hidden;" data-ng-class="{newMessage: chat.newMessage}">
+                    {{chat.lastMessage}}
+                </p>
+            </div>
+        </a>
+        <div class="item-options">
+            <a class="btn btn-flat btn-default" href data-ng-click="toggleArchiveFlag(chat);" style="margin: 0;padding: 5px 10px;">
+                 <i data-ng-class="{'mdi-action-open-in-browser': archivedView, 'mdi-content-archive': !archivedView}" ></i> 
+            </a>
+            <a class="btn btn-flat btn-default" href data-ng-click="deleteChat(chat);" style="margin: 0;padding: 5px 5px;" >
+                <i class="mdi-material-red mdi-action-delete"></i>
+            </a>
+        </div>
+        <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+    </div>
+</div>
+<div class="text-center text-muted helper" data-ng-if="helperLiving.title && !archivedView">
+    <i data-ng-class="{'mdi-communication-chat': helperLiving.title && !archivedView}"></i>
+    <p class="lead">{{helperLiving.title}}</p>
+    <p>{{helperLiving.text}}</p>
+</div>
+<div class="text-center text-muted helper" data-ng-if="helperArchived.title && archivedView">
+    <i data-ng-class="{'mdi-content-archive': helperArchived.title && archivedView}"></i>
+    <p class="lead">{{helperArchived.title}}</p>
+</div>
+<a href class="btn btn-primary btn-fab btn-raised mdi-content-add action-button" ui-sref="home.chats.new" style="z-index:1000;"></a>

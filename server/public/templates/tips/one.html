@@ -1,0 +1,37 @@
+<div class="hc-breadcrumb">
+    <a ui-sref="home.tips.main" class="btn btn-sm btn-info btn-raised btn-arrow-bg" translate>Tips</a> 
+    <a href class="btn btn-sm btn-white btn-arrow-bg-second" disabled>{{tip.title.substr(0, 18)}}...</a>
+</div>
+<div class="panel-heading" style="padding: 5px 0px 10px 0px;">
+    <h3 class="panel-title" style="padding:0;">
+        {{tip.title}}
+    </h3>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p data-ng-bind-html="tip.content | html"></p>
+    </div>
+</div>
+<div class="panel panel-default" data-ng-if="tip.image">
+    <div class="panel-body" data-ng-style="image"></div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4 style="margin-top: 0;margin-bottom: 5px;font-size: 16px;" translate>Official resources</h4>
+        <ul>
+            <li data-ng-repeat="resource in tip.resources">
+                <a href="{{resource.href}}" target="_blank">{{resource.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="panel panel-default" data-ng-if="tip.details">
+    <div class="panel-body">
+        <h4 style="margin-top: 0;margin-bottom: 5px;font-size: 16px;"><span translate>More details</span>...</h4>
+        <p data-ng-bind-html="tip.details | html"></p>
+    </div>
+</div>
+<div class="panel panel-default" data-ng-if="tip.video">
+    <div class="panel-body" style="height: 300px;padding: 0;" data-ng-bind-html="tip.video | html"></div>
+</div>
+<a href class="btn btn-white btn-fab btn-raised action-button" data-ng-class="{'mdi-action-favorite': tip.bookmarked, 'mdi-action-favorite-outline': !tip.bookmarked}" style="z-index:1000;color: #f44336;" data-ng-click="bookmark(tip.id);"></a>

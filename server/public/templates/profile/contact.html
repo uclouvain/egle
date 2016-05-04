@@ -1,0 +1,41 @@
+<div class="hc-breadcrumb">
+    <a ui-sref="home.profile.main" class="btn btn-sm btn-info btn-raised btn-arrow-bg" translate>Profile</a> 
+    <a href class="btn btn-sm btn-white btn-arrow-bg-second" disabled translate>Contact</a>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="alert alert-dismissable alert-{{alert.type}} widgetAlert widgetAlert-sm" data-ng-repeat="alert in alerts">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{alert.title}}</strong> {{alert.msg}}
+        </div>
+        <form class="form-horizontal" name="form" data-ng-submit="updateContact(form);">
+            <fieldset>
+                <div class="col-sm-offset-1 col-sm-9" style="float: none;">
+                    <div class="form-group">
+                        <label for="email" class="col-xs-3 control-label" translate>Email</label>
+                        <div class="col-xs-9">
+                            <input type="email" class="form-control" id="email" ng-model="profile.email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="col-xs-3 control-label" translate>Phone</label>
+                        <div class="col-xs-9">
+                            <input type="tel" class="form-control" id="phone" name="phone" ng-model="profile.phone" 
+                                   data-ng-pattern="numeric" maxlength="10" data-ng-minlength="9" data-ng-maxlength="10">
+                        </div>
+                    </div>
+                    <div class="form-group" data-oc-lazy-load="['/bower_components/ngmap/build/scripts/ng-map.min.js']">
+                        <label for="homeAddress" class="col-xs-3 control-label" translate>Address</label>
+                        <div class="col-xs-9" map-lazy-load="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false">
+                            <input type="text" class="form-control" id="homeAddress" ng-model="profile.homeAddress" places-auto-complete>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <a class="btn btn-default" ui-sref="home.profile.main" translate>Cancel</a>
+                    <button type="submit" class="btn btn-primary" translate>Change</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

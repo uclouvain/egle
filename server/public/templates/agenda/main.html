@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    <div class="btn-group agendaViews">
+        <a href class="btn btn-default" style="margin: 0;padding: 4px 9px;" data-ng-click="method('prev');">
+            <i class="mdi-hardware-keyboard-arrow-left" style="font-size: 25px;line-height: 35px;"></i>
+        </a>
+        <a href class="btn btn-default" style="margin: 0;padding: 4px 9px;" data-ng-click="method('next');">
+            <i class="mdi-hardware-keyboard-arrow-right" style="font-size: 25px;line-height: 35px;"></i>
+        </a>
+        <a href class="btn btn-default" style="margin: 0;padding: 4px 9px;" data-ng-click="method('today');">
+            <i class="mdi-action-today" style="font-size: 25px;line-height: 35px;"></i>
+        </a>
+        <div class="btn-group">
+            <a href class="btn btn-flat btn-default dropdown-toggle" data-toggle="dropdown" style="margin: 0;padding: 4px 9px;">
+            <i class="mdi-navigation-more-vert" style="font-size: 25px;line-height: 35px;"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li data-ng-class="{active: view == 'agendaDay'}">
+                    <a href data-ng-click="changeView('agendaDay');"><i class="mdi-action-view-day"></i>  <span translate>Day</span></a>
+                </li>
+                <li data-ng-class="{active: view == 'threeDays'}">
+                    <a href data-ng-click="changeView('threeDays');"><i class="mdi-action-view-column"></i>  <span translate>3 days</span></a>
+                </li>
+                <li data-ng-class="{active: view == 'agendaWeek'}">
+                    <a href data-ng-click="changeView('agendaWeek');"><i class="mdi-action-view-column"></i>  <span translate>Week</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-oc-lazy-load="['bower_components/fullcalendar/dist/fullcalendar.min.js', 'bower_components/angular-ui-calendar/src/calendar.js']">
+        <div id="calendar" class="panel-body" data-ui-calendar="uiConfig.calendar" data-calendar="myCalendar" data-ng-model="eventSources"></div>
+    </div>
+</div>
+<a href class="btn btn-primary btn-fab btn-raised mdi-content-add action-button" style="z-index:1000;" data-ng-click="add();"></a>

@@ -1,0 +1,49 @@
+<div class="sidebar-overlay"></div>
+<aside sidebar id="sidebar" class="sidebar sidebar-default sidebar-fixed-left" role="navigation">
+    <div class="sidebar-header header-cover" data-ng-class="{'night': night}">
+        <div class="sidebar-image">
+            <a ui-sref="home.profile.avatar" class="sidebar-item">
+                <div class="avatar" data-ng-style="{'background-color': user.avatar}">
+                    {{user.username.substr(0, 1).toUpperCase()}}
+                </div>
+            </a>
+        </div>
+        <a href data-ng-click="dropdown = !dropdown" class="sidebar-brand" style="height: 40px;line-height: inherit;">
+            <span style="font-weight: 400;">{{user.username}}</span><br><span style="font-weight: 100;">{{user.email}}</span>
+            <i style="position: absolute;right: 15px;top: 18px;" 
+               data-ng-class="{'mdi-navigation-arrow-drop-down': !dropdown,'mdi-navigation-arrow-drop-up': dropdown}"></i>
+        </a>
+    </div>
+    <ul class="nav sidebar-nav">
+        <li class="dropdown" data-ng-class="{'open': dropdown}" id="settings-dropdown">
+            <ul class="dropdown-menu" style="background-color: #ffffff;">
+                <li ui-sref-active="active">
+                    <a class="sidebar-item" ui-sref="home.profile.main" tabindex="-1">
+                        <i class="mdi-social-person"></i> <span translate>Profile</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a class="sidebar-item" ui-sref="home.contacts.main" tabindex="-1">
+                        <i class="mdi-social-people"></i> <span translate>My Contacts</span>
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a class="sidebar-item" ui-sref="home.settings.main" tabindex="-1">
+                        <i class="mdi-action-settings"></i> <span translate>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href data-ng-click="signout();" tabindex="-1">
+                        <i class="mdi-action-exit-to-app"></i> <span translate>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li ui-sref-active="active" data-ng-hide="dropdown">
+            <a class="sidebar-item" ui-sref="home.dashboard.main" translate>Home</a>
+        </li>
+        <li data-ng-repeat="li in navLeft" ui-sref-active="active" data-ng-hide="dropdown">
+            <a class="sidebar-item" ui-sref="{{li.href}}">{{li.title}}</a>
+        </li>
+    </ul>
+</aside>

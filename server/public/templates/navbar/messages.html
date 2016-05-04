@@ -1,0 +1,41 @@
+<a href class="nav-icon dropdown-toggle" data-toggle="dropdown">
+    <div class="nav-badge animated bounceIn" data-ng-show="pendingMessages !== 0">{{pendingMessages}}</div>
+    <i class="mdi-communication-chat" style="font-size: 21px;opacity: 0.8;"></i>
+</a>
+<div class="dropdown-menu nav-box">
+    <ul style="padding:0;">
+        <div class="nav-box-body">
+            <div class="nav-box-title" translate>Messages</div>
+            <div class="text-center nav-box-alert text-muted" data-ng-if="chatsList.length == 0">
+                <i data-ng-class="{'mdi-communication-chat': chatsList.length == 0}" style="opacity:0.4;font-size: 70px;margin:10px;"></i>
+                <p>{{helperChat.msg1}}</p>
+                <p>{{helperChat.msg2}}</p>
+            </div>
+            <div class="list-group hc-list-group panel">
+                <div data-ng-repeat="chat in chatsList | filter: chat.archived = false" class="panel panel-default chatItem">
+                    <a class="list-group-item" data-ng-class="{'opacity6': chat.unreadCount == 0}" style="padding-top: 5px;"
+                       ui-sref="home.chats.one({username: chat.participantID ? '_'+chat.participantID : chat.username})">
+                        <div class="row-action-primary" style="padding-top: 5px;">
+                            <div class="avatar avatar-sm" data-ng-style="{'background-color': chat.avatar}">
+                                {{chat.participantID ? '/': chat.username.substr(0, 1).toUpperCase()}}
+                            </div>
+                        </div>
+                        <div class="row-content chat-content-xs">
+                            <div class="least-content chat-date-xs" style="top: 6px;">
+                                {{chat.date | smartDatetime}}
+                            </div>
+                            <h4 class="list-group-item-heading chat-username-xs" data-ng-class="{newMessage: chat.unreadCount>0}">
+                                {{(((chat.participantID ? ('Account deleted'|translate) : chat.username)) + ' ' + (chat.unreadCount>0 ? '(' + chat.unreadCount + ')' : '')) | limitSender}}
+                            </h4>
+                            <p class="list-group-item-text chat-message-xs">
+                                {{chat.lastMessage | limitMessage}}
+                            </p>
+                        </div>
+                    </a>
+                    <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary nav-box-footer" ui-sref="home.chats.main"translate>See All</button>
+    </ul>
+</div>

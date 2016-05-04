@@ -1,0 +1,42 @@
+<div class="navbar navbar-material-white navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" style="border: 1px transparent solid;">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home.dashboard.main">
+                <span class="part1">Egl</span><span class="part2">é</span>
+            </a>
+            <a class="navbar-brand bell-toggle" ui-sref="home.notifications" style="float: right;margin-right: 0px;" data-ng-if="navRight.length > 1">
+                <div class="nav-badge animated bounceIn" data-ng-show="pendingNotifications !== 0">{{pendingNotifications}}</div>
+                <i class="mdi-social-notifications" style="font-size: 21px;opacity: 0.8;"></i>
+            </a>
+            <a class="navbar-brand bell-toggle" ui-sref="home.chats.main" style="float: right;margin-right: 0px;" data-ng-if="navRight.length > 1">
+                <div class="nav-badge animated bounceIn" data-ng-show="pendingMessages !== 0">{{pendingMessages}}</div>
+                <i class="mdi-communication-chat" style="font-size: 21px;opacity: 0.8;"></i>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+                <li data-ng-repeat="li in navLeft" ui-sref-active="active">
+                    <a ui-sref="{{li.href}}">{{li.title}}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" data-ng-repeat="li in navRight" data-ng-include="'templates/navbar/'+ li +'.html'" 
+                    data-ng-class="{'user-menu': li == 'user'}"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-dismissable alert-{{alert.type}} text-center header-alert animated slideInDown" data-ng-show="alert.msg">
+        <button type="button" class="close" data-ng-click="alert = {}"><i class="mdi-navigation-close"></i></button>
+        {{alert.msg}}
+    </div>
+</div>
+<div data-oc-lazy-load="'js/directives/SidebarDirective.js'">
+    <sidebar></sidebar>
+</div>

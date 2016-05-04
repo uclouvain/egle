@@ -1,0 +1,26 @@
+<a href class="dropdown-toggle" data-toggle="dropdown">
+    <div class="avatar avatar-sm" data-ng-style="{'background-color':user.avatar}">{{user.username.substr(0, 1).toUpperCase()}}</div>{{user.username}} <b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+    <li ui-sref-active="active">
+        <a ui-sref="home.profile.main">
+            <i class="mdi-social-person"></i> <span translate>Profile</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="home.contacts.main">
+            <i class="mdi-social-people"></i> <span translate>My Contacts</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="home.settings.main">
+            <i class="mdi-action-settings"></i> <span translate>Settings</span>
+        </a>
+    </li>
+    <li class="divider"></li>
+    <li ui-sref-active="active">
+        <a href data-ng-click="signout();">
+            <i class="mdi-action-exit-to-app"></i> <span translate>Log out</span>
+        </a>
+    </li>
+</ul>

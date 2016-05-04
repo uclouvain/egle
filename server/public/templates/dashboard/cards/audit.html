@@ -1,0 +1,50 @@
+<div class="height100" data-ng-controller="CardAuditController">
+    <div class="panel panel-info card" style="border-bottom: none;margin: 0;height: 100%;">
+        <div class="panel-heading" data-oc-lazy-load="['bower_components/pickadate/lib/compressed/picker.js', 'bower_components/pickadate/lib/compressed/picker.date.js', 'bower_components/pickadate/lib/compressed/picker.time.js', 'bower_components/ng-pickadate/ng-pickadate.js']">
+            <div class="panel-title" style="color:#fff">
+                <div class="col-xs-6" translate>Audit</div>
+                <div class="col-xs-6 text-right">
+                    <div class="btn-group" style="margin:0;">
+                        <input class="btn btn-white btn-raised" style="margin: 0; margin-top: -4px; padding: 4px 0px;" type="text" pick-a-date="dateRange.from" 
+                                pick-a-date-options="{ format: 'dd/mm/yyyy', selectYears: true}" 
+                               placeholder="{{'From'|translate}}">
+                        <button class="btn btn-white btn-raised" style="margin: 0; margin-top: -4px; padding: 4px 0px;opacity: 1!important;" disabled>
+                            -
+                        </button>
+                        <input class="btn btn-white btn-raised" style="margin: 0; margin-top: -4px; padding: 4px 0px;" type="text" pick-a-date="dateRange.to" 
+                                pick-a-date-options="{ format: 'dd/mm/yyyy', selectYears: true, buttonClear:''}" 
+                               placeholder="{{'To'|translate}}">
+                        <button class="btn btn-primary btn-raised" style="margin: 0; margin-top: -4px; padding: 2px 6px;" data-ng-click="fetchResults();">
+                            <i class="mdi-action-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-dismissable alert-{{alert.type}} widgetAlert" data-ng-repeat="alert in alerts">
+            <strong>{{alert.title}}</strong> {{alert.msg}}
+        </div>
+        <div class="panel-body" style="height: calc(100% - 43px);overflow-y: scroll;">
+            <table class="table" data-ng-if="logs.length > 0">
+                <thead>
+                    <tr>
+                        <th class="text-center" data-ng-repeat="field in ['Time', 'Actor', 'Origin', 'Action', 'Status', 'Label', 'Object']">{{field}}</th>
+                    </tr>
+                </thead>
+                <tbody data-ng-repeat="log in logs">
+                    <tr>
+                        <td class="text-center" style="padding-bottom: 0;">{{ log['date'] | date:'dd/MM/yyyy HH:mm:ss.sss' }}</td>
+                        <td class="text-center" data-ng-repeat="field in ['actor', 'origin', 'action', 'status', 'label', 'object']" style="padding-bottom: 0;">
+                            <span data-ng-class="{'label label-default':field == 'status' && log[field] != '','label-success':field == 'status' && log[field] == 'succeed','label-danger':field == 'status' && log[field] == 'failed'}">
+                                {{log[field]}}
+                            </span>
+                        </td>
+                    </tr>
+                    <tr data-ng-show="log['description']">
+                        <td class="text-left logDescription" style="border-top: none;padding-top: 0;" colspan="7"><small class="text-muted">Desc: </small>{{log['description']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

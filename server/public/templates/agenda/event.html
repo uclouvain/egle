@@ -1,0 +1,110 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="hc-breadcrumb">
+            <a ui-sref="home.agenda.main" class="btn btn-sm btn-info btn-raised btn-arrow-bg" translate>Agenda</a> 
+            <a href class="btn btn-sm btn-white btn-arrow-bg-second" disabled>{{mode.title}}</a>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" data-ng-submit="manageEvent(myEvent);">
+                    <div class="form-group">
+                        <label for="type" class="col-xs-2 control-label" translate>Type</label>
+                        <div class="col-xs-10">
+                            <select class="form-control" id="type"
+                                    data-ng-model="myEvent.type" data-ng-options="type.value as type.name for type in typesList">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" data-ng-show="myEvent.type == '3'">
+                        <label for="type" class="col-xs-2 control-label" translate>Intensity</label>
+                        <div class="col-xs-10 text-center" style="margin-bottom: 0px;">
+                            <div class="row" style="display: inline-block;margin-top: 5px;">
+                                <strong class="pull-left" style="margin-right: 10px;">—</strong>
+                                <div data-ng-repeat="level in [1,2,3,4,5]" style="padding: 0;float: left;margin: 0;">
+                                    <input type="radio" name="option" value="{{level}}" data-ng-model="myEvent.intensity"
+                                   data-ng-class="{'marginRight15': !$last}">
+                                </div>
+                                <strong class="pull-left" style="margin-left: 10px;">+</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="title" class="col-xs-2 control-label" translate>Title</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="form-control" id="title" placeholder="{{'Title'|translate}}" data-ng-model="myEvent.title" required>
+                        </div>
+                    </div>
+                    <div data-ng-hide="checkDateInput()">
+                        <div class="form-group">
+                            <label for="from" class="col-xs-2 control-label" translate>From</label>
+                            <div data-ng-class="{'col-xs-5': myEvent.type != '4', 'col-xs-10': myEvent.type == '4'}">
+                                <input type="text" class="form-control" id="fromdate" pick-a-date="myEvent.startDate"
+                                       pick-a-date-options="{ format: 'dd/mm/yyyy'}" required>
+                            </div>
+                            <span data-ng-hide="myEvent.type == '4'" class="col-xs-1 text-center" 
+                                  style="font-weight: 700;padding-top: 7px;padding-right: 0;padding-left: 0;" translate>At</span>
+                            <div class="col-xs-4" data-ng-hide="myEvent.type == '4'">
+                                <input type="text" class="form-control" id="fromtime" pick-a-time="myEvent.startTime" 
+                                       pick-a-time-options="{ format: 'HH:i', interval: 5}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="to" class="col-xs-2 control-label" translate>To</label>
+                            <div data-ng-class="{'col-xs-5': myEvent.type != '4', 'col-xs-10': myEvent.type == '4'}">
+                                <input type="text" class="form-control" id="todate" pick-a-date="myEvent.endDate" 
+                                       pick-a-date-options="{ format: 'dd/mm/yyyy'}" required>
+                            </div>
+                            <span class="col-xs-1 text-center" data-ng-hide="myEvent.type == '4'"
+                                  style="font-weight: 700;padding-top: 7px;padding-right: 0;padding-left: 0;" translate>At</span>
+                            <div class="col-xs-4" data-ng-hide="myEvent.type == '4'">
+                                <input type="text" class="form-control" id="totime" pick-a-time="myEvent.endTime" 
+                                       pick-a-time-options="{ format: 'HH:i', interval: 5}">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-ng-show="checkDateInput()">
+                        <div class="form-group">
+                            <label for="from" class="col-xs-2 control-label" translate>From</label>
+                            <div data-ng-class="{'col-xs-5': myEvent.type != '4', 'col-xs-10': myEvent.type == '4'}">
+                                <input type="date" class="form-control text-center" id="fromdate" data-ng-model="myEvent.startDate" required>
+                            </div>
+                            <span class="col-xs-1 text-center" data-ng-hide="myEvent.type == '4'"
+                                  style="font-weight: 700;padding-top: 7px;padding-right: 0;padding-left: 0;" translate>At</span>
+                            <div class="col-xs-4" data-ng-hide="myEvent.type == '4'">
+                                <input type="time" class="form-control text-center" id="fromtime" data-ng-model="myEvent.startTime">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="to" class="col-xs-2 control-label" translate>To</label>
+                            <div data-ng-class="{'col-xs-5': myEvent.type != '4', 'col-xs-10': myEvent.type == '4'}">
+                                <input type="date" class="form-control text-center" id="todate" data-ng-model="myEvent.endDate" required>
+                            </div>
+                            <span class="col-xs-1 text-center" data-ng-hide="myEvent.type == '4'"
+                                  style="font-weight: 700;padding-top: 7px;padding-right: 0;padding-left: 0;" translate>At</span>
+                            <div class="col-xs-4" data-ng-hide="myEvent.type == '4'">
+                                <input type="time" class="form-control text-center" id="totime" data-ng-model="myEvent.endTime">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" data-oc-lazy-load="['/bower_components/ngmap/build/scripts/ng-map.min.js']">
+                        <label for="where" class="col-xs-2 control-label" translate>Where</label>
+                        <div class="col-xs-10" map-lazy-load="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false">
+                            <input class="form-control" type="text" places-auto-complete id="where" placeholder="{{'Location'|translate}}"
+                                   data-ng-model="myEvent.where.place" on-place-changed="placeChanged();">
+                            <map data-ng-repeat="map in maps" center="{{map.lat}}, {{map.lng}}" zoom="16" style="height:100px;">
+                                <marker data-ng-repeat="marker in markers" position="{{marker.lat}}, {{marker.lng}}" animation="DROP"></marker> 
+                            </map>
+                        </div>
+                    </div>
+                    <div class="pull-left" data-ng-if="myEvent._id">
+                        <button class="btn btn-danger btn-flat" type="button" data-ng-click="deleteEvent(myEvent._id);" translate>Delete</button>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-flat" ui-sref="home.agenda.main" translate>Cancel</a>
+                        <button class="btn btn-primary" type="submit">{{mode.button}}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

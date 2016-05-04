@@ -1,0 +1,69 @@
+<div class="card-group">
+    <div class="panel panel-default" style="border-bottom: none;">
+        <div class="panel-title" style=" line-height: inherit;" translate>Account</div>
+        <div class="panel-body">
+            <div class="hc-list-infos">
+                <div class="hc-list-table">
+                    <div class="hc-list-table-row">
+                        <div class="hc-list-table-left" translate>Username</div>
+                        <div class="hc-list-table-right">{{user.username}}</div>
+                    </div>
+                    <div class="hc-list-table-row">
+                        <div class="hc-list-table-left" translate>Password</div>
+                        <div class="hc-list-table-right">
+                            <a ui-sref="home.settings.password" class="btn btn-primary btn-raised btn-sm" translate>Change</a>
+                        </div>
+                    </div>
+                    <div class="hc-list-table-row">
+                        <div class="hc-list-table-left" translate>Language</div>
+                        <div class="hc-list-table-right">
+                            <select class="form-control" data-ng-init="language = language" data-ng-model="$parent.language" 
+                                    data-ng-options="language.value as language.name for language in languagesList"
+                                    data-ng-change="changeLanguage();">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default" style="border-bottom: none;">
+        <div class="panel-title" style=" line-height: inherit;" translate>Dashboard</div>
+        <div class="panel-body">
+            <p class="text-muted" style="margin-top: 0;margin-bottom: 10px;" translate>
+                To turn off a card, slide its switch to the left.
+            </p>
+            <div class="col-xs-offset-2 col-xs-8">
+                <hr class="col-xs-12" style="margin-top: 10px;margin-bottom: 10px;padding:0;">
+                <div data-ng-repeat="item in items">
+                    <div class="row">
+                        <div class="pull-left"><strong>{{item.title}}</strong></div>
+                        <div class="pull-right">
+                            <div class="togglebutton" style="float:left;">
+                                <label>
+                                    <input type="checkbox" checked="" data-ng-change="toggle(item);" data-ng-model="item.enabled">
+                                </label>
+                            </div>
+                            <span data-ng-if="item.enabled" class="text-muted">&nbsp; ON</span>
+                            <span data-ng-if="!item.enabled" class="text-muted">&nbsp; OFF</span>
+                        </div>
+                    </div>
+                    <div class="row" data-ng-repeat="sub in item.subitems" style="padding-left: 15px;padding-top:5px;padding-bottom:5px;" 
+                         data-ng-if="item.enabled && !item.abstract">
+                        <div class="pull-left">{{sub.title}}</div>
+                        <div class="pull-right">
+                            <div class="togglebutton" style="float:left;">
+                                <label>
+                                    <input type="checkbox" checked="" data-ng-change="toggle(item, sub);" data-ng-model="sub.enabled">
+                                </label>
+                            </div>
+                            <span data-ng-if="sub.enabled" class="text-muted">&nbsp; ON</span>
+                            <span data-ng-if="!sub.enabled" class="text-muted">&nbsp; OFF</span>
+                        </div>
+                    </div>
+                    <hr class="col-xs-12" style="margin-top: 10px;margin-bottom: 10px;padding:0;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

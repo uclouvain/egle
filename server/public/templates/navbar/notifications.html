@@ -1,0 +1,47 @@
+<a href class="nav-icon bell dropdown-toggle" data-toggle="dropdown" data-ng-click="readLast();">
+    <div class="nav-badge animated bounceIn" data-ng-show="pendingNotifications !== 0">{{pendingNotifications}}</div>
+    <i class="mdi-social-notifications" style="font-size: 21px;opacity: 0.8;"></i>
+</a>
+<div class="dropdown-menu nav-box">
+    <ul style="margin: 0;padding:0;">
+        <div class="nav-box-body">
+            <div class="nav-box-title" translate>Notifications</div>
+            <div class="text-center nav-box-alert text-muted" data-ng-if="notifications.length == 0">
+                <i data-ng-class="{'mdi-social-notifications': notifications.length == 0}" style="opacity:0.4;font-size: 70px;margin:10px;"></i>
+                <p>{{helperNotification.msg1}}</p>
+                <p>{{helperNotification.msg2}}</p>
+            </div>
+            <div class="nav-box-container">
+                <div class="notification" data-ng-repeat="notification in notifications">
+                     <ng-switch on="$first || (notification.datetime | dMMMM) != (notifications[$index-1].datetime | dMMMM)">
+                        <div ng-switch-when="true">
+                            <h4 style="color: #333;font-size: 13px;line-height: 13px;margin-top: 0px;margin-bottom: 5px;">
+                                {{notification.datetime | dMMMM}}
+                            </h4>
+                        </div>
+                    </ng-switch>
+                    <div style="-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2); cursor: pointer;" 
+                         data-ng-click="markAsRead(notification);" data-ng-class="{'opacity6': notification.datetimeRead}">
+                        <div style="display: block;overflow: hidden;float: left;position: relative;width: 55px; height: 55px;">
+							<div class="avatar-notification" ng-style="{'background-color': notification.avatar}"
+                                data-ng-class="{'icon-notification': !notification.username}" ng-switch="notification.type">
+								<div ng-switch-when="contacts">{{notification.username.substr(0, 1).toUpperCase()}}</div>
+								<div ng-switch-when="ia" ng-switch="notification.subType">
+									<i ng-switch-when="sport" class="mdi-social-mood"></i>
+									<i ng-switch-when="glycemia" class="mdi-social-mood"></i>
+									<i ng-switch-when="stuff1" class="mdi-social-mood"></i>
+									<i ng-switch-when="stuff2" class="mdi-social-mood"></i>
+								</div>
+                            </div>
+                        </div>
+                        <div class="nav-box-item">
+                            <div><strong>{{notification.username ? notification.username : typesMapping[notification.type].name}}</strong></div>
+                            {{notification.content | limiNotification}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary nav-box-footer" ui-sref="home.notifications"translate>See All</button>
+    </ul>
+</div>

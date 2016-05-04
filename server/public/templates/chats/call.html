@@ -1,0 +1,18 @@
+<div class="chat-calling animated zoomIn">
+    <div data-ng-style="{'background-color': (message.username == user.username) ? user.avatar : contactAvatar}" 
+         class="avatar avatar-lg animated infinite" data-ng-class="{'tada': callDirection === 'incoming', 'pulse': callDirection === 'outgoing'}">
+        {{ contactUsername.substr(0, 1).toUpperCase()}}
+    </div>
+    <p class="text-center lead animated infinite" data-ng-class="{'tada': callDirection === 'incoming', 'pulse': callDirection === 'outhoing'}" 
+       style="color:#fff;margin-top:10px;">
+        <i>{{(callDirection === 'incoming') ? ('incoming call' | translate) : ('calling' | translate)}}</i>
+    </p>
+    <button href class="btn btn-success btn-raised btn-lg" style="border-radius: 15px;color: #fff;margin-right: 20px;" 
+            data-ng-click="call();" data-ng-if="callDirection === 'incoming'">
+        <i class="mdi-communication-call"></i>
+    </button>
+    <button href class="btn btn-danger btn-raised btn-lg" style="border-radius: 15px;color: #fff;" data-ng-click="hangup();">
+        <i class="mdi-communication-call-end"></i>
+    </button>
+</div>
+<div class="chat-backdrop" data-ng-style="{'height': (callDirection === 'incoming') ? 'calc(100% - 103px)' : 'calc(100% - 370px)'}"></div>

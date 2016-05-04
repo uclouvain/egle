@@ -1,0 +1,75 @@
+<div class="panel-title" style="line-height: inherit;padding: 0px 0px 15px 0px;" data-ng-if="received.length > 0" translate>Pending contact requests</div>
+<div class="list-group hc-list-group panel" style="clear: both;" data-ng-if="received">
+    <div data-ng-repeat="contact in received" class="panel panel-default chatItem" style="height: 48px;">
+        <a class="list-group-item" href style="padding: 0 10px;padding-top: 5px;height: 48px;pointer-events: none;">
+            <div class="row-action-primary" style="padding-top: 5px;">
+                <div class="avatar avatar-sm" data-ng-style="{'background-color': contact.avatar}">{{contact.username.substr(0, 1).toUpperCase()}}</div>
+            </div>
+            <div class="row-content" style="min-height: inherit;">
+                <h4 class="list-group-item-heading" style="margin-top: 6px;margin-bottom: 0px;font-size: 18px;">
+                    {{contact.username}}
+                </h4>
+            </div>
+        </a>
+        <div class="item-options" style="top: 7px;">
+            <a class="btn btn-flat btn-default" href  
+               data-ng-click="acceptRequest(contact);" style="margin: 0;padding: 5px 5px;" >
+                <i class="mdi-material-green mdi-action-done"></i>
+            </a>
+            <a class="btn btn-flat btn-default" href 
+               data-ng-click="declineRequest(contact);" style="margin: 0;padding: 5px 5px;" >
+                <i class="mdi-material-red mdi-content-clear"></i>
+            </a>
+        </div>
+        <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+    </div>
+</div>
+<div class="panel-title" style="line-height: inherit;padding: 0px 0px 15px 0px;" data-ng-if="accepted.length > 0" translate>My contacts</div>
+<div class="list-group hc-list-group panel" style="clear: both;" data-ng-if="accepted">
+    <div data-ng-repeat="contact in accepted" class="panel panel-default chatItem" style="height: 48px;">
+        <a class="list-group-item" ui-sref="home.contacts.one({username:contact.username})" style="padding: 0 10px;padding-top: 5px;  height: 48px;">
+            <div class="row-action-primary" style="padding-top: 5px;">
+                <div class="avatar avatar-sm" data-ng-style="{'background-color': contact.avatar}">{{contact.username.substr(0, 1).toUpperCase()}}</div>
+            </div>
+            <div class="row-content" style="min-height: inherit;">
+                <h4 class="list-group-item-heading" style="margin-top: 6px;margin-bottom: 0px;font-size: 18px;">
+                    {{contact.username}}
+                </h4>
+            </div>
+        </a>
+        <div class="item-options" style="top: 7px;">
+            <a class="btn btn-flat btn-default" href data-ng-click="deleteContact(contact);" style="margin: 0;padding: 5px 5px;" >
+                <i class="mdi-material-red mdi-action-delete"></i>
+            </a>
+        </div>
+        <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+    </div>
+</div>
+<div class="panel-title" style="line-height: inherit;padding: 0px 0px 15px 0px;" data-ng-if="sent.length > 0" translate>Requests sent</div>
+<div class="list-group hc-list-group panel" style="clear: both;" data-ng-if="sent">
+    <div data-ng-repeat="contact in sent" class="panel panel-default chatItem" style="height: 48px;">
+        <a class="list-group-item" href style="padding: 0 10px;padding-top: 5px;  height: 48px;pointer-events: none;">
+            <div class="row-action-primary" style="padding-top: 5px;">
+                <div class="avatar avatar-sm" data-ng-style="{'background-color': contact.avatar}">{{contact.username.substr(0, 1).toUpperCase()}}</div>
+            </div>
+            <div class="row-content" style="min-height: inherit;">
+                <h4 class="list-group-item-heading" style="margin-top: 6px;margin-bottom: 0px;font-size: 18px;">
+                    {{contact.username}}
+                </h4>
+            </div>
+        </a>
+        <div class="item-options" style="top: 7px;">
+            <a class="btn btn-flat btn-default" href 
+               data-ng-click="cancelRequest(contact);" style="margin: 0;padding: 5px 5px;" >
+                <i class="mdi-material-red mdi-content-clear"></i>
+            </a>
+        </div>
+        <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+    </div>
+</div>
+<div class="text-center text-muted helper" data-ng-if="helper.length !== 0">
+    <i data-ng-class="{'mdi-social-people': helper.length !== 0}"></i>
+    <p class="lead">{{helper.title}}</p>
+    <p>{{helper.text}}</p>
+</div>
+<a class="btn btn-primary btn-fab btn-raised mdi-social-person-add action-button" ui-sref="home.contacts.add" style="z-index:1000;"></a>

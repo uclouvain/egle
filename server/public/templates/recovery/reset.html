@@ -1,0 +1,39 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-dismissable alert-{{alert.type}} text-center header-alert animated slideInDown" data-ng-show="alert.msg" style="top: 0;">
+        <button type="button" class="close" data-ng-click="alert = {}"><i class="mdi-navigation-close"></i></button>
+        {{alert.msg}}
+    </div>
+</div>
+<div class="panel panel-default col-lg-offset-3 col-lg-6" style="margin-bottom: 10px;">
+    <div class="panel-title" translate>Reset your password</div>
+    <div class="panel-body">
+        <p class="text-muted" style="margin-top: 0;margin-bottom: 10px;" translate>
+            Enter a new password for your Eglé account.
+        </p>
+        <p><span translate>Use at least 6 characters</span>.</p>
+        <form style="margin:0;" name="form" class="form-horizontal" data-ng-submit="reset(form);">
+            <fieldset>
+                <div class="form-group">
+                    <label for="newPassword" class="col-lg-4 control-label" translate>Password</label>
+                    <div class="col-lg-6">
+                        <input type="password" class="form-control" id="newPassword" name="newPassword" 
+                               data-ng-model="newPassword" data-ng-minlength="6" placeholder="{{'Use at least 6 characters'|translate}}" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newPasswordConfirmation" class="col-lg-4 control-label"></label>
+                    <div class="col-lg-6">
+                        <input type="password" class="form-control" id="newPasswordConfirmation" 
+                               data-ng-model="newPasswordConfirmation" placeholder="{{'Re-enter Password'|translate}}" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                    <button class="btn btn-default btn-raised pull-left" ui-sref="signin" translate>Back</button>
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-primary btn-raised" style="margin-bottom: 0;" translate>Validate</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form> 
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="hc-breadcrumb">
+            <a ui-sref="home.contacts.main" class="btn btn-sm btn-info btn-raised btn-arrow-bg" translate>Contacts</a> 
+            <a href class="btn btn-sm btn-white btn-arrow-bg-second" disabled translate>Add</a>
+        </div>
+        <div class="form-group searchBox panel panel-default card">
+            <div class="icon-addon addon-lg" style="margin: 5px 10px;">
+                <input data-autofocus class="form-control" type="text" placeholder="{{'Search for Eglé users'|translate}}" data-ng-focus="in();" 
+                       data-ng-blur="out();" data-ng-model="searchText" data-ng-change="findContacts();" style="margin-bottom: -1px;" >
+                <i class="mdi-action-search"></i>
+            </div>
+        </div>
+        <div class="text-center helper text-muted" data-ng-if="searchHelper !== ''">{{searchHelper}}</div>
+        <div class="list-group hc-list-group panel" style="clear: both;">
+            <div class="panel panel-default" data-ng-repeat="contact in contacts">
+                <a class="list-group-item" href style="padding: 0 10px;padding-top: 5px;height: 48px;pointer-events: none;">
+                    <div class="row-action-primary" style="padding-top: 5px;">
+                        <div class="avatar avatar-sm" data-ng-style="{'background-color': contact.avatar}">{{contact.username.substr(0, 1).toUpperCase()}}</div>
+                    </div>
+                    <div class="row-content" style="min-height: inherit;">
+                        <h4 class="list-group-item-heading" style="margin-top: 6px;margin-bottom: 0px;font-size: 18px;">
+                            {{contact.username}}
+                        </h4>
+                    </div>
+                </a>
+                <div class="item-options" style="top: 7px;">
+                    <a class="btn btn-raised btn-primary" href data-ng-click="sendRequest(contact.username);" style="margin: 0;padding: 5px 5px;" >
+                        <i class="mdi-social-person-add"></i> <span translate>Send</span>
+                    </a>
+                </div>
+                <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+            </div>
+        </div>
+    </div>
+</div>

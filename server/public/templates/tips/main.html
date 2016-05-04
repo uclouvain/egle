@@ -1,0 +1,31 @@
+<div class="toggleFilter pull-right">
+    <div class="togglebutton text-left">
+        <label>
+            {{mode.text}} &nbsp;&nbsp;<input data-ng-model="mode.status" data-ng-change="toggleMode();" type="checkbox" checked="">
+        </label>
+    </div>
+</div>
+<div class="panel-title pull-left" style="line-height: inherit;padding: 0px 0px 10px 0px;">{{mode.title}}</div>
+<div class="list-group hc-list-group panel" style="clear: both;">
+    <div class="panel panel-default chatItem" style="height: 48px;" data-ng-repeat="tip in filteredTips = (tips | filter: filterTips)">
+        <a class="list-group-item" ui-sref="home.tips.one({id: tip.id})"  style="padding: 0 10px;padding-top: 5px;  height: 48px;">
+            <div class="row-content" style="min-height: inherit;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                <h4 class="list-group-item-heading" style="margin-top: 5px;margin-bottom: 0px;font-size: 18px;padding-left: 5px;">
+                    {{tip.title}}
+                </h4>
+            </div>
+        </a>
+        <div class="item-options" style="top: 7px;">
+            <a href class="btn btn-flat btn-default" style="margin: 0;padding: 5px 5px;" 
+               data-ng-click="bookmark(tip.id);">
+                <i class="mdi-material-red" data-ng-class="{'mdi-action-favorite': tip.bookmarked, 'mdi-action-favorite-outline': !tip.bookmarked}"></i>
+            </a>
+        </div>
+        <div class="list-group-separator" style="margin: 0px;" data-ng-hide="$last"></div>
+    </div>
+</div>
+<div class="text-center text-muted helper" data-ng-if="filteredTips.length === 0 && mode.status">
+    <i data-ng-class="{'mdi-action-favorite-outline': filteredTips.length === 0 && mode.status}"></i>
+    <p class="lead">{{helper.title}}</p>
+    <p>{{helper.text}}</p>
+</div>

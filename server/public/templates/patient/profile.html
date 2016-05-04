@@ -1,0 +1,41 @@
+<div class="panel panel-white card" style="border: solid #FFC107 2px;">
+    <div class="panel-heading" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+        <div class="panel-title">
+            <div class="col-xs-7" style="padding: 0;" translate>Eglé profile</div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="hc-list-infos">
+            <div class="hc-list-table">
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" style="padding-top: 0;" translate>Username</div>
+                    <div class="hc-list-table-right" style="padding-top: 0;">{{profile.username}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Gender</div>
+                    <div class="hc-list-table-right">{{profile.gender | gender}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Birthdate</div>
+                    <div class="hc-list-table-right">{{profile.birthdate}}</div>
+                </div>
+                <div class="hc-list-table-row" data-ng-show="profile.condition">
+                    <div class="hc-list-table-left" translate>Condition</div>
+                    <div class="hc-list-table-right">{{profile.condition | condition}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Home address</div>
+                    <div class="hc-list-table-right">{{profile.homeAddress | unknown}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Phone</div>
+                    <div class="hc-list-table-right">{{profile.phone | phone}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Email</div>
+                    <div class="hc-list-table-right">{{profile.email | unknown}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

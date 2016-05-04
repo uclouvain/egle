@@ -1,0 +1,32 @@
+<div class="panel panel-white card" style="border: solid #2196F3 2px;">
+    <div class="panel-heading" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+        <div class="panel-title">
+            <div class="col-xs-7" style="padding: 0;" translate>Frequent contacts</div>
+            <div class="pull-right">
+                <button class="btn btn-primary btn-raised btn-objectives btn-xs" style="padding-right:5px;padding-left:5px;" ui-sref="home.chats.main" translate>Messages</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="icons-group" style="min-height: 92px;text-align:left;" data-ng-if="contacts.length > 0">
+            <a href data-ng-repeat="contact in contacts" data-ng-click="select(contact);" class="avatar avatar-md" style="margin: 0px 20px 5px 0px;"
+               data-ng-style="{'background-color': contact.avatar}" data-ng-hide="selected && contact != selected">
+                    {{contact.username.substr(0, 1).toUpperCase()}}
+                <div class="text-center" style="color:#000;font-size: 18px;line-height: 32px;overflow: hidden;">{{contact.username}}</div>
+            </a>
+            <a style="margin: 0px 0px 5px 0px;color: #4caf50;background-color:inherit;" class="avatar avatar-md animated bounceIn" data-ng-if="selected"
+               ui-sref="home.chats.one({username:selected.username})">
+                <i class="mdi-communication-chat"></i>
+            </a>
+            <a style="margin: 0px 0px 5px 0px;color: #03a9f4;background-color:inherit;" class="avatar avatar-md animated bounceIn" data-ng-if="selected"
+               ui-sref="home.contacts.one({username:selected.username})">
+                <i class="mdi-action-assignment-ind"></i>
+            </a>
+        </div>
+        <div class="text-center text-muted helper" style="padding: 0;" data-ng-if="helper.length !== 0">
+            <i data-ng-class="{'mdi-social-people': helper.length !== 0}" style="margin:0;font-size: 70px;"></i>
+            <p class="lead">{{helper.title}}</p>
+            <p>{{helper.text}}</p>
+        </div>
+    </div>
+</div>

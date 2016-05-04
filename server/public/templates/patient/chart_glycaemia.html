@@ -1,0 +1,28 @@
+<div class="panel panel-white card chart" style="border: solid #2196F3 2px;" data-ng-controller="CardPatientChartGlycaemiaController">
+    <div class="panel-title" style=" line-height: inherit;">
+        <span translate>Glycaemia</span>
+    </div>
+    <div class="panel-body" style="padding: 0px 10px;">
+        <div class="row" style="padding: 0px 15px;">
+            <div class="text-center">
+                <div class="btn-group">
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == ''}" data-ng-click="build('');" style="padding: 4px 10px;">
+                        1 <span translate>month</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '2m'}" data-ng-click="build('2m');" style="padding: 4px 10px;">
+                        2 <span translate>months</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '3m'}" data-ng-click="build('3m');" style="padding: 4px 10px;"> 
+                        3 <span translate>months</span>
+                    </button>
+                    <button class="btn btn-xs btn-white" data-ng-class="{'active': view == '6m'}" data-ng-click="build('6m');" style="padding: 4px 10px;">
+                        6 <span translate>months</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div data-oc-lazy-load="['bower_components/highcharts-release/highcharts.js', 'additional_components/highcharts-ng/dist/highcharts-ng.min.js']">
+            <highchart id="chart" config="chart"></highchart>
+        </div>
+    </div>
+</div>

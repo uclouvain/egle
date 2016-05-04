@@ -1,0 +1,40 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-ng-click="close(false);">&times;</button>
+                <h4 class="modal-title" translate>Delete an entry</h4>
+            </div>
+            <div class="modal-body">
+                <span translate>Are you sure you want to delete the following entry?</span>
+                <table class="table text-center" style="margin: 0;margin-top: 16px;">
+                    <thead>
+                        <tr>
+                            <th class="text-center" translate>Date</th>
+                            <th class="text-center" translate>Hour</th>
+                            <th class="text-center">
+                                <span data-ng-hide="meal" translate>Value</span>
+                                <span data-ng-show="meal">Score</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{entry.datetimeAcquisition | date: 'dd/MM/yy'}}</td>
+                            <td>{{entry.datetimeAcquisition | date: 'HH:mm'}}</td>
+                            <td class = "logValue">
+                                <span data-ng-if="!entry.isSkipped"><strong>{{entry.value}}</strong> <small>{{unit}}</small></span>
+                                <i data-ng-if="entry.isSkipped" translate>skipped</i>
+                                <i data-ng-repeat="icon in entry.icons" class="{{icon.i}}" style="font-size:16px;"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer" style="margin-top:0;">
+                <button type="button" class="btn btn-default btn-flat" data-dismiss="modal" data-ng-click="close(false);"  translate>Cancel</button>
+                <button type="button" class="btn btn-danger btn-flat" data-dismiss="modal" data-ng-click="close(true);" translate>Delete</button>
+            </div>
+        </div>  
+    </div>
+</div>

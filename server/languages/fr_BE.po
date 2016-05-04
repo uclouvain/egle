@@ -1,0 +1,2774 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: healthcompass_fr\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "1 fruit, 1 juice"
+msgstr "1 fruit, 1 jus"
+
+#: public/templates/agenda/main.html
+msgid "3 days"
+msgstr "3 jours"
+
+#: public/templates/recovery/recovery.html
+msgid "<strong>Eglé</strong> Account Recovery"
+msgstr "Récupération de compte <strong>Eglé</strong>"
+
+#: public/templates/modals/deleteChat.html
+#: public/templates/modals/deleteContact.html
+msgid "?"
+msgstr " ?"
+
+#: languages/extraDictionary.html
+msgid "Accepted your contact request"
+msgstr "A accepté votre demande de contact"
+
+#: public/templates/settings/main.html
+msgid "Account"
+msgstr "Compte"
+
+#: public/templates/dashboard/add.html
+msgid "Acting"
+msgstr "Action"
+
+#: languages/extraDictionary.html
+msgid "Activities"
+msgstr "Activités"
+
+#: public/templates/contacts/add.html public/templates/dashboard/add.html
+msgid "Add"
+msgstr "Ajouter"
+
+#: public/templates/profile/contact.html public/templates/profile/main.html
+msgid "Address"
+msgstr "Adresse"
+
+#: languages/extraDictionary.html public/templates/agenda/event.html
+msgid "Agenda"
+msgstr "Agenda"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "All conversations"
+msgstr "Toutes les conversations"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "All tips"
+msgstr "Toutes les astuces"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Allergies"
+msgstr "Allergies"
+
+#: public/js/controllers/ProfileCtrl.js public/js/appFilters.js
+msgid "Alzheimer's Disease"
+msgstr "Maladie d'Alzheimer"
+
+#: public/templates/modals/signSent.html
+msgid ""
+"An email will be sent to your email address that includes a password reset "
+"link"
+msgstr ""
+"Un e-mail contenant un lien de réinitialisation de mot de passe, va être "
+"envoyé à votre adresse"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "An entry already exists for this date"
+msgstr "Une entrée existe déjà pour cette date"
+
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+#: public/js/controllers/PatientCtrl.js public/js/controllers/ProfileCtrl.js
+#: public/js/controllers/SettingsCtrl.js public/js/controllers/SignupCtrl.js
+#: public/js/controllers/TipsCtrl.js
+#: public/js/controllers/agenda/AgendaCtrl.js
+#: public/js/controllers/agenda/EventCtrl.js
+#: public/js/controllers/chats/ChatCtrl.js
+#: public/js/controllers/chats/ChatsCtrl.js
+#: public/js/controllers/contacts/ContactCtrl.js
+#: public/js/controllers/contacts/ContactsCtrl.js
+#: public/js/controllers/dashboard/DashboardCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/AskWeightDirective.js
+#: public/js/directives/FrequentContactsDirective.js
+#: public/js/directives/GlycaemiaChartDirective.js
+#: public/js/directives/InsulinChartDirective.js
+#: public/js/directives/MealChartDirective.js
+#: public/js/directives/SearchPatientsDirective.js
+#: public/js/directives/SportChartDirective.js
+#: public/js/directives/TodoDirective.js
+#: public/js/directives/WeightChartDirective.js
+msgid "An error occurred, please try again later"
+msgstr "Une erreur est survenue, merci de réessayer plus tard"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "April"
+msgstr "Avril"
+
+#: public/templates/chats/one.html
+msgid "Archive"
+msgstr "Archiver"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Archived"
+msgstr "Archivées"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Archived conversations"
+msgstr "Conversations archivées"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Archived conversations appear here"
+msgstr "Les conversations archivées apparaissent ici"
+
+#: public/templates/modals/deleteContact.html
+msgid "Are you sure you want to delete the contact"
+msgstr "Êtes-vous sûr de vouloir supprimer le contact"
+
+#: public/templates/modals/deleteChat.html
+msgid "Are you sure you want to delete the conversation with"
+msgstr "Êtes-vous sûr de vouloir supprimer la conversation avec"
+
+#: public/templates/modals/deleteEntry.html
+msgid "Are you sure you want to delete the following entry?"
+msgstr "Êtes-vous sûr de vouloir supprimer l'entrée suivante ?"
+
+#: public/templates/agenda/event.html
+msgid "At"
+msgstr "à"
+
+#: public/templates/dashboard/cards/audit.html
+msgid "Audit"
+msgstr "Audit"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "August"
+msgstr "Août"
+
+#: public/templates/profile/avatar.html public/templates/profile/main.html
+msgid "Avatar"
+msgstr "Avatar"
+
+#: public/templates/signin.html public/templates/signup.html
+#: public/templates/recovery/lost.html public/templates/recovery/reset.html
+msgid "Back"
+msgstr "Retour"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Bedtime"
+msgstr "Coucher"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Bike"
+msgstr "Vélo"
+
+#: public/templates/patient/medicalRecord.html
+#: public/templates/patient/profile.html public/templates/profile/basic.html
+msgid "Birthdate"
+msgstr "Date de naissance"
+
+#: public/templates/profile/main.html
+msgid "Birthday"
+msgstr "Anniversaire"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Blood type"
+msgstr "Groupe sanguin"
+
+#: languages/extraDictionary.html
+msgid "Breakfast"
+msgstr "Repas : matin"
+
+#: public/templates/agenda/event.html public/templates/dashboard/add.html
+#: public/templates/dashboard/objective.html
+#: public/templates/modals/deleteChat.html
+#: public/templates/modals/deleteContact.html
+#: public/templates/modals/deleteEntry.html
+#: public/templates/profile/avatar.html public/templates/profile/basic.html
+#: public/templates/profile/contact.html
+#: public/templates/settings/password.html
+msgid "Cancel"
+msgstr "Annuler"
+
+#: public/js/controllers/SignupCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+msgid "Captcha verification failed. Please retry later."
+msgstr "Vérification Captcha échoué. Merci de réessayer plus tard."
+
+#: public/js/appFilters.js
+msgid "Caregiver"
+msgstr "Soignant(e)"
+
+#: public/templates/profile/basic.html public/templates/profile/contact.html
+#: public/templates/settings/main.html public/templates/settings/password.html
+msgid "Change"
+msgstr "Modifier"
+
+#: public/templates/profile/avatar.html
+msgid "Choose a color for your avatar."
+msgstr "Choisissez une couleur pour votre avatar."
+
+#: public/templates/dashboard/add.html
+msgid "Comments"
+msgstr "Commentaires"
+
+#: public/templates/signup.html public/templates/contacts/one.html
+#: public/templates/patient/profile.html public/templates/profile/basic.html
+#: public/templates/profile/main.html
+msgid "Condition"
+msgstr "Maladie"
+
+#: public/templates/profile/contact.html public/templates/profile/main.html
+msgid "Contact"
+msgstr "Contact"
+
+#: public/templates/contacts/add.html public/templates/contacts/one.html
+msgid "Contacts"
+msgstr "Contacts"
+
+#: public/templates/chats/new.html public/templates/contacts/one.html
+msgid "Converse"
+msgstr "Discuter"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Create"
+msgstr "Créer"
+
+#: public/templates/sign.html public/templates/signup.html
+msgid "Create Account"
+msgstr "S'inscrire"
+
+#: public/templates/signup.html
+msgid "Create you <strong>Eglé</strong> Account"
+msgstr "Créer votre compte <strong>Eglé</strong>"
+
+#: public/templates/settings/password.html
+msgid "Current"
+msgstr "Actuel"
+
+#: public/templates/settings/main.html
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: public/templates/techentry.html public/templates/dashboard/add.html
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+msgid "Date"
+msgstr "Date"
+
+#: public/templates/agenda/main.html
+msgid "Day"
+msgstr "Jour"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "December"
+msgstr "Décembre"
+
+#: public/templates/agenda/event.html public/templates/chats/one.html
+#: public/templates/dashboard/objective.html
+#: public/templates/modals/deleteChat.html
+#: public/templates/modals/deleteContact.html
+#: public/templates/modals/deleteEntry.html
+msgid "Delete"
+msgstr "Supprimer"
+
+#: public/templates/modals/deleteChat.html
+msgid "Delete a conversation"
+msgstr "Supprimer une conversation"
+
+#: public/templates/modals/deleteEntry.html
+msgid "Delete an entry"
+msgstr "Supprimer une entrée"
+
+#: public/templates/modals/deleteContact.html
+msgid "Delete from your contacts"
+msgstr "Supprimer de vos contacts"
+
+#: public/js/controllers/chats/ChatCtrl.js
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Deleted account"
+msgstr "Compte supprimé"
+
+#: public/js/controllers/ProfileCtrl.js public/js/controllers/SignupCtrl.js
+#: public/js/appFilters.js
+msgid "Diabetes Type 1"
+msgstr "Diabète Type 1"
+
+#: public/js/controllers/ProfileCtrl.js public/js/controllers/SignupCtrl.js
+#: public/js/appFilters.js
+msgid "Diabetes Type 2"
+msgstr "Diabète Type 2"
+
+#: languages/extraDictionary.html
+msgid "Dinner"
+msgstr "Repas : soir"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Disease"
+msgstr "Maladie"
+
+#: public/templates/signup.html public/templates/recovery/lost.html
+msgid "Don't forget to mark the verification box below."
+msgstr "N'oubliez pas de cocher la case de vérification ci-dessous."
+
+#: public/js/controllers/SignupCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+msgid "Don't forget to mark the verification box."
+msgstr "N'oubliez pas de cocher la case de vérification."
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/MobilityChartDirective.js
+msgid "Duration"
+msgstr "Durée"
+
+#: public/templates/profile/avatar.html public/templates/profile/main.html
+msgid "Edit"
+msgstr "Modifier"
+
+#: public/js/controllers/HeaderCtrl.js
+msgid "Eglé Server Unreachable."
+msgstr "Serveur Eglé Inaccessible"
+
+#: public/templates/patient/profile.html
+msgid "Eglé profile"
+msgstr "Profil Eglé"
+
+#: public/templates/signin.html public/templates/signup.html
+#: public/templates/patient/profile.html public/templates/profile/contact.html
+#: public/templates/profile/main.html public/templates/recovery/lost.html
+msgid "Email"
+msgstr "Email"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Emergency contact"
+msgstr "Contact d'urgence"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Empty dashboard"
+msgstr "Tableau de bord vide"
+
+#: public/templates/recovery/reset.html
+msgid "Enter a new password for your Eglé account."
+msgstr "Saisissez un nouveau mot de passe pour votre compte Eglé."
+
+#: public/js/controllers/chats/ChatsCtrl.js
+#: public/js/controllers/contacts/ContactsCtrl.js
+msgid "Enter a username"
+msgstr "Entrez un nom d'utilisateur"
+
+#: public/js/directives/SearchPatientsDirective.js
+msgid "Enter the username of the patient"
+msgstr "Entrez le nom d'utilisateur d'un patient"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Evening"
+msgstr "Soir"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Event details"
+msgstr "Détails de l'événement"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Failed to add the entry!"
+msgstr "Impossible d'ajouter l'entrée !"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Fast sugars"
+msgstr "Sucres rapides"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Fats"
+msgstr "Graisses"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Favorite tips"
+msgstr "Astuces favorites"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Favorites"
+msgstr "Favoris"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Favorites appear here"
+msgstr "Les favoris apparaissent ici"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "February"
+msgstr "Février"
+
+#: public/js/controllers/ProfileCtrl.js public/js/appFilters.js
+msgid "Female"
+msgstr "Femme"
+
+#: public/templates/dashboard/cards/directives/frequent_contacts.html
+msgid "Frequent contacts"
+msgstr "Contacts fréquents"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Friday"
+msgstr "Vendredi"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/cards/audit.html
+msgid "From"
+msgstr "Du"
+
+#: public/templates/contacts/one.html
+#: public/templates/patient/medicalRecord.html
+#: public/templates/patient/profile.html public/templates/profile/basic.html
+#: public/templates/profile/main.html
+msgid "Gender"
+msgstr "Genre"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Glucose level"
+msgstr "Taux de glucose"
+
+#: public/templates/dashboard/cards/glycaemia.html
+#: public/templates/patient/chart_glycaemia.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Glycaemia"
+msgstr "Glycémie"
+
+#: public/templates/error.html
+msgid "Go to the Home Page"
+msgstr "Retourner à la page d’accueil"
+
+#: public/templates/modals/warning.html
+msgid "Got it"
+msgstr "Compris"
+
+#: public/templates/recovery/lost.html
+msgid "Having trouble signing in?"
+msgstr "Des problèmes de connexion ?"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Health-related"
+msgstr "Lié à la santé"
+
+#: public/templates/sign.html
+msgid "Hello"
+msgstr "Bonjour"
+
+#: public/templates/sidebar.html public/templates/patient/patient.html
+msgid "Home"
+msgstr "Accueil"
+
+#: public/templates/patient/profile.html
+msgid "Home address"
+msgstr "Adresse domicile"
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+msgid "Hour"
+msgstr "Heure"
+
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+msgid "How did you travel today?"
+msgstr "Comment vous êtes-vous déplacé aujourd'hui ?"
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+msgid "How much do you weight?"
+msgstr "Combien pesez-vous ?"
+
+#: public/templates/recovery/lost.html
+msgid "I don't know my password"
+msgstr "Je ne connais pas mon mot de passe"
+
+#: public/templates/signup.html public/templates/contacts/one.html
+msgid "I'm a"
+msgstr "Je suis un(e)"
+
+#: public/templates/profile/basic.html public/templates/profile/main.html
+msgid "Informations"
+msgstr "Informations"
+
+#: public/templates/dashboard/cards/insulin.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Insulin"
+msgstr "Insuline"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Insulin intake"
+msgstr "Prise d'insuline"
+
+#: languages/extraDictionary.html
+msgid "Intelligent Assistant"
+msgstr "Assistant Intelligent"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/asks/directives/ask_activity.html
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Intensity"
+msgstr "Intensité"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Intermediate"
+msgstr "Intermédiaire"
+
+#: public/js/controllers/SigninCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+#: public/js/controllers/recovery/ResetCtrl.js
+msgid "Internal Server Error"
+msgstr "Erreur interne du serveur"
+
+#: public/js/controllers/ProfileCtrl.js
+msgid "Invalid birthdate"
+msgstr "Date de naissance invalide"
+
+#: public/templates/recovery/lost.html
+msgid "Issue"
+msgstr "Problème"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "January"
+msgstr "Janvier"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "July"
+msgstr "Juillet"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "June"
+msgstr "Juin"
+
+#: public/templates/signup.html public/templates/settings/main.html
+msgid "Language"
+msgstr "Langue"
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "Language changed!"
+msgstr "Langue changée !"
+
+#: public/templates/dashboard/add.html
+msgid "Less"
+msgstr "Moins"
+
+#: public/templates/signup.html public/templates/recovery/lost.html
+msgid "Loading"
+msgstr "Chargement"
+
+#: public/templates/agenda/event.html
+msgid "Location"
+msgstr "Lieu"
+
+#: public/templates/sign.html public/templates/signin.html
+msgid "Log In"
+msgstr "Se connecter"
+
+#: public/templates/signin.html
+msgid "Log in with your <strong>Eglé</strong> Account"
+msgstr "Connectez-vous à votre compte <strong>Eglé</strong>"
+
+#: public/templates/sidebar.html public/templates/navbar/user.html
+msgid "Log out"
+msgstr "Se déconnecter"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Long"
+msgstr "Lente"
+
+#: languages/extraDictionary.html
+msgid "Lunch"
+msgstr "Repas : midi"
+
+#: public/js/controllers/ProfileCtrl.js public/js/appFilters.js
+msgid "Male"
+msgstr "Homme"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "March"
+msgstr "Mars"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Max"
+msgstr "Max"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "May"
+msgstr "Mai"
+
+#: public/templates/dashboard/cards/meal.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Meal"
+msgstr "Repas"
+
+#: languages/extraDictionary.html public/js/controllers/dashboard/AddCtrl.js
+msgid "Meals"
+msgstr "Repas"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Measured value"
+msgstr "Valeur relevée"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Medical record"
+msgstr "Dossier médical"
+
+#: public/templates/chats/new.html public/templates/chats/one.html
+#: public/templates/dashboard/cards/directives/frequent_contacts.html
+#: public/templates/navbar/messages.html
+msgid "Messages"
+msgstr "Messages"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Midday"
+msgstr "Midi"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Min"
+msgstr "Min"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Mixed"
+msgstr "Mixte"
+
+#: languages/extraDictionary.html
+#: public/templates/dashboard/cards/mobility.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/MobilityChartDirective.js
+msgid "Mobility"
+msgstr "Déplacement"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Monday"
+msgstr "Lundi"
+
+#: public/templates/dashboard/cards/meal.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Monitoring"
+msgstr "Suivi"
+
+#: public/templates/dashboard/add.html
+msgid "More"
+msgstr "Plus"
+
+#: public/templates/tips/one.html
+msgid "More details"
+msgstr "Plus de détails"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Morning"
+msgstr "Matin"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Motor vehicule"
+msgstr "Véhicule motorisé"
+
+#: public/templates/sidebar.html public/templates/navbar/user.html
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+msgid "My Contacts"
+msgstr "Mes Contacts"
+
+#: public/templates/contacts/main.html
+msgid "My contacts"
+msgstr "Mes contacts"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Name"
+msgstr "Nom"
+
+#: public/templates/signin.html
+msgid "Need help?"
+msgstr "Besoin d'aide ?"
+
+#: public/templates/settings/password.html
+msgid "New"
+msgstr "Nouveau"
+
+#: public/templates/chats/new.html
+msgid "New convers."
+msgstr "Nlle convers."
+
+#: public/templates/dashboard/cards/directives/chart.html
+msgid "New entry"
+msgstr "Nlle entrée"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "New event"
+msgstr "Nouvel événement"
+
+#: public/js/controllers/PatientCtrl.js
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "No Data"
+msgstr "Pas de données"
+
+#: public/js/controllers/HeaderCtrl.js
+msgid "No Internet Connection."
+msgstr "Pas de Connexion Internet."
+
+#: public/js/controllers/recovery/LostCtrl.js
+msgid "No account found with that email address."
+msgstr "Pas de compte trouvé avec cette adresse email."
+
+#: public/js/controllers/contacts/ContactsCtrl.js
+msgid "No contact yet?"
+msgstr "Pas encore de contact ?"
+
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "No conversation yet?"
+msgstr "Pas encore de discussion ?"
+
+#: public/js/directives/FrequentContactsDirective.js
+msgid "No frequent contacts yet?"
+msgstr "Pas encore de contacts fréquents ?"
+
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+msgid "No recent notification!"
+msgstr "Aucune notification récente !"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+#: public/js/controllers/contacts/ContactsCtrl.js
+#: public/js/directives/SearchPatientsDirective.js
+msgid "No results for"
+msgstr "Pas de résultat pour"
+
+#: public/templates/navbar/notifications.html
+msgid "Notifications"
+msgstr "Notifications"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "November"
+msgstr "Novembre"
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/templates/dashboard/cards/glycaemia.html
+#: public/templates/dashboard/cards/sport.html
+#: public/templates/dashboard/cards/weight.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Objective"
+msgstr "Objectif"
+
+#: languages/extraDictionary.html public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+msgid "Objectives"
+msgstr "Objectifs"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "October"
+msgstr "Octobre"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "Office"
+msgstr "Bureau"
+
+#: public/templates/tips/one.html
+msgid "Official resources"
+msgstr "Ressources officielles"
+
+#: public/templates/signin.html public/templates/signup.html
+#: public/templates/recovery/reset.html public/templates/settings/main.html
+#: public/templates/settings/password.html
+msgid "Password"
+msgstr "Mot de passe"
+
+#: public/templates/modals/signReset.html
+msgid "Password resetted"
+msgstr "Mot de passe réinitialisé"
+
+#: public/js/controllers/SignupCtrl.js public/js/appFilters.js
+msgid "Patient"
+msgstr "Patient"
+
+#: public/templates/patient/patient.html
+msgid "Patient file"
+msgstr "Fiche patient"
+
+#: public/templates/contacts/main.html
+msgid "Pending contact requests"
+msgstr "Demandes de contact en attente"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Personal"
+msgstr "Personnel"
+
+#: public/templates/patient/profile.html public/templates/profile/contact.html
+#: public/templates/profile/main.html
+msgid "Phone"
+msgstr "Téléphone"
+
+#: public/js/controllers/ProfileCtrl.js
+msgid "Please check the phone number"
+msgstr "Merci de vérifier le numéro de téléphone"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Please choose a valid date range."
+msgstr "Merci de choisir une plage de date valide."
+
+#: public/js/directives/AskMealDirective.js
+msgid "Please describe your breakfast"
+msgstr "Veuillez décrire votre repas du matin"
+
+#: public/js/directives/AskMealDirective.js
+msgid "Please describe your dinner"
+msgstr "Veuillez décrire votre repas du soir"
+
+#: public/js/directives/AskMealDirective.js
+msgid "Please describe your lunch"
+msgstr "Veuillez décrire votre repas du midi"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "Please select an intensity"
+msgstr "Merci de sélectionner une intensité"
+
+#: public/js/controllers/SignupCtrl.js
+msgid "Please verify your email address."
+msgstr "Merci de vérifier votre adresse email."
+
+#: public/js/controllers/SignupCtrl.js
+msgid "Please verify your username."
+msgstr "Merci de vérifier votre nom d'utilisateur."
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Please, fill out the form correctly"
+msgstr "Merci de remplir correctement le formulaire"
+
+#: public/js/controllers/SettingsCtrl.js public/js/controllers/SignupCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+#: public/js/controllers/recovery/ResetCtrl.js
+msgid "Please, fill out the form correctly."
+msgstr "Merci de remplir correctement le formulaire."
+
+#: public/js/controllers/SettingsCtrl.js public/js/controllers/SignupCtrl.js
+msgid "Please, use at least 6 characters for your password."
+msgstr "Merci d'utiliser au moins 6 caractères pour votre mot de passe."
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Professional"
+msgstr "Professionnel"
+
+#: public/templates/sidebar.html public/templates/contacts/one.html
+#: public/templates/navbar/user.html public/templates/profile/avatar.html
+#: public/templates/profile/basic.html public/templates/profile/contact.html
+msgid "Profile"
+msgstr "Profil"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Public transports"
+msgstr "Transports publics"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Rapid"
+msgstr "Rapide"
+
+#: public/templates/signup.html public/templates/recovery/reset.html
+msgid "Re-enter Password"
+msgstr "Confirmez votre mot de passe"
+
+#: public/templates/settings/password.html
+msgid "Re-type new"
+msgstr "Saisir à nouveau"
+
+#: languages/extraDictionary.html
+msgid ""
+"Remember to drink water more often! At least <b>1,5 liters of water</b> per "
+"day."
+msgstr ""
+"Pensez à boire de l'eau plus souvent ! Au moins <b>1,5 litre d'eau</b> par "
+"jour."
+
+#: public/templates/contacts/main.html
+msgid "Requests sent"
+msgstr "Demandes envoyées"
+
+#: public/templates/modals/signSent.html
+msgid "Reset password"
+msgstr "Réinitialiser le mot de passe"
+
+#: public/templates/recovery/reset.html
+msgid "Reset your password"
+msgstr "Réinitialisez votre mot de passe"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Saturday"
+msgstr "Samedi"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Save"
+msgstr "Enregistrer"
+
+#: public/templates/dashboard/cards/insulin.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Schema"
+msgstr "Schéma"
+
+#: public/js/directives/MealChartDirective.js
+msgid "Score"
+msgstr "Score"
+
+#: public/templates/contacts/add.html
+msgid "Search for Eglé users"
+msgstr "Rechercher des utilisateurs d'Eglé"
+
+#: public/templates/chats/new.html
+msgid "Search for contacts"
+msgstr "Rechercher des contacts"
+
+#: public/templates/dashboard/cards/directives/search_patients.html
+msgid "Search for patients"
+msgstr "Rechercher des patients"
+
+#: public/templates/navbar/messages.html
+#: public/templates/navbar/notifications.html
+msgid "See All"
+msgstr "Afficher tout"
+
+#: public/templates/chats/one.html public/templates/contacts/add.html
+msgid "Send"
+msgstr "Envoyer"
+
+#: public/templates/chats/one.html
+msgid "Send message..."
+msgstr "Envoyer un message..."
+
+#: languages/extraDictionary.html
+msgid "Sent you a contact request."
+msgstr "Vous a envoyé une demande de contact."
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "September"
+msgstr "Septembre"
+
+#: public/templates/sidebar.html
+#: public/templates/dashboard/cards/directives/todo.html
+#: public/templates/navbar/user.html public/templates/settings/password.html
+msgid "Settings"
+msgstr "Paramètres"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Short"
+msgstr "Ultra-rapide"
+
+#: public/templates/dashboard/asks/directives/ask_activity.html
+#: public/templates/dashboard/asks/directives/ask_meal.html
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+#: public/templates/dashboard/asks/directives/ask_weight.html
+msgid "Skip"
+msgstr "Sauter"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Slow sugars"
+msgstr "Sucres lents"
+
+#: languages/extraDictionary.html
+msgid "Snack 10am"
+msgstr "Encas 10h"
+
+#: languages/extraDictionary.html
+msgid "Snack 4pm"
+msgstr "Encas 16h"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "Social"
+msgstr "Social"
+
+#: public/js/controllers/SettingsCtrl.js public/js/controllers/SignupCtrl.js
+msgid "Sorry, but passwords don't match."
+msgstr "Les mots de passe ne correspondent pas."
+
+#: public/js/controllers/ErrorCtrl.js
+msgid "Sorry, this content isn't available right now"
+msgstr "Désolé, ce contenu n’est pas disponible actuellement"
+
+#: public/js/controllers/ErrorCtrl.js
+msgid "Sorry, this page isn't available"
+msgstr "Désolé, cette page n'est pas disponible"
+
+#: public/templates/dashboard/cards/sport.html
+#: public/js/controllers/agenda/EventCtrl.js
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/AskActivityDirective.js
+msgid "Sport"
+msgstr "Sport"
+
+#: public/js/controllers/SigninCtrl.js
+msgid "Stay signed in"
+msgstr "Rester connecté"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: public/js/directives/AskWeightDirective.js
+msgid "Target value must be greater than 1"
+msgstr "La valeur cible doit être supérieure à 1"
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+msgid "Targeted weight"
+msgstr "Poids ciblé"
+
+#: public/templates/modals/signActivation.html
+msgid "Thank you for registering with Eglé!"
+msgstr "Merci pour votre inscription à Eglé !"
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "The current password you entered is incorrect"
+msgstr "Le mot de passe actuel que vous avez entré est incorrect"
+
+#: public/js/controllers/SigninCtrl.js
+msgid "The email or password is empty"
+msgstr "L'email ou le mot de passe est vide"
+
+#: public/js/controllers/SigninCtrl.js
+msgid "The email or password you entered is incorrect"
+msgstr "L'email ou le mot de passe est incorrect"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "The entry has been removed"
+msgstr "L'entrée a été supprimée"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "The event has been deleted"
+msgstr "L'événement a été supprimé"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "The feature Diet Monitoring helps you to eat well"
+msgstr "La fonctionnalité Suivi de l'alimentation vous aide à bien manger"
+
+#: public/js/controllers/ErrorCtrl.js
+msgid "The link you followed may be broken, or the page may have been removed."
+msgstr ""
+"Le lien que vous avez suivi peut être cassé, ou la page peut avoir été "
+"supprimée."
+
+#: public/js/controllers/ErrorCtrl.js
+msgid ""
+"The link you followed may have expired, or the page may only be visible to "
+"an audience you're not in."
+msgstr ""
+"Le lien que vous avez suivi a peut-être expiré ou la page n’est peut-être "
+"accessible qu’à une audience dont vous ne faites pas partie."
+
+#: public/js/controllers/SigninCtrl.js
+msgid "The link you used to activate your account is invalid."
+msgstr "Le lien que vous avez utilisé pour activer votre compte est invalide."
+
+#: public/js/controllers/recovery/ResetCtrl.js
+msgid "The link you used to reset your password is invalid or has expired."
+msgstr ""
+"Le lien que vous avez utilisé pour réinitialiser votre mot de passe est "
+"invalide ou a expiré."
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "The minimum cannot be larger than the maximum"
+msgstr "Le minimum ne peut être plus grand que le maximum"
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "These passwords don't match."
+msgstr "Ces mots de passe ne correspondent pas."
+
+#: public/js/controllers/SignupCtrl.js
+msgid ""
+"This email is already used. Please use 'Need Help?' link on sign in page to "
+"retrieve your account."
+msgstr ""
+"Cette adresse e-mail est déjà utilisée. Afin de récupérer votre compte, "
+"merci d'utiliser le lien 'Besoin d'aide' disponible sur la page de connexion."
+
+#: public/js/controllers/SignupCtrl.js
+msgid "This username is already used. Please pick another one."
+msgstr "Ce nom d'utilisateur est déjà utilisé. Merci d'en choisir un autre."
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: public/templates/dashboard/add.html
+msgid "Time"
+msgstr "Heure"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Tip has been added to favorites"
+msgstr "L'astuce a été ajoutée aux favoris"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Tip has been deleted from favorites"
+msgstr "L'astuce a été supprimée des favoris"
+
+#: public/templates/tips/one.html
+msgid "Tips"
+msgstr "Astuces"
+
+#: languages/extraDictionary.html
+msgid "Tips & Tricks"
+msgstr "Trucs & Astuces"
+
+#: public/templates/agenda/event.html
+msgid "Title"
+msgstr "Titre"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/cards/audit.html
+msgid "To"
+msgstr "Au"
+
+#: public/templates/settings/main.html
+msgid "To turn off a card, slide its switch to the left."
+msgstr "Pour désactiver une carte, faites glisser son bouton vers la gauche."
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/js/directives/InsulinChartDirective.js
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/objective.html
+msgid "Type"
+msgstr "Type"
+
+#: public/templates/chats/one.html
+msgid "Unarchive"
+msgstr "Désarchiver"
+
+#: public/templates/dashboard/objective.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/InsulinChartDirective.js
+msgid "Unit(s)"
+msgstr "Unité(s)"
+
+#: public/js/directives/FrequentContactsDirective.js
+msgid "Use Messages, to begin a conversation."
+msgstr "Utilisez Messages, pour commencer une conversation."
+
+#: public/templates/signup.html public/templates/recovery/reset.html
+#: public/templates/settings/password.html
+msgid "Use at least 6 characters"
+msgstr "Utilisez au moins 6 caractères"
+
+#: public/js/controllers/HeaderCtrl.js
+msgid "Use the button See All to begin one."
+msgstr "Utilisez le bouton Afficher tout pour en commencer une nouvelle."
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Use the green button to begin one"
+msgstr "Utilisez le bouton vert pour en commencer une"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Use the heart to add to favorites"
+msgstr "Utilisez le coeur pour ajouter aux favoris"
+
+#: public/js/controllers/contacts/ContactsCtrl.js
+msgid "Use the input above to find one"
+msgstr "Utilisez le champ ci-dessus pour en trouver un"
+
+#: public/templates/signup.html public/templates/contacts/one.html
+#: public/templates/patient/profile.html public/templates/settings/main.html
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Vacation"
+msgstr "Vacances"
+
+#: public/templates/assistant.html public/templates/dashboard/objective.html
+#: public/templates/dashboard/asks/directives/ask_activity.html
+#: public/templates/dashboard/asks/directives/ask_meal.html
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/templates/recovery/lost.html public/templates/recovery/reset.html
+msgid "Validate"
+msgstr "Valider"
+
+#: public/templates/techentry.html public/templates/dashboard/objective.html
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Value"
+msgstr "Valeur"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Value must be greater than 1."
+msgstr "La valeur doit être supérieure à 1."
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Walking"
+msgstr "Marche à pied"
+
+#: public/templates/modals/warning.html
+msgid "Warning"
+msgstr "Attention"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: public/templates/agenda/main.html
+msgid "Week"
+msgstr "Semaine"
+
+#: languages/extraDictionary.html
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/templates/dashboard/cards/weight.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/WeightChartDirective.js
+msgid "Weight"
+msgstr "Poids"
+
+#: public/templates/sign.html
+msgid "Welcome to"
+msgstr "Bienvenue sur"
+
+#: public/templates/dashboard/asks/directives/ask_activity.html
+msgid "What have you done today?"
+msgstr "Qu'avez-vous fait aujourd'hui ?"
+
+#: public/templates/agenda/event.html
+msgid "Where"
+msgstr "Lieu"
+
+#: public/js/appFilters.js
+msgid "Yesterday"
+msgstr "Hier"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "You can add dashboard cards from Settings."
+msgstr ""
+"Vous pouvez ajouter des cartes au tableau de bord à partir des Paramètres."
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "You cannot create an event that ends before it starts"
+msgstr ""
+"Vous ne pouvez pas créer un événement se terminant avant d'avoir commencé"
+
+#: public/js/controllers/chats/ChatCtrl.js
+msgid "You cannot reply to this conversation"
+msgstr "Vous ne pouvez pas répondre à cette conversation"
+
+#: public/js/controllers/SigninCtrl.js
+msgid "You need to activate your account."
+msgstr "Vous devez activer votre compte."
+
+#: public/templates/chats/one.html
+msgid "You were on a call"
+msgstr "Vous avez participé à un appel"
+
+#: public/js/controllers/SigninCtrl.js
+msgid "Your account has been activated! You can now sign in."
+msgstr "Votre compte a été activé! Vous pouvez maintenant vous connecter."
+
+#: public/templates/modals/signActivation.html
+msgid ""
+"Your account has been created and a verification email has been sent to your "
+"registered email address.<br><br><strong>Please click on the verification "
+"link included in the email to activate your account</strong>."
+msgstr ""
+"Votre compte a été créé et un email de confirmation a été envoyé à votre "
+"adresse email.<br><br><strong>Pour activer votre compte, merci de cliquer "
+"sur le lien de vérification inclus dans l'e-mail.</strong>"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Your last meal has a low energy intake. Be careful."
+msgstr "Votre dernier repas a un faible apport énergétique. Soyez vigilant."
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Your last meal has a rich trend. Be careful."
+msgstr "Votre dernier repas a une tendance riche. Soyez vigilant."
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "Your password was changed with success."
+msgstr "Votre mot de passe a été modifié avec succès."
+
+#: public/templates/modals/signReset.html
+msgid "Your password was changed with success. You can now sign in."
+msgstr ""
+"Votre mot de passe a été modifié avec succès. Vous pouvez dès à présent vous "
+"connecter."
+
+#: public/js/directives/AskActivityDirective.js
+msgid "be sitting, TV/PC, reading, video games"
+msgstr "être assis, TV/PC, lecture, jeux vidéo"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "bread"
+msgstr "pain"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "butter"
+msgstr "beurre"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "dressed"
+msgstr "habillé"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "e.g."
+msgstr "p. ex."
+
+#: public/js/directives/AskActivityDirective.js
+msgid "family, friends, professional network"
+msgstr "famille, amis, réseau professionnel"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/SportChartDirective.js
+msgid "h/week"
+msgstr "h/sem."
+
+#: public/js/directives/SportChartDirective.js
+msgid "hours"
+msgstr "heures"
+
+#: public/js/directives/SportChartDirective.js
+msgid "hours per week"
+msgstr "heures par semaine"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "jogging, swimming, tennis, golf"
+msgstr "jogging, natation, tennis, golf"
+
+#: public/js/directives/GlycaemiaChartDirective.js
+msgid "mean"
+msgstr "moyenne"
+
+#: public/templates/dashboard/add.html
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+msgid "min."
+msgstr "min."
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "missed meal"
+msgstr "repas manqué"
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/patient/chart_glycaemia.html
+msgid "month"
+msgstr "mois"
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/patient/chart_glycaemia.html
+#: public/js/directives/SportChartDirective.js
+msgid "months"
+msgstr "mois"
+
+#: public/js/directives/MealChartDirective.js
+#: public/js/directives/SportChartDirective.js
+#: public/js/directives/WeightChartDirective.js
+msgid "obj."
+msgstr "obj."
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+msgid "skipped"
+msgstr "sauté"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "soda"
+msgstr "soda"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "swimming"
+msgstr "natation"
+
+#: public/js/controllers/PatientCtrl.js public/js/controllers/ProfileCtrl.js
+#: public/js/appFilters.js
+msgid "unknown"
+msgstr "inconnu"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "value"
+msgstr "valeur"
+
+#: public/js/directives/SportChartDirective.js
+msgid "weeks"
+msgstr "semaines"
+
+#: public/templates/dashboard/cards/directives/chart.html
+msgid "year"
+msgstr "année"
+
+#~ msgid "Failed to delele the entry!"
+#~ msgstr "Impossible de supprimer l'entrée !"
+
+#~ msgid "Use at least 6 characters."
+#~ msgstr "Utilisez au moins 6 caractères."
+
+#~ msgid "Accepted your contact request."
+#~ msgstr "A accepté votre demande de contact."
+
+#~ msgid "Amber"
+#~ msgstr "Ambre"
+
+#~ msgid ""
+#~ "An email will be sent to your email address that includes a password "
+#~ "reset link."
+#~ msgstr ""
+#~ "Un e-mail contenant un lien de réinitialisation de mot de passe, va être "
+#~ "envoyé à votre adresse."
+
+#~ msgid "Cyan"
+#~ msgstr "Cyan"
+
+#~ msgid "Default"
+#~ msgstr "Par défaut"
+
+#~ msgid "Lime"
+#~ msgstr "Citron vert"
+
+#~ msgid "Pink"
+#~ msgstr "Rose"
+
+#~ msgid "Purple"
+#~ msgstr "Pourpre"
+
+#~ msgid "Standard day"
+#~ msgstr "Journée standard"
+
+#~ msgid "Diet monitoring"
+#~ msgstr "Suivi de l'alimentation"
+
+#~ msgid "Goal definition"
+#~ msgstr "Définition de l'objectif"
+
+#~ msgid "Other"
+#~ msgstr "Autre"
+
+#~ msgid "This feature helps you to eat well"
+#~ msgstr "Cette fonctionnalité vous aide à bien manger"
+
+#~ msgid "Modify"
+#~ msgstr "Modifier"
+
+#~ msgid "Tip added to favorites"
+#~ msgstr "Astuce ajouté"
+
+#~ msgid "Account deleted"
+#~ msgstr "Compte supprimé"
+
+#~ msgid "An error occurred, please try again later. Sorry about that."
+#~ msgstr "Une erreur est survenue, merci de réessayer plus tard."
+
+#~ msgid "Entry removed"
+#~ msgstr "Entrée supprimée"
+
+#~ msgid "No contacts yet?"
+#~ msgstr "Pas encore de contacts ?"
+
+#~ msgid "Sorry, you cannot create an event that ends before it starts."
+#~ msgstr ""
+#~ "Désolé, vous ne pouvez pas créer un événement qui se termine avant "
+#~ "d'avoir commencé."
+
+#~ msgid "The event was deleted"
+#~ msgstr "L'événement a été supprimé"
+
+#~ msgid "Use the green button to begin one."
+#~ msgstr "Utilisez le bouton vert pour en commencer une nouvelle."
+
+#~ msgid "Use the input above to find one."
+#~ msgstr "Utilisez le champ de recherche pour en trouver un."
+
+#~ msgid "You cannot reply to this conversation."
+#~ msgstr "Vous ne pouvez pas répondre à cette conversation"
+
+#~ msgid "!"
+#~ msgstr " !"
+
+#~ msgid "20km BXL, swimming"
+#~ msgstr "20km BXL, natation"
+
+#~ msgid "Bookmarked tips"
+#~ msgstr "Astuces favoris"
+
+#~ msgid "Bookmarked tips appear here"
+#~ msgstr "Vos astuces favorites apparaissent ici"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Favoris"
+
+#~ msgid "Dashboard empty"
+#~ msgstr "Tableau de bord vide"
+
+#~ msgid "Datetime"
+#~ msgstr "Date-heure"
+
+#~ msgid "Entry removed."
+#~ msgstr "Entrée supprimée."
+
+#~ msgid "Target value must be greater than 1."
+#~ msgstr "La valeur cible doit être supérieur à 1."
+
+#~ msgid "The email or password is empty."
+#~ msgstr "L'email ou le mot de passe est vide."
+
+#~ msgid "The email or password you entered is incorrect."
+#~ msgstr "L'email ou le mot de passe que vous avez saisi est incorrect."
+
+#~ msgid "The event was deleted."
+#~ msgstr "L'événement a été supprimé."
+
+#~ msgid "Tip bookmarked!"
+#~ msgstr "Astuce ajoutée aux favoris !"
+
+#~ msgid "Tip unbookmarked."
+#~ msgstr "Astuce retirée des favoris."
+
+#~ msgid "Update"
+#~ msgstr "Mettre à jour"
+
+#~ msgid "Use the heart to bookmark one."
+#~ msgstr "Utiliser l'icône en forme de coeur pour marquer une astuce."
+
+#~ msgid "Your last meal has a rich trend (or low energy intake). Be careful."
+#~ msgstr ""
+#~ "Votre dernier repas a une tendance riche (ou faible apport énergétique). "
+#~ "Soyez vigilant."
+
+#~ msgid "id"
+#~ msgstr "id"
+
+#~ msgid "Extra"
+#~ msgstr "Supplément"
+
+#~ msgid "Intake"
+#~ msgstr "Prise"
+
+#~ msgid "Moment"
+#~ msgstr "Moment"
+
+#~ msgid "Delete this conversation"
+#~ msgstr "Supprimer cette conversation"
+
+#~ msgid "Delete this entry"
+#~ msgstr "Supprimer cette entrée"
+
+#~ msgid ""
+#~ "Your account has been created and a verification email has been sent to "
+#~ "your registered email address.<br><br>Please click on the verification "
+#~ "link included in the email to <strong>activate your account</strong>."
+#~ "<br><br>Your account will not be activated until you verify your email "
+#~ "address."
+#~ msgstr ""
+#~ "Votre compte a été créé et un email de confirmation a été envoyé à votre "
+#~ "adresse email.<br><br><strong>Pour activer votre compte</strong>, merci "
+#~ "de cliquer sur le lien de vérification inclus dans l'e-mail.<br><br>Votre "
+#~ "compte ne sera pas activé jusqu'à ce que vous validiez votre adresse e-"
+#~ "mail."
+
+#~ msgid "Reset"
+#~ msgstr "Réinitialiser"
+
+#~ msgid "Tip"
+#~ msgstr "Astuce"
+
+#~ msgid "Targeted duration"
+#~ msgstr "Durée ciblée"
+
+#~ msgid "Targeted rate"
+#~ msgstr "Taux ciblé"
+
+#~ msgid "The minimum value is 1."
+#~ msgstr "La valeur minimale est de 1."
+
+#~ msgid "kg"
+#~ msgstr "kg"
+
+#~ msgid "1st"
+#~ msgstr "1ère"
+
+#~ msgid "20km BXL, walk the dog, swimming"
+#~ msgstr "20km BXL, promener chien, natation"
+
+#~ msgid "2nd"
+#~ msgstr "2ème"
+
+#~ msgid "3rd"
+#~ msgstr "3ème"
+
+#~ msgid "4th"
+#~ msgstr "4ème"
+
+#~ msgid "None"
+#~ msgstr "Aucune"
+
+#~ msgid "Rapid-acting"
+#~ msgstr "Action ultra rapide"
+
+#~ msgid "Short-acting"
+#~ msgstr "Action rapide"
+
+#~ msgid "Label"
+#~ msgstr "Etiquette"
+
+#~ msgid "Widgets"
+#~ msgstr "Widgets"
+
+#~ msgid "Glucose"
+#~ msgstr "Glycémie"
+
+#~ msgid "Over:"
+#~ msgstr "Sur :"
+
+#~ msgid "unit(s)"
+#~ msgstr "uni"
+
+#~ msgid "Ignore"
+#~ msgstr "Ignorer"
+
+#~ msgid "What are you going to do today?"
+#~ msgstr "Qu'allez-vous faire aujourd'hui ?"
+
+#~ msgid "Office activities"
+#~ msgstr "Activités de bureau"
+
+#~ msgid "Physical activities"
+#~ msgstr "Activités physiques"
+
+#~ msgid "Social activities"
+#~ msgstr "Activités sociales"
+
+#~ msgid "be standing, walking, sport, museum"
+#~ msgstr "être debout, marche, sport, musée"
+
+#~ msgid "duration"
+#~ msgstr "durée"
+
+#~ msgid "How much do you weigh?"
+#~ msgstr "Combien pesez-vous ?"
+
+#~ msgid "be sitting, TV/PC, reading"
+#~ msgstr "être assis, TV/PC, lecture"
+
+#~ msgid "be standing, sport, museum"
+#~ msgstr "être debout, sport, musée"
+
+#~ msgid "family, friends, colleagues"
+#~ msgstr "famille, amis, collègues"
+
+#~ msgid "hamburger, butter"
+#~ msgstr "hamburger, beurre"
+
+#~ msgid "soda, honey"
+#~ msgstr "soda, miel"
+
+#~ msgid "starchy, bread"
+#~ msgstr "féculent, pain"
+
+#~ msgid "Please describe your meal"
+#~ msgstr "Veuillez décrire votre repas"
+
+#~ msgid "Activities monitoring"
+#~ msgstr "Suivi des activités"
+
+#~ msgid "Food monitoring"
+#~ msgstr "Suivi alimentaire"
+
+#~ msgid "Travel monitoring"
+#~ msgstr "Suivi déplacement"
+
+#~ msgid "Weight monitoring"
+#~ msgstr "Suivi du poids"
+
+#~ msgid "w."
+#~ msgstr "s."
+
+#~ msgid "Target value"
+#~ msgstr "Valeur cible"
+
+#~ msgid "Target values"
+#~ msgstr "Valeurs cibles"
+
+#~ msgid "few"
+#~ msgstr "peu"
+
+#~ msgid "high"
+#~ msgstr "élevée"
+
+#~ msgid "low"
+#~ msgstr "faible"
+
+#~ msgid "much"
+#~ msgstr "beaucoup"
+
+#~ msgid "Content"
+#~ msgstr "Contenu"
+
+#~ msgid "Less options"
+#~ msgstr "Moins d'options"
+
+#~ msgid "More options"
+#~ msgstr "Plus d'options"
+
+#~ msgid "hour(s)"
+#~ msgstr "heure(s)"
+
+#~ msgid "Color"
+#~ msgstr "Couleur"
+
+#~ msgid ""
+#~ "Here, you can personalize your profile by choosing a color for your "
+#~ "avatar."
+#~ msgstr ""
+#~ "Vous pouvez ici personnaliser votre profil en choisissant une couleur "
+#~ "pour votre avatar."
+
+#~ msgid "Month"
+#~ msgstr "Mois"
+
+#~ msgid "Preview"
+#~ msgstr "Aperçu"
+
+#~ msgid "Confirm password"
+#~ msgstr "Confirmer votre mot de passe"
+
+#~ msgid "Current password"
+#~ msgstr "Mot de passe actuel"
+
+#~ msgid "New password"
+#~ msgstr "Nouveau mot de passe"
+
+#~ msgid "General monitoring"
+#~ msgstr "Suivi général"
+
+#~ msgid "Hours"
+#~ msgstr "Heures"
+
+#~ msgid "h/w"
+#~ msgstr "h/s"
+
+#~ msgid "hour"
+#~ msgstr "heure"
+
+#~ msgid "hours/week"
+#~ msgstr "heures/semaine"
+
+#~ msgid "time(s)"
+#~ msgstr "fois"
+
+#~ msgid "Comment"
+#~ msgstr "Commentaire"
+
+#~ msgid "General Account Settings"
+#~ msgstr "Paramètres généraux du compte"
+
+#~ msgid "Maximum"
+#~ msgstr "Maximale"
+
+#~ msgid "Minimum"
+#~ msgstr "Minimale"
+
+#~ msgid "Number"
+#~ msgstr "Nombre"
+
+#~ msgid "Session per week"
+#~ msgstr "séance par semaine"
+
+#~ msgid "Basic informations"
+#~ msgstr "Informations générales"
+
+#~ msgid "Contact informations"
+#~ msgstr "Coordonnées"
+
+#~ msgid "Last 3 months"
+#~ msgstr "3 derniers mois"
+
+#~ msgid "Last 7 days"
+#~ msgstr "7 derniers jours"
+
+#~ msgid "New conversation"
+#~ msgstr "Nouvelle conversation"
+
+#~ msgid "Number of sessions per week"
+#~ msgstr "Nombre de séances par semaine"
+
+#~ msgid "This year"
+#~ msgstr "Cette année"
+
+#~ msgid "Your weight"
+#~ msgstr "Votre poids"
+
+#~ msgid "Sign in with your <strong>Eglé</strong> Account"
+#~ msgstr "Connectez-vous à votre compte <strong>Eglé</strong>"
+
+#~ msgid "Sign In"
+#~ msgstr "Se connecter"
+
+#~ msgid "Sign Up"
+#~ msgstr "S'inscrire"
+
+#~ msgid "Sign out"
+#~ msgstr "Se déconnecter"
+
+#~ msgid ""
+#~ "If there's a card that you don't want to see again, turn it off. To do "
+#~ "this, slide the switch to the left."
+#~ msgstr ""
+#~ "Pour ne plus revoir une carte, vous pouvez la désactiver. Pour cela, "
+#~ "faites glisser son bouton vers la gauche."
+
+#~ msgid "Habits monitoring"
+#~ msgstr "Suivi des habitudes"
+
+#~ msgid "be sitting, TV/PC, read"
+#~ msgstr "être assis, TV/PC, le"
+
+#~ msgid "sit, read, TV/PC"
+#~ msgstr "être assis, lecture,"
+
+#~ msgid "Continue"
+#~ msgstr "Continuer"
+
+#~ msgid "I don't know my username"
+#~ msgstr "Je ne connais pas mon nom d'utilisateur"
+
+#~ msgid "In general, how do you move?"
+#~ msgstr "En général, comment vous déplacez-vous ?"
+
+#~ msgid "Motor vehic."
+#~ msgstr "Véhic. motorisé"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Please, fill out the username correctly."
+#~ msgstr "Merci de remplir correctement le champ nom d'utilisateur."
+
+#~ msgid "Public trans."
+#~ msgstr "Trans. publics"
+
+#~ msgid "Robot"
+#~ msgstr "Robot"
+
+#~ msgid "Sedentary activities"
+#~ msgstr "Activités sédentaires"
+
+#~ msgid "Walk"
+#~ msgstr "Marche"
+
+#~ msgid "always"
+#~ msgstr "toujours"
+
+#~ msgid "never"
+#~ msgstr "jamais"
+
+#~ msgid "outing with family or friends, professional networking"
+#~ msgstr "sortie avec famille ou amis, networking professionnel"
+
+#~ msgid "sit, read, watch TV, video games, computer, tablet"
+#~ msgstr "être assis, lire, regarder TV, jeux vidéos, PC, tablette"
+
+#~ msgid "sport, walking, standing, domestic tasks, visits"
+#~ msgstr "sport, marche, être debout, tâches domestiques"
+
+#~ msgid ""
+#~ "Enter a new password for your Eglé account. We highly recommend you "
+#~ "create a unique password (one that you don't use for any other websites)."
+#~ msgstr ""
+#~ "Saisissez un nouveau mot de passe pour votre compte Eglé. Nous vous "
+#~ "recommandons vivement de créer un mot de passe unique (que vous "
+#~ "n'utilisez pas pour d'autres sites Web)."
+
+#~ msgid ""
+#~ "We highly recommend you create a unique password (one that you don't use "
+#~ "for any other websites)."
+#~ msgstr ""
+#~ "Nous vous recommandons vivement de créer un mot de passe unique (que vous "
+#~ "n'utilisez pas pour d'autres sites Web)."
+
+#~ msgid "Already have an account?"
+#~ msgstr "Vous avez déjà un compte ?"
+
+#~ msgid "Create an account"
+#~ msgstr "Créer un compte"
+
+#~ msgid "Year"
+#~ msgstr "Année"
+
+#~ msgid "Public transport"
+#~ msgstr "Transports publics"
+
+#~ msgid "Got it!"
+#~ msgstr "Compris !"
+
+#~ msgid "Public tr."
+#~ msgstr "Tr. public"
+
+#~ msgid ""
+#~ "Tip: drag the points of each column in order to reach the most accurate "
+#~ "distribution of your transportation habits."
+#~ msgstr ""
+#~ "Astuce : faites glisser les points de chaque colonne afin d'atteindre la "
+#~ "distribution la plus précise de vos habitudes de transport."
+
+#~ msgid "Transportation habits in %"
+#~ msgstr "Habitudes de transport en %"
+
+#~ msgid "What are your transportation habits?"
+#~ msgstr "Quelles sont vos habitudes de transport ?"
+
+#~ msgid ":"
+#~ msgstr " :"
+
+#~ msgid "session(s) per week"
+#~ msgstr "séance(s) par semaine"
+
+#~ msgid "Desc."
+#~ msgstr "Desc."
+
+#~ msgid "Description"
+#~ msgstr "Description"
+
+#~ msgid ""
+#~ "Use at least 6 characters. Don’t use a password from another site, or "
+#~ "something too obvious like your pet’s name."
+#~ msgstr ""
+#~ "Utilisez au moins six caractères. Évitez d'indiquer un mot de passe que "
+#~ "vous utilisez déjà sur un autre site ou qui serait trop évident tel que "
+#~ "le nom de votre animal."
+
+#~ msgid ""
+#~ "You can only use lowercase letters, numbers and full stops and it has to "
+#~ "start with a letter."
+#~ msgstr ""
+#~ "Vous ne pouvez utiliser que des lettres minuscules, des chiffres, des "
+#~ "points ou tirets et il doit commencer par une lettre."
+
+#~ msgid "medium"
+#~ msgstr "moyen"
+
+#~ msgid "soda, pastry"
+#~ msgstr "soda, pâtisserie"
+
+#~ msgid "What did you have for breakfast?"
+#~ msgstr "Qu'avez-vous mangé pour déjeuner ce matin ?"
+
+#~ msgid "What did you have for dinner?"
+#~ msgstr "Qu'avez vous soupé ce soir ?"
+
+#~ msgid "What did you have for lunch?"
+#~ msgstr "Qu'avez-vous mangé ce midi ?"
+
+#~ msgid "balanced"
+#~ msgstr "équilibré"
+
+#~ msgid "large"
+#~ msgstr "grand"
+
+#~ msgid "light"
+#~ msgstr "léger"
+
+#~ msgid "not defined"
+#~ msgstr "non défini"
+
+#~ msgid "rich"
+#~ msgstr "riche"
+
+#~ msgid "small"
+#~ msgstr "petit"
+
+#~ msgid "Caught up with everything!"
+#~ msgstr "Terminé !"
+
+#~ msgid "Tip unbookmarked!"
+#~ msgstr "Astuce ajoutée aux favoris"
+
+#~ msgid "Tip un/bookmarked!"
+#~ msgstr "Astuce ajoutée aux favoris !"
+
+#~ msgid ""
+#~ "Tip: click/tap on slices to make them bigger. In order to reach the most "
+#~ "accurate distribution of your transportation habits."
+#~ msgstr ""
+#~ "Astuce : cliquez/tapez sur les secteurs pour les agrandir afin "
+#~ "d'atteindre la distribution la plus précise de vos habitudes de transport."
+
+#~ msgid "Consultation"
+#~ msgstr "Consultation"
+
+#~ msgid "What are you up to?"
+#~ msgstr "Qu'allez-vous faire ?"
+
+#~ msgid "End Date"
+#~ msgstr "Date de fin"
+
+#~ msgid "End Value"
+#~ msgstr "Valeur de fin"
+
+#~ msgid "Progression"
+#~ msgstr "Progression"
+
+#~ msgid "Selection of objectives"
+#~ msgstr "Sélection des objectifs"
+
+#~ msgid "Start Date"
+#~ msgstr "Date de début"
+
+#~ msgid "Start Value"
+#~ msgstr "Valeur de début"
+
+#~ msgid "Administrative tasks"
+#~ msgstr "Tâches administratives"
+
+#~ msgid "Art & culture"
+#~ msgstr "Art & culture"
+
+#~ msgid "Beauty & hygiene"
+#~ msgstr "Hygiène & beauté"
+
+#~ msgid "Communication"
+#~ msgstr "Communication"
+
+#~ msgid "Domestic tasks"
+#~ msgstr "Tâches domestiques"
+
+#~ msgid "Eat, drink, sleep"
+#~ msgstr "Manger, boire, dormir"
+
+#~ msgid "End"
+#~ msgstr "Fin"
+
+#~ msgid "Family, friends, pets"
+#~ msgstr "Famille, amis, animaux"
+
+#~ msgid "Health"
+#~ msgstr "Santé"
+
+#~ msgid "Holidays & leisure"
+#~ msgstr "Loisirs & vacances"
+
+#~ msgid "Mobility & transportation"
+#~ msgstr "Mobilité et transports"
+
+#~ msgid "Multimedia"
+#~ msgstr "Multimedia"
+
+#~ msgid "Nightlife"
+#~ msgstr "Vie nocturne"
+
+#~ msgid "Physical activity"
+#~ msgstr "Activité physique"
+
+#~ msgid "Religious observance"
+#~ msgstr "Pratique religieuse"
+
+#~ msgid "Shopping"
+#~ msgstr "Shopping"
+
+#~ msgid "Start"
+#~ msgstr "Début"
+
+#~ msgid "Studies"
+#~ msgstr "Etudes"
+
+#~ msgid "The username or password is empty."
+#~ msgstr "Le nom d'utilisateur ou le mot de passe est vide."
+
+#~ msgid "The username or password you entered is incorrect."
+#~ msgstr "Le nom d'utilisateur ou le mot de passe saisi est incorrect."
+
+#~ msgid "Work"
+#~ msgstr "Travail"
+
+#~ msgid "basic needs"
+#~ msgstr "besoins naturels"
+
+#~ msgid "cabaret, bars, shows, clubbing..."
+#~ msgstr "cabaret, bars, spectacles, discothèque ..."
+
+#~ msgid "care of, meeting with..."
+#~ msgstr "prendre soin de, rencontrer..."
+
+#~ msgid "cooking, cleaning, DIY..."
+#~ msgstr "cuisiner, nettoyer, bricoler"
+
+#~ msgid "dentist, general practionner, hospital..."
+#~ msgstr "dentiste, généraliste, hôpital"
+
+#~ msgid "dressing, hair, clothes..."
+#~ msgstr "se préparer, se coiffer, s'habiller"
+
+#~ msgid "except home working"
+#~ msgstr "sauf le travail à domicile"
+
+#~ msgid "groceries, clothing..."
+#~ msgstr "épicerie, vêtements ..."
+
+#~ msgid "meditate, pray, place of worship..."
+#~ msgstr "méditer, prier, lieu de culte ..."
+
+#~ msgid "mmol.l-1"
+#~ msgstr "mmol.l-1"
+
+#~ msgid "museum, theater, exposition..."
+#~ msgstr "musée, théâtre, exposition"
+
+#~ msgid "news, movie, music, Internet..."
+#~ msgstr "news, films, musique, Internet"
+
+#~ msgid "school, university, evening class..."
+#~ msgstr "école, université, formation"
+
+#~ msgid "socializing, telephone, skype, social networks..."
+#~ msgstr "socialiser, téléphoner, skype, réseaux sociaux ..."
+
+#~ msgid "swimming, chess, salsa..."
+#~ msgstr "nager, jeu d'échecs, salsa"
+
+#~ msgid "taxes, accounting, mail..."
+#~ msgstr "impôts, comptabilité, courrier..."
+
+#~ msgid "travels, parc, take a walk..."
+#~ msgstr "voyages, parc, promenade..."
+
+#~ msgid "walking, driving, cycling..."
+#~ msgstr "marcher, conduire, vélo..."
+
+#~ msgid "Custom"
+#~ msgstr "Personnalisé"
+
+#~ msgid "Fast"
+#~ msgstr "Rapide"
+
+#~ msgid "Linear"
+#~ msgstr "Linéaire"
+
+#~ msgid "Slow"
+#~ msgstr "Lente"
+
+#~ msgid ""
+#~ "Tip: Click the chart to personnalize your objective. Not satisfied with "
+#~ "the result? Hit the button to start again!"
+#~ msgstr ""
+#~ "Astuce : Cliquez le graphique pour personnaliser votre objectif. Pas "
+#~ "satisfait du résultat ? Cliquez sur le bouton pour le réinitialiser !"
+
+#~ msgid ""
+#~ "Tip: Click the chart to personnalize your objective. Not satisfied? Hit "
+#~ "the button to start again!"
+#~ msgstr ""
+#~ "Astuce : Cliquez sur le graphique pour personnaliser votre objectif. Pas "
+#~ "satisfait ?, le bouton le réinitialisera!"
+
+#~ msgid ""
+#~ "Tip: Click the chart to personnalize your objective. If you mess it up, "
+#~ "hit the button to start again!"
+#~ msgstr ""
+#~ "Astuce : Cliquez sur le graphique pour personnaliser votre objectif. Si "
+#~ "vous vous embrouillez, le bouton le réinitialisera !"
+
+#~ msgid "Not defined"
+#~ msgstr "Non défini"
+
+#~ msgid "incoming call"
+#~ msgstr "appel entrant"
+
+#~ msgid "Add location"
+#~ msgstr "Ajouter un lieu"
+
+#~ msgid "End value"
+#~ msgstr "Valeur de fin"
+
+#~ msgid "Start value"
+#~ msgstr "Valeur de début"
+
+#~ msgid "Card"
+#~ msgstr "Carte"
+
+#~ msgid ""
+#~ "You can use letters, numbers and full stops. The username has to start "
+#~ "with a letter."
+#~ msgstr ""
+#~ "Vous pouvez utiliser des lettres, des chiffres et des points. Le nom "
+#~ "d'utilisateur doit commencer par une lettre."
+
+#~ msgid "Don't forget to mark the box above."
+#~ msgstr "N'oubliez pas de cocher  la case ci-dessus."
+
+#~ msgid "Search for Eglé contacts"
+#~ msgstr "Rechercher des contacts Eglé"
+
+#~ msgid "Accept"
+#~ msgstr "Accepter"
+
+#~ msgid "Add a contact"
+#~ msgstr "Ajouter un contact"
+
+#~ msgid "Decline"
+#~ msgstr "Refuser"
+
+#~ msgid "Use the green button to find one."
+#~ msgstr "Utilisez le bouton vert pour en trouver un."
+
+#~ msgid ""
+#~ "Use this input to search for another Eglé user. Once found you are reay "
+#~ "to send him a Contact Request."
+#~ msgstr ""
+#~ "Utilisez ce champ de recherche afin de trouver un autre utilisateur "
+#~ "d'Eglé. Une fois trouvé, vous pouvez lui envoyer une Demande de Contact."
+
+#~ msgid "No data to display"
+#~ msgstr "Aucune donnée à afficher"
+
+#~ msgid "Entries"
+#~ msgstr "Entrée"
+
+#~ msgid "Delete this event"
+#~ msgstr "Supprimer cet événement"
+
+#~ msgid "Fat"
+#~ msgstr "Gras"
+
+#~ msgid "Fish"
+#~ msgstr "Poisson"
+
+#~ msgid "The event id must be known"
+#~ msgstr "L'id de l'événement doit être présente"
+
+#~ msgid "Use the green button"
+#~ msgstr "Utilisez le bouton vert"
+
+#~ msgid "to find one!"
+#~ msgstr "pour en trouver un !"
+
+#~ msgid "Cards"
+#~ msgstr "Cartes"
+
+#~ msgid "Cards appear here"
+#~ msgstr "Les cartes apparaissent ici"
+
+#~ msgid "No notifications for this period."
+#~ msgstr "Pas de notifications pour cette période."
+
+#~ msgid "The password you entered is incorrect."
+#~ msgstr "Le mot de passe saisi est incorrect."
+
+#~ msgid "You can enable cards in your Settings."
+#~ msgstr "Vous pouvez activer des cartes dans vos Paramètres."
+
+#~ msgid "Use the button See All to begin one!"
+#~ msgstr "Utilisez le bouton Afficher tout pour en commencer une nouvelle."
+
+#~ msgid "To enable cards, please go to Settings."
+#~ msgstr "Pour activer les cartes, merci "
+
+#~ msgid "Use the button"
+#~ msgstr "Utilisez le bouton"
+
+#~ msgid "to begin one!"
+#~ msgstr "pour en commencer une nouvelle !"
+
+#~ msgid "Enter the first name or the last name of a patient"
+#~ msgstr "Entrez le nom ou le prénom d'un patient"
+
+#~ msgid "This month"
+#~ msgstr "Ce mois-ci"
+
+#~ msgid "This week"
+#~ msgstr "Cette semaine"
+
+#~ msgid "Add a measure"
+#~ msgstr "Ajouter une mesure"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+
+#~ msgid "Need some help?"
+#~ msgstr "Besoin d'aide ?"
+
+#~ msgid ""
+#~ "Are you sure you want to <strong>delete</strong> your account? This "
+#~ "action can not be undone."
+#~ msgstr ""
+#~ "Êtes-vous sûr de vouloir <strong>supprimer</strong> votre compte? Cette "
+#~ "action est irréversible."
+
+#~ msgid "Delete account"
+#~ msgstr "Supprimer compte"
+
+#~ msgid "Divorced"
+#~ msgstr "Divorcé(e)"
+
+#~ msgid "First name"
+#~ msgstr "Prénom"
+
+#~ msgid "Last name"
+#~ msgstr "Nom"
+
+#~ msgid "Marital status"
+#~ msgstr "Situation familiale"
+
+#~ msgid "Married"
+#~ msgstr "Marié(e)"
+
+#~ msgid "Maximum file size is 5MB."
+#~ msgstr "La taille maximale du fichier est de 5 Mo."
+
+#~ msgid "My Eglé account"
+#~ msgstr "Mon compte Eglé"
+
+#~ msgid "Profile picture"
+#~ msgstr "Photo de profil"
+
+#~ msgid "Separated"
+#~ msgstr "Séparé(e)"
+
+#~ msgid "Single"
+#~ msgstr "Célibataire"
+
+#~ msgid "The image you uploaded is too large. Maximum file size is 5MB."
+#~ msgstr ""
+#~ "L'image que vous avez téléchargé est trop grand. La taille maximale du "
+#~ "fichier est de 5 Mo."
+
+#~ msgid "Widowed"
+#~ msgstr "Veuf(ve)"
+
+#~ msgid "Work address"
+#~ msgstr "Adresse travail"
+
+#~ msgid ""
+#~ "You're trying to delete your Eglé account.<br>You'll no longer be able to "
+#~ "use any information associated with it, and your account and data will be "
+#~ "lost."
+#~ msgstr ""
+#~ "Vous tentez de supprimer votre compte Eglé.<br>Vous ne pourrez plus "
+#~ "utiliser les informations qui lui sont associées, et vous perdrez votre "
+#~ "compte, ainsi que vos données."
+
+#~ msgid "Advice"
+#~ msgstr "Conseils"
+
+#~ msgid "Assistant"
+#~ msgstr "Assistant"
+
+#~ msgid "Charts"
+#~ msgstr "Graphiques"
+
+#~ msgid "Dairy products"
+#~ msgstr "Produits laitiers"
+
+#~ msgid "Entry added!"
+#~ msgstr "Entrée ajoutée"
+
+#~ msgid "Fish & meat"
+#~ msgstr "Viandes & Poissons"
+
+#~ msgid "Fruits & vegetables"
+#~ msgstr "Fruits & Légumes"
+
+#~ msgid "Logsbook"
+#~ msgstr "Journal"
+
+#~ msgid "No entries for the moment."
+#~ msgstr "Pas d'entrées pour le moment."
+
+#~ msgid "Starchy"
+#~ msgstr "Féculents"
+
+#~ msgid "Glucose settings"
+#~ msgstr "Paramètres du glucose"
+
+#~ msgid "Physical activity settings"
+#~ msgstr "Activité physique : paramètres"
+
+#~ msgid "Alcoholic beverages"
+#~ msgstr "Boissons alcoolisées"
+
+#~ msgid "Apply"
+#~ msgstr "Appliquer"
+
+#~ msgid "Blood pressure"
+#~ msgstr "Pression sanguine"
+
+#~ msgid "Daily tracking"
+#~ msgstr "Suivi quotidien"
+
+#~ msgid "Eat & Move"
+#~ msgstr "Manger Bouger"
+
+#~ msgid "Filter by"
+#~ msgstr "Filtrer par"
+
+#~ msgid "Hang Up"
+#~ msgstr "Raccrocher"
+
+#~ msgid "Hot drinks"
+#~ msgstr "Boissons chaudes"
+
+#~ msgid "Intensive sports"
+#~ msgstr "Sports intenses"
+
+#~ msgid "Measurements"
+#~ msgstr "Mesures"
+
+#~ msgid "Need an advice?"
+#~ msgstr "Besoin d'un conseil ?"
+
+#~ msgid "Nibbling"
+#~ msgstr "Grignotage"
+
+#~ msgid "Read more"
+#~ msgstr "En savoir plus"
+
+#~ msgid "Tip of the day"
+#~ msgstr "Astuce du jour"
+
+#~ msgid "Water"
+#~ msgstr "Eau"
+
+#~ msgid "Your water consumption"
+#~ msgstr "Votre consommation d'eau"
+
+#~ msgid "calories"
+#~ msgstr "calories"
+
+#~ msgid "glasses"
+#~ msgstr "verres"
+
+#~ msgid "minutes"
+#~ msgstr "minutes"
+
+#~ msgid "portions"
+#~ msgstr "portions"
+
+#~ msgid "Account created. You can now login."
+#~ msgstr "Compte créé. Vous pouvez maintenant vous connecter."
+
+#~ msgid "Fill out the form correctly"
+#~ msgstr "Remplissez le formulaire correctement"
+
+#~ msgid "This username is already used. Please pick a new one."
+#~ msgstr ""
+#~ "Ce nom d'utilisateur est déjà utilisé. Merci d'en choisir un nouveau."
+
+#~ msgid "Log Out"
+#~ msgstr "Déconnexion"
+
+#~ msgid "Previously read"
+#~ msgstr "Déjà consulté"
+
+#~ msgid "Your notifications"
+#~ msgstr "Vos notifications"
+
+#~ msgid "Account type"
+#~ msgstr "Type de compte"
+
+#~ msgid "You can use letters, numbers and full stops."
+#~ msgstr "Vous pouvez utiliser des lettres, des chiffres et des points."
+
+#~ msgid "Call"
+#~ msgstr "Appeler"
+
+#~ msgid "Create your"
+#~ msgstr "Créer votre"
+
+#~ msgid "Sign in with your"
+#~ msgstr "Connectez-vous à votre compte"
+
+#~ msgid ""
+#~ "My <span class=\"part1\">Egl</span><span class=\"part2\">é</span> account"
+#~ msgstr ""
+#~ "Mon compte <span class=\"part1\">Egl</span><span class=\"part2\">é</span>"
+
+#~ msgid ""
+#~ "Sign in with your <span class=\"part1\">Egl</span><span class="
+#~ "\"part2\">é</span> Account"
+#~ msgstr ""
+#~ "Connectez-vous à votre compte compte <span class=\"part1\">Egl</"
+#~ "span><span class=\"part2\">é</span> "
+
+#~ msgid ""
+#~ "You're trying to delete your <span class=\"part1\">Egl</span><span class="
+#~ "\"part2\">é</span> account.<br>You'll no longer be able to use any "
+#~ "information associated with it, and your account and data will be lost."
+#~ msgstr ""
+#~ "Vous tentez de supprimer votre compte <span class=\"part1\">Egl</"
+#~ "span><span class=\"part2\">é</span>.<br>Vous ne pourrez plus utiliser les "
+#~ "informations qui lui sont associées, et vous perdrez votre compte, ainsi "
+#~ "que vos données."
+
+#~ msgid "New Discussion"
+#~ msgstr "Nouvelle conversation"
+
+#~ msgid "View"
+#~ msgstr "Vue"
+
+#~ msgid "Requested page unreachable"
+#~ msgstr "La page demandée est inaccessible"
+
+#~ msgid "That’s an error. The requested URL was not found on this server."
+#~ msgstr ""
+#~ "C'est une erreur. L'URL demandée n'a pas été trouvée sur ce serveur."
+
+#~ msgid "Enter the first name or last name of a patient"
+#~ msgstr "Entrez le nom ou prénom d'un patient"
+
+#~ msgid "Enter at least a character of a patient name"
+#~ msgstr "Entrez au moins un caractère d'un nom de patient"
+
+#~ msgid "Enter at least 3 characters of a patient name"
+#~ msgstr "Entrez au moins 3 caractères d'un nom de patient"
+
+#~ msgid "Allergy"
+#~ msgstr "Allergie"
+
+#~ msgid "Medical profile"
+#~ msgstr "Profil médical"
+
+#~ msgid "Chart"
+#~ msgstr "Graphique"
+
+#~ msgid ""
+#~ "Create your            <span class=\"part1\">Egl</span><span class="
+#~ "\"part2\">é</span>             Account"
+#~ msgstr ""
+#~ "Créer votre compte            <span class=\"part1\">Egl</span><span class="
+#~ "\"part2\">é</span>"
+
+#~ msgid "Entry"
+#~ msgstr "Entrée"
+
+#~ msgid "Submit"
+#~ msgstr "Envoyer"
+
+#~ msgid "Type of entry"
+#~ msgstr "Type d'entrée"
+
+#~ msgid "The event_id must be known"
+#~ msgstr "L'id de l'event doit être connu"
+
+#~ msgid "All entries"
+#~ msgstr "Toutes les entrées"
+
+#~ msgid "Use the green button to begin one !"
+#~ msgstr "Utilisez le bouton vert pour en commencer une nouvelle !"
+
+#~ msgid ""
+#~ "No conversation yet? Use the button 'New conversation' to begin one !"
+#~ msgstr ""
+#~ "Pas encore de discussion ? Utilisez le bouton 'Nouvelle discussion' pour "
+#~ "en commencer un nouvelle !"
+
+#~ msgid ""
+#~ "Sign in with your         <span class=\"part1\">Egl</span><span class="
+#~ "\"part2\">é</span>         Account"
+#~ msgstr ""
+#~ "Connectez-vous à votre compte          <span class=\"part1\">Egl</"
+#~ "span><span class=\"part2\">é</span>"
+
+#~ msgid "Remove my account"
+#~ msgstr "Supprimer mon compte"
+
+#~ msgid ""
+#~ "You're trying to delete your <span class=\"part1\">Egl</span><span class="
+#~ "\"part2\">é</span> account.<br>                            You'll no "
+#~ "longer be able to use any information associated with it, and your "
+#~ "account and data will be lost."
+#~ msgstr ""
+#~ "Vous tentez de supprimer votre compte <span class=\"part1\">Egl</"
+#~ "span><span class=\"part2\">é</span>.<br>                            Vous "
+#~ "ne pourrez plus utiliser les informations qui lui sont associées, et vous "
+#~ "perdrez votre compte, ainsi que vos données."
+
+#~ msgid "Language changed"
+#~ msgstr "Langue modifiée"
+
+#~ msgid "Reload"
+#~ msgstr "Actualiser"
+
+#~ msgid "Your language is now"
+#~ msgstr "Nouvelle langue :"
+
+#~ msgid "Change your password"
+#~ msgstr "Modifier votre mot de passe"
+
+#~ msgid "LogsBook"
+#~ msgstr "Journal"
+
+#~ msgid "Patient entries"
+#~ msgstr "Entrées du patient"
+
+#~ msgid "Show"
+#~ msgstr "Afficher"
+
+#~ msgid "Allergie"
+#~ msgstr "Allergie"
+
+#~ msgid "Your primary language is now"
+#~ msgstr "Nouvelle langue principale :"
+
+#~ msgid "All"
+#~ msgstr "Tout"
+
+#~ msgid "Blood pressure entries"
+#~ msgstr "Entrées de pression sanguine"
+
+#~ msgid "Failed!"
+#~ msgstr "Échoué !"
+
+#~ msgid "Filter"
+#~ msgstr "Filtre"
+
+#~ msgid "Glucose entries"
+#~ msgstr "Entrées de glucose"
+
+#~ msgid "Here you can find your"
+#~ msgstr "Vous pouvez retrouver ici vos"
+
+#~ msgid "Here you can find your blood pressure entries."
+#~ msgstr "Vous pouvez retrouver ici vos entrées de pression sanguine."
+
+#~ msgid "Here you can find your entries."
+#~ msgstr "Vous pouvez retrouver ici vos différentes entrées."
+
+#~ msgid "Here you can find your glucose entries."
+#~ msgstr "Vous pouvez retrouver ici vos entrées de glucose."
+
+#~ msgid "Here you can find your weight entries."
+#~ msgstr "Vous pouvez retrouver ici vos entrées de poids."
+
+#~ msgid "No blood pressure entries for the moment."
+#~ msgstr "Pas d'entrées de pression sanguine pour le moment."
+
+#~ msgid "No glucose entries for the moment."
+#~ msgstr "Pas d'entrées de glucose pour le moment."
+
+#~ msgid "No weight entries for the moment."
+#~ msgstr "Pas d'entrées de poids pour le moment."
+
+#~ msgid "Syntax error"
+#~ msgstr "Erreur de syntaxe"
+
+#~ msgid "Weight entries"
+#~ msgstr "Entrées de poids"
+
+#~ msgid "Your tips"
+#~ msgstr "Vos astuces"
+
+#~ msgid "entries"
+#~ msgstr "entrées"
+
+#~ msgid "Choose your username"
+#~ msgstr "Choisissez votre nom d'utilisateur"
+
+#~ msgid "Create a password"
+#~ msgstr "Créez un mot de passe"
+
+#~ msgid "Create your HealthCompass Account"
+#~ msgstr "Créer votre compte HealthCompass"
+
+#~ msgid "Actions"
+#~ msgstr "Actions"
+
+#~ msgid "All results"
+#~ msgstr "Tous les résultats"
+
+#~ msgid "Alzheimer"
+#~ msgstr "Alzheimer"
+
+#~ msgid "Ask"
+#~ msgstr "Demandes"
+
+#~ msgid "Change Password"
+#~ msgstr "Modifier le mot de passe"
+
+#~ msgid "Change password..."
+#~ msgstr "Modifier le mot de passe..."
+
+#~ msgid "Conversation"
+#~ msgstr "Discussion"
+
+#~ msgid "Datetime entry"
+#~ msgstr "Date"
+
+#~ msgid "Delete conversation..."
+#~ msgstr "Supprimer la discussion..."
+
+#~ msgid "Diabete"
+#~ msgstr "Diabète"
+
+#~ msgid ""
+#~ "Enter a new password for your HealthCompass account. We highly recommend "
+#~ "you create a unique password (one that you don't use for any other "
+#~ "websites)."
+#~ msgstr ""
+#~ "Saisissez un nouveau mot de passe pour votre compte HealthCompass. Nous "
+#~ "vous recommandons vivement de créer un mot de passe unique (que vous "
+#~ "n'utilisez pas pour d'autres sites Web)."
+
+#~ msgid "Here you can find several charts."
+#~ msgstr "Vous pouvez retrouver ici différents graphiques."
+
+#~ msgid "Last logs"
+#~ msgstr "Dernières entrées"
+
+#~ msgid "Note: You can't reuse your old password once you change it."
+#~ msgstr ""
+#~ "Remarque: Une fois modifié, vous ne pouvez pas réutiliser votre ancien "
+#~ "mot de passe."
+
+#~ msgid "Privacy"
+#~ msgstr "Vie privée"
+
+#~ msgid "Sign in with your HealthCompass Account"
+#~ msgstr "Connectez-vous à votre compte HealthCompass."
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid "Tips of the day"
+#~ msgstr "Astuces du jour"
+
+#~ msgid "Type of entry and value"
+#~ msgstr "Type et valeur"
+
+#~ msgid "Video call"
+#~ msgstr "Appel vidéo"
+
+#~ msgid "News"
+#~ msgstr "Actualités"
+
+#~ msgid "Welcome to HealthCompass"
+#~ msgstr "Bienvenue sur HealthCompass"
+
+#~ msgid "AM"
+#~ msgstr "Matin"
+
+#~ msgid "PM"
+#~ msgstr "Après-midi"
+
+#~ msgid "No"
+#~ msgstr "Pas de"
+
+#~ msgid "entries for the moment."
+#~ msgstr "entrées pour le moment."
+
+#~ msgid "entries."
+#~ msgstr "entrées."

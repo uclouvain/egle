@@ -1,0 +1,43 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="hc-breadcrumb">
+            <a ui-sref="home.contacts.main" class="btn btn-sm btn-info btn-raised btn-arrow-bg" translate>Contacts</a> 
+            <a href class="btn btn-sm btn-white btn-arrow-bg-second" disabled translate>Profile</a>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body hc-list-infos">
+                <div class="hc-list-table">
+                    <div class="row"> 
+                        <div class="col-xs-3">
+                            <div class="avatar avatar-md" data-ng-style="{'background-color': contact.avatar}" 
+                                 style="width:50px;height:50px;line-height:50px;font-size: 28px;">
+                                {{contact.username.substr(0, 1).toUpperCase()}}
+                            </div>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="hc-list-table-row">
+                                <div class="hc-list-table-left" translate>Username</div>
+                                <div class="hc-list-table-right">{{contact.username}}</div>
+                            </div>
+                            <div class="hc-list-table-row">
+                                <div class="hc-list-table-left" translate>I'm a</div>
+                                <div class="hc-list-table-right">{{contact.role | role}}</div>
+                            </div>
+                            <div class="hc-list-table-row" data-ng-if="contact.role == '3'">
+                                <div class="hc-list-table-left" translate>Condition</div>
+                                <div class="hc-list-table-right">{{contact.condition | condition}}</div>
+                            </div>
+                            <div class="hc-list-table-row">
+                                <div class="hc-list-table-left" translate>Gender</div>
+                                <div class="hc-list-table-right">{{contact.gender | gender}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a ui-sref="home.chats.one({username: contact.username})" class="btn btn-primary btn-raised pull-right" style="margin: 0;">
+            <i class="mdi-communication-chat"></i> <span translate>Converse</span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.fc-toolbar h2{
+    font-size: 18px;
+}
+
+.fc-today {
+    background: #f7f7f7!important;
+    border-color: #ddd!important;
+}
+
+.fc th{
+    font-weight: 500;
+}
+
+.agendaViews{
+    position: absolute;
+    margin: 0;
+    top: 5px;
+    right: 10px;
+    box-shadow:none;
+}
+
+.agendaViews .dropdown-menu{
+    right: 0;
+    left:initial;
+    min-width: 120px;
+}
+
+.agendaViews .dropdown-menu > li > a{
+    padding: 6px 20px;
+}
+
+.event-desc{
+    font-size: 80%;
+    font-style: italic;
+    margin:0;
+}
+
+
+.fc-time-grid .fc-slats .fc-minor td {
+    border-top-width: 0;
+}

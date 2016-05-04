@@ -1,0 +1,102 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-dismissable alert-{{alert.type}} text-center header-alert animated slideInDown" data-ng-show="alert.msg" style="top: 0;">
+        <button type="button" class="close" data-ng-click="alert = {}"><i class="mdi-navigation-close"></i></button>
+        {{alert.msg}}
+    </div>
+</div>
+<div class="container signup" data-oc-lazy-load="['https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit','bower_components/angular-recaptcha/release/angular-recaptcha.min.js']">
+    <p class="sign-title egle" style="margin-top: 10px;" translate>Create you <strong>Eglé</strong> Account</p>
+    <div class="row-fluid">
+        <div class="panel panel-default col-md-6 col-md-offset-3" style="margin-bottom: 10px;">
+            <div class="panel-body" style="padding: 5px;">
+                <form style="margin:0;" name="registerForm" class="form-horizontal" data-ng-submit="signup(registerForm);">
+                    <fieldset style="position: relative;">
+                        <div class="form-group">
+                            <label for="email" class="col-xs-3 control-label" data-autofocus translate>Email</label>
+                            <div class="col-xs-9">
+                                <input type="email" placeholder="{{'Email'|translate}}" name="email" data-ng-model="email" 
+                                       id="email" class="form-control" data-ng-pattern="patEmail" data-ng-required="true"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="col-xs-3 control-label" translate>Username</label>
+                            <div class="col-xs-9">
+                                <input type="text" placeholder="{{('e.g.'|translate) + '@ameliePoul1, indy-j, nikita45'}}" 
+                                       name="username" data-ng-model="username" id="username" class="form-control" 
+                                       autocapitalize="off" autocorrect="off" data-ng-required="true"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="col-xs-3 control-label" translate>Password</label>
+                            <div class="col-xs-9">
+                                <input type="password" placeholder="{{'Use at least 6 characters'|translate}}" name="password" data-ng-model="password" 
+                                       id="password" class="form-control" data-ng-required="true"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordConfirmation" class="col-xs-3 control-label"></label>
+                            <div class="col-xs-9">
+                                <input type="password" placeholder="{{'Re-enter Password'|translate}}" 
+                                       name="passwordConfirmation" data-ng-model="passwordConfirmation"
+                                       id="passwordConfirmation" class="form-control" data-ng-required="true"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountType" class="col-xs-3 control-label" translate>I'm a</label>
+                            <div class="col-xs-9">
+                                <select data-ng-init="role = role || rolesList[0].value" data-ng-model="role" class="form-control"  
+                                    data-ng-options="role.value as role.name for role in rolesList" data-ng-required="true">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" data-ng-show="rolesList[0].value == role">
+                            <label for="accountType" class="col-xs-3 control-label" translate>Condition</label>
+                            <div class="col-xs-9">
+                                <select data-ng-init="condition = condition || conditionsList[0].value" data-ng-model="condition" data-ng-required="true"
+                                        class="form-control" data-ng-options="condition.value as condition.name for condition in conditionsList">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="language" class="col-xs-3 control-label" translate>Language</label>
+                            <div class="col-xs-9">
+                                <select class="form-control" data-ng-init="language = language || languagesList[0].value" data-ng-model="language" 
+                                                data-ng-options="language.value as language.name for language in languagesList">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label class="col-xs-3 control-label">Antispam</label>
+                            <div class="col-xs-9">
+                                <p style="padding-top: 7px;" translate>Don't forget to mark the verification box below.</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div style="display: inline-block;" vc-recaptcha key="'6LfzkAkTAAAAAKEtbEQDCx9ZNhVJTFDuXkp_1_tP'" data-ng-model="response"></div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;padding-right: 10px;padding-left: 10px;">
+                            <button class="btn btn-default btn-raised pull-left" ui-sref="sign" translate>Back</button>
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-primary btn-raised" style="margin-bottom: 0;" data-ng-disabled="loading">
+                                    <span data-ng-hide="loading" translate>Create Account</span> 
+                                    <span data-ng-show="loading" translate>Loading</span> 
+                                    <div data-ng-show="loading"  class="preloader-wrapper xs active" style=" margin: -3px -3px -5px 3px;">
+                                      <div class="spinner-layer spinner-white-only">
+                                        <div class="circle-clipper left">
+                                          <div class="circle"></div>
+                                        </div><div class="gap-patch">
+                                          <div class="circle"></div>
+                                        </div><div class="circle-clipper right">
+                                          <div class="circle"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

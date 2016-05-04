@@ -1,0 +1,41 @@
+<div class="panel panel-white card" style="border: solid #FFC107 2px;" data-ng-controller="CardMedialRecordController">
+    <div class="panel-heading" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+        <div class="panel-title">
+            <div class="col-xs-7" style="padding: 0;" translate>Medical record</div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="hc-list-infos">
+            <div class="hc-list-table">
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Name</div>
+                    <div class="hc-list-table-right">{{patient.firstName}} {{patient.lastName}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Gender</div>
+                    <div class="hc-list-table-right">{{patient.gender | gender}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Birthdate</div>
+                    <div class="hc-list-table-right">{{patient.birthdate| unknown}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Blood type</div>
+                    <div class="hc-list-table-right"><span class="label label-danger" style="font-size: 85%;">{{(patient.bloodType + patient.rh)| unknown}}</span></div>
+                </div>
+                <div class="hc-list-table-row" data-ng-repeat="disease in patient.diseases">
+                    <div class="hc-list-table-left" translate>Disease</div>
+                    <div class="hc-list-table-right" >{{disease| unknown}}</div>
+                </div>
+                <div class="hc-list-table-row">
+                    <div class="hc-list-table-left" translate>Allergies</div>
+                    <div class="hc-list-table-right"><span data-ng-repeat="allergie in patient.allergies">{{allergie}} </span></div>
+                </div>
+                <div class="hc-list-table-row" data-ng-repeat="contact in patient.emergency">
+                    <div class="hc-list-table-left" translate>Emergency contact</div>
+                    <div class="hc-list-table-right">{{contact| phone}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

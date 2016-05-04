@@ -1,0 +1,142 @@
+/* <searchPatients> */
+.searchBox{
+    width: 100%;
+}
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+.icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+.icon-addon:after,
+.icon-addon:before {
+    display: table;
+    content: " ";
+}
+.icon-addon:after {
+    clear: both;
+}
+.icon-addon.addon-md .mdi-action-search,
+.icon-addon .mdi-action-search {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    padding: 10px 0;
+}
+.icon-addon.addon-lg .form-control {
+    line-height: 1.33;
+    height: 40px;
+    font-size: 18px;
+    padding: 9px 10px 6px 40px;
+}
+
+.icon-addon.addon-sm .form-control {
+    height: 30px;
+    padding: 5px 10px 5px 28px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.icon-addon.addon-lg .mdi-action-search{
+    font-size: 20px;
+    margin-left: 0;
+    left: 8px;
+}
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+    padding-left: 30px;
+    float: left;
+    font-weight: normal;
+}
+
+.icon-addon.addon-sm .fa{
+    margin-left: 0;
+    font-size: 12px;
+    left: 5px;
+    top: -1px
+}
+
+.icon-addon .form-control:focus + .mdi-action-search,
+.icon-addon:hover .mdi-action-search {
+    color: #337ab7;
+}
+.icon-addon input{
+    width: 100%;
+    box-sizing: border-box;
+    height: inherit;
+}
+.doctor-icons-group{
+    margin-bottom: 10px;
+    max-height: 140px;
+    overflow-y: scroll;
+}
+.doctor-icons-group img{
+    max-width: 45px;
+    margin: 2px;
+}
+/* </searchPatients> */
+
+.chart{
+    padding-bottom: 2px;
+}
+
+.card > .panel-heading{
+    padding:0;height:35px;color:#000;
+}
+
+.chart > .panel-body{
+    padding:0;
+}
+
+.chart > .panel-heading> .panel-title >.col-xs-6{
+    padding:0;
+}
+
+.chart > .panel-heading> .panel-title > .col-xs-6:nth-child(2){
+    margin-top: -2px;
+}
+
+.btn-objectives{
+    margin: 0;
+    padding: 4px 15px;
+    margin-top: -4px;
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+    color:#fff!important;
+}
+
+.circle{
+    height: 14px;
+    margin-top: 3px;
+}
+
+.circle-empty{
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    width:14px;
+}
+
+.circle-half{
+    width:7px;
+    border-radius: 14px 0px 0px 14px;
+    background-color:#d9d9d9;
+}
+
+.circle-full{
+    width:14px;
+    border-radius: 50%;
+    background-color:#d9d9d9;
+}
+
+.list-todo a.list-group-item:hover, .list-todo a.list-group-item:active, .list-todo a.list-group-item:focus{
+    background-color: inherit!important;
+}
+
+.list-todo .avatar{
+    font-size: 18px;
+    height: 25px!important;
+    width: 25px!important;
+}

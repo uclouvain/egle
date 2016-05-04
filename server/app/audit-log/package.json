@@ -1,0 +1,29 @@
+{
+  "name": "audit-log",
+  "description": "Node Audit Logging Toolkit",
+  "version": "0.9.1",
+  "keywords": [
+    "node",
+    "log",
+    "audit"
+  ],
+  "author": {
+    "name": "Craig Coffman",
+    "email": "ch.cr.co@gmail.com"
+  },
+  "main": "index",
+  "dependencies": {
+    "async": "0.1.22"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "readmeFilename": "README.md",
+  "readme": "# AuditLog\n\nAudit logging toolkit for Node.js.  Choose your storage or notification strategy by utilizing one or\nmore extendable transport systems.  Automate log creation by utilizing plugins for common libraries such as\nMongoose (CRUD logging via model plugin) and Express (access logging via route middleware).\n\n\n# How To Use It\n**0. Install the module:**\n\nUse NPM to install the module, like so:\n\n    npm install audit-log\n\n**1. Include the library:**\n\n```javascript\nvar auditLog = require('audit-log');\n```\n\n**2. Add a Transport System:**\n\nDifferent transports may have varying options. You should read their documentation for details.\nThe Mongoose and Console transports are described in this example.\n```javascript\nauditLog.addTransport(\"mongoose\", {connectionString: \"mongodb://localhost:27017/myDatabase\"});\n// either or both -- up to you where your messages are sent!\nauditLog.addTransport(\"console\");\n```\n\n**3a. Log an Event**\n\nEvents are the usual structure for log events.\n```javascript\n//  method is logEvent( actor, origin, action, label, object, description )\n\n// descriptive parameters for your reading pleasure:\nauditLog.logEvent('user id or something', 'maybe script name or function', 'what just happened', 'the affected target name perhaps', 'target id', 'additional info, JSON, etc.');\n\n// a more realistic example:\nauditLog.logEvent(95049, 'AppServer', 'Shutdown', 'Production-3 Instance', 'ec2-255-255-255-255', 'Terminated from web console.');\n```\n\n**3b. Log another kind of message of your devising**\n\nYou can make up another type of message and give it a descriptive label, if you so desire...\n```javascript\nauditLog.log({logType:'Warning', text:'An error occurred and you should fix it.', datetime:'2013-01-31 13:15:02', traceData:'...'});\n\n// note:\nauditLog.log({message:'Call your mother.'});\n// will send this to your active transports:\n// { logType: 'Generic', message: 'Call your mother.' }\n// because logType is needed by AuditLog to identify handlers.\n```\n\n**4. Use a Plugin to Automatically Send Messages**\n\nThere are some plugins already available which ship with AuditLog, including Mongoose CRUD logging and Express route logging.\n\n\n**Addendum**\n\nIt's usually a good idea to check any documentation in the Transports and Plugins, because they can vary a fair amount,\nand might be specifically written to handle a specific *logType*.\n\n\n# Plugins\n\n## Express\nLog requests, and automatically assign an actor to events by checking session variables.\n\n### Usage Example\n```javascript\n// setup the plugin\nvar auditLogExpress = auditLog.getPlugin('express', {\n    userIdPath:['user','_id'],\n    whiteListPaths:[/^\\/some\\/particular\\/path.*$/]\n});\n\n// use it in your Express app\napp.use(auditLogExpress.middleware);\n```\n\n## Mongoose\nLog MongoDB database activity by adding this plugin to your models.\n\n### Usage Example\n```javascript\n// Here's the mongoose plugin being used on a Model\nvar mongoose = require('mongoose'),\n    Schema = mongoose.Schema\n    auditLog = require('audit-log');\n\nvar HumanSchema = new Schema({\n    name: { type: String },\n    height: { type: Number }\n});\n\nvar pluginFn = auditLog.getPlugin('mongoose', {modelName:'Human', namePath:'name'}); // setup occurs here\nHumanSchema.plugin(pluginFn.handler); // .handler is the pluggable function for mongoose in this case\n```\n\n# Roadmap\n\n+ Adding a Redis Transport\n+ Log archival and pruning\n+ Socket-driven live log monitoring API\n\n\n# License\n\n(The MIT License)\n\nCopyright (c) 2013 Craig Coffman <craig@imakewidgets.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+  "_id": "audit-log@0.9.1",
+  "dist": {
+    "shasum": "d5d0ed6d13154218c2201dca8c6e778e1d7615de"
+  },
+  "_from": "audit-log@*",
+  "_resolved": "https://registry.npmjs.org/audit-log/-/audit-log-0.9.1.tgz"
+}

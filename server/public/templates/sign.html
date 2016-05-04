@@ -1,0 +1,49 @@
+<style>
+    @media (min-width: 3001px) and (min-height: 2001px) {
+        body{
+            background: url(../img/bg-xl.jpg) no-repeat center center;
+        }
+    }
+    
+    @media (max-width: 3000px) and (max-height: 2000px) {
+        body{
+            background: url(../img/bg-lg.jpg) no-repeat center center;
+        }
+    }
+    
+    @media (max-width: 2000px) and (max-height: 1333px) {
+        body{
+            background: url(../img/bg-md.jpg) no-repeat center center;
+        }
+    }
+    
+    @media (max-width: 1500px) and (max-height: 1000px){
+        body{
+            background: url(../img/bg-sm.jpg) no-repeat center center;
+        }
+    }
+    
+    @media (max-width: 1000px) and (max-height: 667px){
+        body{
+            background: url(../img/bg-xs.jpg) no-repeat;
+        }
+    }
+</style>
+<div class="container" style="position: relative;height: calc(100% - 40px);">
+    <h3 class="text-center"><span translate>Hello</span></h3>
+    <h2 class="text-center"><span translate>Welcome to</span> <span style="color:#000;">Egl</span><span style="color:#308fe9;">é</span></h2>
+    <div class="text-center" style="bottom: 80px;position: fixed;right: 15px;left: 15px;">
+        <form class="login">
+            <div class="row">
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-primary btn-raised" ui-sref="signup" 
+                            style="max-width: 250px;letter-spacing: 0;padding-right:0;padding-left:0;" translate>Create Account</button>
+                </div>
+                <div class="col-xs-6">
+                    <button type="button" class="btn btn-primary btn-raised" ui-sref="signin" 
+                            style="max-width: 250px;letter-spacing: 0;padding-right:0;padding-left:0;" translate>Log In</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+[
+    {
+        "name": "ask_meal",
+        "card": "meal",
+        "order": 1,
+        "roles": [3],
+        "condition": ["d1","d2"]
+    },
+    {
+        "name": "ask_weight",
+        "card": "weight",
+        "order": 2,
+        "roles": [3],
+        "condition": ["d1","d2"]
+    },
+    {
+        "name": "ask_mobility",
+        "cards": "mobility",
+        "order": 3,
+        "roles": [3],
+        "condition": ["d1","d2"]
+    },
+    {
+        "name": "ask_activity",
+        "cards": "activity",
+        "order": 4,
+        "roles": [3],
+        "condition": ["d1","d2"]
+    }
+]

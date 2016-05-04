@@ -1,0 +1,266 @@
+[
+    {
+        "name": "audit",
+        "title": "Audit",
+        "type": 1,
+        "order": 1,
+        "roles": [1],
+        "enabled": true
+    },{
+        "name": "search_patients",
+        "title": "Search for patients",
+        "type": 1,
+        "order": 1,
+        "roles": [2],
+        "enabled": true
+    },{
+        "name": "todo",
+        "title": "Todo list",
+        "type": 2,
+        "order": 1,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "enabled": true
+    },{
+        "name": "glycaemia",
+        "title": "Glycaemia",
+        "type": 2,
+        "order": 2,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "subitems":[{
+            "name":"morning",
+            "title":"Morning",
+            "params": {
+                "card" : "glycaemia",
+                "timeslot": {
+                    "suggestion": 8,
+                    "from": [0,0,0,0],
+                    "to": [8,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"snack10",
+            "title":"Snack 10am",
+            "params": {
+                "card" : "glycaemia",
+                "timeslot":{
+                    "suggestion": 10,
+                    "from": [9,0,0,0],
+                    "to": [10,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"midday",
+            "title":"Midday",
+            "params": {
+                "card" : "glycaemia",
+                "timeslot":{
+                    "suggestion": 12,
+                    "from": [11,0,0,0],
+                    "to": [14,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"snack4",
+            "title":"Snack 4pm",
+            "params": {
+                "card" : "glycaemia",
+                "timeslot":{
+                    "suggestion": 16,
+                    "from": [15,0,0,0],
+                    "to": [16,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"evening",
+            "title":"Evening",
+            "params": {
+                "card" : "glycaemia",
+                "timeslot":{
+                    "suggestion": 18,
+                    "from": [17,0,0,0],
+                    "to": [20,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"bedtime",
+            "title":"Bedtime",
+            "params": {
+                "card" : "glycaemia",
+                "timeslot":{
+                    "suggestion": 22,
+                    "from": [21,0,0,0],
+                    "to": [23,59,59,999]
+                }
+            },
+            "enabled": true
+        }],
+        "todo": true,
+        "enabled": true
+    },{
+        "name": "insulin",
+        "title": "Insulin",
+        "type": 2,
+        "order": 3,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "subitems":[{
+            "name":"morning",
+            "title":"Morning",
+            "params": {
+                "card" : "insulin",
+                "timeslot":{
+                    "suggestion": 8,
+                    "from": [0,0,0,0],
+                    "to": [8,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"snack10",
+            "title":"Snack 10am",
+            "params": {
+                "card" : "insulin",
+                "timeslot":{
+                    "suggestion": 10,
+                    "from": [9,0,0,0],
+                    "to": [10,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"midday",
+            "title":"Midday",
+            "params": {
+                "card" : "insulin",
+                "timeslot":{
+                    "suggestion": 12,
+                    "from": [11,0,0,0],
+                    "to": [14,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"snack4",
+            "title":"Snack 4pm",
+            "params": {
+                "card" : "insulin",
+                "timeslot":{
+                    "suggestion": 16,
+                    "from": [15,0,0,0],
+                    "to": [16,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"evening",
+            "title":"Evening",
+            "params": {
+                "card" : "insulin",
+                "timeslot":{
+                    "suggestion": 18,
+                    "from": [17,0,0,0],
+                    "to": [20,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"bedtime",
+            "title":"Bedtime",
+            "params": {
+                "card" : "insulin",
+                "timeslot":{
+                    "suggestion": 22,
+                    "from": [21,0,0,0],
+                    "to": [23,59,59,999]
+                }
+            },
+            "enabled": true
+        }],
+        "todo": true,
+        "enabled": true
+    },{
+        "name": "meal",
+        "title": "Meals",
+        "type": 2,
+        "order": 4,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "subitems":[{
+            "name":"breakfast",
+            "title":"Breakfast",
+            "params": {
+                "card" : "meal",
+                "timeslot":{
+                    "suggestion": 8,
+                    "from": [0,0,0,0],
+                    "to": [10,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"lunch",
+            "title":"Lunch",
+            "params": {
+                "card" : "meal",
+                "timeslot":{
+                    "suggestion": 12,
+                    "from": [11,0,0,0],
+                    "to": [16,59,59,999]
+                }
+            },
+            "enabled": true
+        },{
+            "name":"dinner",
+            "title":"Dinner",
+            "params": {
+                "card" : "meal",
+                "timeslot":{
+                    "suggestion": 19,
+                    "from": [17,0,0,0],
+                    "to": [23,59,59,999]
+                }
+            },
+            "enabled": true
+        }],
+        "todo": true,
+        "enabled": true
+    },{
+        "name": "sport",
+        "title": "Sport",
+        "type": 2,
+        "order": 5,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "enabled": true
+    },{
+        "name": "weight",
+        "title": "Weight",
+        "type": 2,
+        "order": 6,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "enabled": true
+    },{
+        "name": "mobility",
+        "title": "Mobility",
+        "type": 2,
+        "order": 7,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "enabled": true
+    },{
+        "name": "frequent_contacts",
+        "title": "Frequent contacts",
+        "type": 2,
+        "order": 99,
+        "roles": [2,3],
+        "enabled": true
+    }
+]

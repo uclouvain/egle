@@ -1,0 +1,93 @@
+<div class="panel panel-default panel-chat" data-oc-lazy-load="'bower_components/angularjs-scroll-glue/src/scrollglue.js'">
+    <div class="panel-heading" style="padding: 0;height:45px;background-color:#f5f5f5;">
+        <div class="panel-title" style="line-height: inherit;padding: 10px;position: relative;">
+            <div class="chat-header">
+                <a class="btn btn-primary btn-raised btn-breadcrumbs btn-arrow-panel" ui-sref="home.chats.main" style="color:#fff;" translate>
+                    Messages
+                </a>
+                <a class="btn btn-white btn-raised btn-breadcrumbs btn-arrow-panel-second" style="opacity: 1!important" disabled>
+                    {{contactIsDeleted ? accountDeleted : contactUsername}}
+                </a>
+                <div class="btn-group pull-right" style="margin:0;box-shadow:none;">
+                    <a href class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-ng-disabled="hideOptions" 
+                       style="margin:0;padding: 2px 5px;">
+                        <i class="mdi-navigation-more-vert"></i>
+                    </a>
+                    <ul class="dropdown-menu" style="right:0;left:initial;">
+                        <li>
+                            <a href data-ng-click="toggleArchiveFlag();" class="btn btn-flat btn-default" style="text-align: left;">
+                                <i data-ng-class="{'mdi-action-open-in-browser': archived, 'mdi-content-archive': !archived}" style="font-size: 18px;"></i> 
+                                <span data-ng-if="archived"><span translate>Unarchive</span></span>
+                                <span data-ng-if="!archived"><span translate>Archive</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href data-ng-click="deleteChat();" class="btn btn-flat btn-danger" style="text-align: left;">
+                                <i class="mdi-action-delete" style="font-size: 18px;"></i> <span translate>Delete</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href class="btn btn-success btn-flat pull-right" data-ng-click="call();" style="margin:0;padding: 2px 10px;"
+                   data-ng-if="isWebRTCSupported && !isWebRTCActive && callStatus === 'inactive'" data-ng-disabled="contactIsDeleted || forbidden">
+                    <i class="mdi-communication-call"></i> 
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-dismissable alert-{{alert.type}} widgetAlert" data-ng-repeat="alert in alerts">
+        <strong>{{alert.title}}</strong> {{alert.msg}}
+    </div>
+    <div data-oc-lazy-load="'bower_components/angular-fullscreen/src/angular-fullscreen.js'">
+        <div class="webrtc" data-ng-show="isWebRTCActive" fullscreen="isFullscreen" only-watched-property
+             data-ng-class="{'webrtc-fullscreen': isFullscreen}">
+            <div id="remotes"></div>
+            <video id="localVideo" muted data-ng-show="isWebRTCActive"></video>
+            <div data-ng-class="{'webrtc-toolbar-fullscreen': isFullscreen}" data-ng-show="callStatus === 'calling'">
+                <a href data-ng-click="hangup();" class="btn btn-flat btn-danger btn-lg call-end-button" 
+                   data-ng-class="{'call-end-button-fullscreen': isFullscreen}">
+                    <i class="mdi-communication-call-end"></i>
+                </a>
+                <a href class="btn btn-flat btn-info btn-lg fullscreen-button" data-ng-click="toggleFullScreen();">
+                    <i data-ng-class="{'mdi-navigation-fullscreen-exit': isFullscreen, 'mdi-navigation-fullscreen': !isFullscreen}"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="chat-thread" data-ng-class="{'chat-thread-xs': isWebRTCActive && callStatus !== 'calling', 'chat-thread-xxs': isWebRTCActive && callStatus === 'calling'}">
+        <div data-ng-if="callStatus === 'ringing'" data-ng-include="'templates/chats/call.html'"></div>
+        <div class="chatScroll" scroll-glue>
+            <div class="list-group">
+                <div data-ng-repeat="message in messages" class="message animated fadeIn">
+                    <div class="list-group-item" data-ng-class="{paddingMsg: message != messages[0]}" data-ng-if="message.message">
+                        <div class="row-action-primary">
+                            <div class="avatar avatar-chat" data-ng-style="{'background-color': (message.username == user.username) ? user.avatar : contactAvatar}">
+                                {{ message.username.substr(0, 1).toUpperCase()}}
+                            </div>
+                        </div>
+                        <div class="row-content bubble" data-ng-class="{'bubble-blue': message.username != user.username}">
+                            <p class="list-group-item-text">{{message.message}}</p>
+                            <div class="least-content text-right">
+                                {{message.datetime | dMMMM}}, {{message.datetime | HHmm}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item text-center" data-ng-class="{paddingMsg: message != messages[0]}" 
+                         data-ng-if="!message.message" style="padding:0;">
+                        <div class="row-content bubble-call">
+                            <p class="list-group-item-text"><i class="mdi-communication-call"></i> <span translate>You were on a call</span></p>
+                            <small>{{message.datetime | dMMMM}}, {{message.datetime | HHmm}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-ctrl">
+        <form data-ng-submit="sendMessage();">
+            <input type="text" data-autofocus data-ng-model="message" placeholder="{{'Send message...'|translate}}" 
+                   required data-ng-disabled="contactIsDeleted || forbidden">
+            <button type="submit" class="btn btn-primary" translate data-ng-disabled="contactIsDeleted || forbidden">Send</button>
+        </form>
+    </div>
+</div>

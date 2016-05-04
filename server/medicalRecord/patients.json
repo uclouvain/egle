@@ -1,0 +1,74 @@
+[
+    {
+        "id": "53b3fcae7b460a2e14b6763e",
+        "firstName": "John",
+        "lastName": "Doe",
+        "gender": "1",
+        "birthdate": "30/05/2000",
+        "bloodType": "A",
+        "rh": "+",
+        "diseases":["E10"],
+        "allergies":[],
+        "emergency":{
+            "father": "0423456789",
+            "mother": "022347885"
+        }
+    },
+    {
+        "id": "53b3fcd67b460a2e14b6763f",
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "gender": "2",
+        "birthdate": "31/12/1989",
+        "bloodType": "O",
+        "rh": "+",
+        "diseases":["E11"],
+        "allergies":[],
+        "emergency":{
+            "physician": "0412345678",
+            "mother": "022234788"
+        }
+    },
+    {
+        "id": "53b3fd0b7b460a2e14b67640",
+        "firstName": "Fernand",
+        "lastName": "Doe",
+        "gender": "1",
+        "birthdate": "31/12/1948",
+        "bloodType": "B",
+        "rh": "-",
+        "diseases":["G30"],
+        "allergies":[],
+        "emergency":{
+            "physician": "0423456789"
+        }
+    },
+    {
+        "id": "53b275b6c63686c30718a078",
+        "firstName": "Ron",
+        "lastName": "Phil",
+        "gender": "1",
+        "birthdate": "30/05/1979",
+        "bloodType": "O",
+        "rh": "-",
+        "diseases":["G30"],
+        "allergies":[],
+        "emergency":{
+            "physician": "0423456789"
+        }
+    },
+    {
+        "id": "53b277e1d2752f9a03deb9c0",
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "gender": "1",
+        "birthdate": "08/01/1998",
+        "bloodType": "A",
+        "rh": "+",
+        "diseases":[],
+        "allergies":["Peanut", "Milk"],
+        "emergency":{
+            "physician": "022225675"
+        }
+    }
+]

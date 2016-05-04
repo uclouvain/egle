@@ -1,0 +1,29 @@
+{
+    "name": "egle-app",
+    "main": "app.js",
+    "dependencies": {
+        "bcrypt": "~0.8.2",
+        "bristol": "^0.3.1",
+        "express": "~4.13.3",
+        "method-override": "~2.3.5",
+        "body-parser": "~1.13.3",
+        "serve-favicon": "~2.3.0",
+        "express-jwt": "~3.0.1",
+        "generate-key" : "~0.0.6",
+        "gm": "~1.9.2",
+        "jsonwebtoken": "~5.0.2",
+        "mongodb": "~2.0.27",
+        "mongoose": "~4.0.1",
+        "mongoose-unique-validator": "~0.4.1",
+        "nconf": "~0.7.1",
+        "redis": "~2.4.1",
+        "underscore": "~1.5.2",
+        "nodemailer": "~1.4.0",
+        "request": "~2.61.0",
+        "json2csv": "~2.12.0"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-angular-gettext": "^0.2.14"
+    }
+}

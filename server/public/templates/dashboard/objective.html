@@ -1,0 +1,89 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="row">
+        <div class="panel panel-white card">
+            <div class="panel-heading" style="height: 45px;">
+                <div class="panel-title" style="padding: 10px;">
+                    <button type="button" class="close" ui-sref="home.dashboard.main">
+                        <i class="mdi-navigation-close"></i>
+                    </button>
+                    <a class="btn btn-primary btn-raised btn-breadcrumbs btn-arrow-panel" ui-sref="home.dashboard.main" style="color:#fff;">
+                        {{config.title}}
+                    </a>
+                    <a class="btn btn-white btn-breadcrumbs btn-raised btn-arrow-panel-second" style="opacity: 1!important" disabled>
+                        {{config.objective}}
+                    </a>
+                </div>
+            </div>
+            <form class="form-horizontal" data-ng-submit="setObjective();">
+                <div class="panel-body">
+                    <div class="col-sm-offset-2 col-sm-8" style="float:none;">
+                        <div data-ng-show="config.name == 'meal'">
+                            <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
+                                {{config.help}}
+                            </h4>
+                            <div class="text-center">
+                                <div class="togglebutton text-center">
+                                    <label>
+                                        <span data-ng-if="position" class="text-muted" style="font-weight: 200;">&nbsp; ON</span>
+                                        <span data-ng-if="!position" class="text-muted" style="font-weight: 200;">&nbsp; OFF</span> &nbsp;&nbsp;
+                                        <input data-ng-model="position" type="checkbox" checked="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-ng-show="config.name == 'insulin'">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th style="text-align: center;" translate>Unit(s)</th>
+                                        <th style="text-align: center;" translate>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="value in config.values">
+                                        <td>{{value.name}}</td>
+                                        <td><input data-ng-model="value.value" class="form-control text-center" placeholder="{{'Value'|translate}}" type="number" checked=""></td>
+                                        <td>
+                                            <select class="form-control" data-ng-model="value.type" data-ng-options="type.value as type.name for type in config.types"></select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div data-ng-show="config.name == 'glycaemia'">
+                            <div class="row text-center">
+                            <div class="col-xs-6" style="padding-right: 0;">
+                                <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
+                                    {{config.values[0].name}} <small>({{config.unit}})</small>
+                                </h4>
+                                <input type="number" class="form-control text-center" data-ng-model="config.values[0].value" placeholder="{{config.placeholder}}" step="0.1">
+                            </div>
+                            <div class="col-xs-6" style="padding-right: 0;">
+                                <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
+                                    {{config.values[1].name}} <small>({{config.unit}})</small>
+                                </h4>
+                                <input type="number" class="form-control text-center" data-ng-model="config.values[1].value" placeholder="{{config.placeholder}}" step="0.1">
+                            </div>
+                            </div>
+                        </div>
+                        <div data-ng-hide="config.name == 'meal' || config.name == 'insulin' || config.name == 'glycaemia'">
+                            <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
+                                {{config.value.name}} <small>({{config.unit}})</small>
+                            </h4>
+                            <input type="number" class="form-control text-center" data-ng-model="config.value.value" placeholder="{{config.placeholder}}" step="0.1" min="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-left" style="padding: 0px 0px 15px 0px;" data-ng-hide="config.name == 'meal'">
+                    <button class="btn btn-danger btn-flat" type="button" style="margin: 0px 1px" data-ng-click="deleteObjective();" data-ng-disabled="!verify();" translate>Delete</button>
+                </div>
+                <div class="pull-right" style="padding: 0px 0px 15px 0px;">
+                    <button type="button" class="btn btn-default btn-flat" style="margin: 0px 1px" ui-sref="home.dashboard.main" translate>Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-flat" style="margin: 0px 1px"  
+                            data-ng-disabled="!verify();" translate>Validate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

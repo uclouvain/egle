@@ -1,0 +1,1745 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: healthcompass_nl\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "1 fruit, 1 juice"
+msgstr "1 vrucht, 1 sap"
+
+#: public/templates/agenda/main.html
+msgid "3 days"
+msgstr "3 dagen"
+
+#: public/templates/recovery/recovery.html
+msgid "<strong>Eglé</strong> Account Recovery"
+msgstr "<strong>Eglé</strong> Accountherstel"
+
+#: public/templates/modals/deleteChat.html
+#: public/templates/modals/deleteContact.html
+msgid "?"
+msgstr "?"
+
+#: languages/extraDictionary.html
+msgid "Accepted your contact request"
+msgstr "Aanvardde uw contact aanvraag"
+
+#: public/templates/settings/main.html
+msgid "Account"
+msgstr "Account"
+
+#: public/templates/dashboard/add.html
+msgid "Acting"
+msgstr ""
+
+#: languages/extraDictionary.html
+msgid "Activities"
+msgstr "Activiteiten"
+
+#: public/templates/contacts/add.html public/templates/dashboard/add.html
+msgid "Add"
+msgstr "Toevoegen"
+
+#: public/templates/profile/contact.html public/templates/profile/main.html
+msgid "Address"
+msgstr "Adres"
+
+#: languages/extraDictionary.html public/templates/agenda/event.html
+msgid "Agenda"
+msgstr "Agenda"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "All conversations"
+msgstr "Alle conversaties"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "All tips"
+msgstr "Alle tips"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Allergies"
+msgstr "Allergieën"
+
+#: public/js/controllers/ProfileCtrl.js public/js/appFilters.js
+msgid "Alzheimer's Disease"
+msgstr "Ziekte van Alzheimer"
+
+#: public/templates/modals/signSent.html
+msgid ""
+"An email will be sent to your email address that includes a password reset "
+"link"
+msgstr ""
+"U ontvangt een email met een activatielink om uw wachtwoord in te vullen"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "An entry already exists for this date"
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js
+#: public/js/controllers/agenda/AgendaCtrl.js
+#: public/js/controllers/agenda/EventCtrl.js
+#: public/js/controllers/chats/ChatCtrl.js
+#: public/js/controllers/chats/ChatsCtrl.js
+#: public/js/controllers/contacts/ContactCtrl.js
+msgid "An error occurred, please try again later"
+msgstr ""
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "April"
+msgstr "April"
+
+#: public/templates/chats/one.html
+msgid "Archive"
+msgstr "Archief"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Archived"
+msgstr "Gearchiveerd"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Archived conversations"
+msgstr ""
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Archived conversations appear here"
+msgstr ""
+
+#: public/templates/modals/deleteContact.html
+msgid "Are you sure you want to delete the contact"
+msgstr ""
+
+#: public/templates/modals/deleteChat.html
+msgid "Are you sure you want to delete the conversation with"
+msgstr "Ben je zeker het gesprek willen verwijderen met"
+
+#: public/templates/modals/deleteEntry.html
+msgid "Are you sure you want to delete the following entry?"
+msgstr ""
+
+#: public/templates/agenda/event.html
+msgid "At"
+msgstr "Om"
+
+#: public/templates/dashboard/cards/audit.html
+msgid "Audit"
+msgstr "Audit"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "August"
+msgstr "Augustus"
+
+#: public/templates/profile/avatar.html public/templates/profile/main.html
+msgid "Avatar"
+msgstr "Avatar"
+
+#: public/templates/signin.html public/templates/signup.html
+#: public/templates/recovery/lost.html public/templates/recovery/reset.html
+msgid "Back"
+msgstr "Terug"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Bedtime"
+msgstr "Slaaptijd"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Bike"
+msgstr "Fiets"
+
+#: public/templates/patient/medicalRecord.html
+#: public/templates/patient/profile.html public/templates/profile/basic.html
+msgid "Birthdate"
+msgstr "Geboortedatum"
+
+#: public/templates/profile/main.html
+msgid "Birthday"
+msgstr "Verjaardag"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Blood type"
+msgstr "Bloedtype"
+
+#: languages/extraDictionary.html
+msgid "Breakfast"
+msgstr "Ontbijt"
+
+#: public/templates/agenda/event.html public/templates/dashboard/add.html
+#: public/templates/dashboard/objective.html
+#: public/templates/modals/deleteChat.html
+#: public/templates/modals/deleteContact.html
+#: public/templates/modals/deleteEntry.html
+#: public/templates/profile/avatar.html public/templates/profile/basic.html
+#: public/templates/profile/contact.html
+#: public/templates/settings/password.html
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: public/js/controllers/SignupCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+msgid "Captcha verification failed. Please retry later."
+msgstr "Captcha verificatie mislukt. Gelieve later opnieuw te proberen."
+
+#: public/js/appFilters.js
+msgid "Caregiver"
+msgstr "Verzorg(st)er"
+
+#: public/templates/profile/basic.html public/templates/profile/contact.html
+#: public/templates/settings/main.html public/templates/settings/password.html
+msgid "Change"
+msgstr "Wijzigen"
+
+#: public/templates/profile/avatar.html
+msgid "Choose a color for your avatar."
+msgstr "Gelieve een kleur voor uw avatar te kiezen."
+
+#: public/templates/dashboard/add.html
+msgid "Comments"
+msgstr "Opmerkingen"
+
+#: public/templates/signup.html public/templates/contacts/one.html
+#: public/templates/patient/profile.html public/templates/profile/basic.html
+#: public/templates/profile/main.html
+msgid "Condition"
+msgstr "Ziekte"
+
+#: public/templates/profile/contact.html public/templates/profile/main.html
+msgid "Contact"
+msgstr "Contact"
+
+#: public/templates/contacts/add.html public/templates/contacts/one.html
+msgid "Contacts"
+msgstr "Contacten"
+
+#: public/templates/chats/new.html public/templates/contacts/one.html
+msgid "Converse"
+msgstr "Babbelen"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Create"
+msgstr "Creëren"
+
+#: public/templates/sign.html public/templates/signup.html
+msgid "Create Account"
+msgstr "Account aanmaken"
+
+#: public/templates/signup.html
+msgid "Create you <strong>Eglé</strong> Account"
+msgstr "Maak uw <strong>Eglé</strong>-account"
+
+#: public/templates/settings/password.html
+msgid "Current"
+msgstr "Stroom"
+
+#: public/templates/settings/main.html
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: public/templates/techentry.html public/templates/dashboard/add.html
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+msgid "Date"
+msgstr "Datum"
+
+#: public/templates/agenda/main.html
+msgid "Day"
+msgstr "Dag"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "December"
+msgstr "December"
+
+#: public/templates/agenda/event.html public/templates/chats/one.html
+#: public/templates/dashboard/objective.html
+#: public/templates/modals/deleteChat.html
+#: public/templates/modals/deleteContact.html
+#: public/templates/modals/deleteEntry.html
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: public/templates/modals/deleteChat.html
+msgid "Delete a conversation"
+msgstr ""
+
+#: public/templates/modals/deleteEntry.html
+msgid "Delete an entry"
+msgstr ""
+
+#: public/templates/modals/deleteContact.html
+msgid "Delete from your contacts"
+msgstr "Verwijderen uit de contactenlijst"
+
+#: public/js/controllers/chats/ChatCtrl.js
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Deleted account"
+msgstr ""
+
+#: public/js/controllers/ProfileCtrl.js public/js/controllers/SignupCtrl.js
+#: public/js/appFilters.js
+msgid "Diabetes Type 1"
+msgstr "Diabetes Type 1"
+
+#: public/js/controllers/ProfileCtrl.js public/js/controllers/SignupCtrl.js
+#: public/js/appFilters.js
+msgid "Diabetes Type 2"
+msgstr "Diabetes Type 2"
+
+#: languages/extraDictionary.html
+msgid "Dinner"
+msgstr "Diner"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Disease"
+msgstr "Ziekte"
+
+#: public/templates/signup.html public/templates/recovery/lost.html
+msgid "Don't forget to mark the verification box below."
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+msgid "Don't forget to mark the verification box."
+msgstr "Vergeet niet de doos verificatie te markeren."
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/MobilityChartDirective.js
+msgid "Duration"
+msgstr "Duur"
+
+#: public/templates/profile/avatar.html public/templates/profile/main.html
+msgid "Edit"
+msgstr "Uitgeven"
+
+#: public/js/controllers/HeaderCtrl.js
+msgid "Eglé Server Unreachable."
+msgstr "Eglé server onbereikbaar"
+
+#: public/templates/patient/profile.html
+msgid "Eglé profile"
+msgstr "Eglé profiel"
+
+#: public/templates/signin.html public/templates/signup.html
+#: public/templates/patient/profile.html public/templates/profile/contact.html
+#: public/templates/profile/main.html public/templates/recovery/lost.html
+msgid "Email"
+msgstr "E-mail"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Emergency contact"
+msgstr "Contact nood"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Empty dashboard"
+msgstr ""
+
+#: public/templates/recovery/reset.html
+msgid "Enter a new password for your Eglé account."
+msgstr "Gelieve een nieuw wachtwoord in te vullen."
+
+#: public/js/controllers/chats/ChatsCtrl.js
+#: public/js/controllers/contacts/ContactsCtrl.js
+msgid "Enter a username"
+msgstr "Gelieve een gebruikersnaam te kiezen"
+
+#: public/js/directives/SearchPatientsDirective.js
+msgid "Enter the username of the patient"
+msgstr ""
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Evening"
+msgstr "Avond"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Event details"
+msgstr "Details van het evenement"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Failed to add the entry!"
+msgstr "Niet in geslaagd de vermelding toe te voegen!"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Failed to delele the entry!"
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Fast sugars"
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Fats"
+msgstr "Vetten"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Favorite tips"
+msgstr ""
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Favorites"
+msgstr ""
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Favorites appear here"
+msgstr ""
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "February"
+msgstr "Februari"
+
+#: public/js/controllers/ProfileCtrl.js public/js/appFilters.js
+msgid "Female"
+msgstr "Vrouwelijk"
+
+#: public/templates/dashboard/cards/directives/frequent_contacts.html
+msgid "Frequent contacts"
+msgstr ""
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Friday"
+msgstr "Vrijdag"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/cards/audit.html
+msgid "From"
+msgstr "Van"
+
+#: public/templates/contacts/one.html
+#: public/templates/patient/medicalRecord.html
+#: public/templates/patient/profile.html public/templates/profile/basic.html
+#: public/templates/profile/main.html
+msgid "Gender"
+msgstr "Geslacht"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Glucose level"
+msgstr ""
+
+#: public/templates/dashboard/cards/glycaemia.html
+#: public/templates/patient/chart_glycaemia.html
+#: public/js/controllers/PatientCtrl.js
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/GlycaemiaChartDirective.js
+msgid "Glycaemia"
+msgstr "Glycaemia"
+
+#: public/templates/error.html
+msgid "Go to the Home Page"
+msgstr "Ga naar de homepage"
+
+#: public/templates/modals/warning.html
+msgid "Got it"
+msgstr "Begrepen"
+
+#: public/templates/recovery/lost.html
+msgid "Having trouble signing in?"
+msgstr "Heeft u problemen met aanmelden?"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Health-related"
+msgstr ""
+
+#: public/templates/sign.html
+msgid "Hello"
+msgstr "Hallo"
+
+#: public/templates/sidebar.html public/templates/patient/patient.html
+msgid "Home"
+msgstr "Home"
+
+#: public/templates/patient/profile.html
+msgid "Home address"
+msgstr "Huisadres"
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+msgid "Hour"
+msgstr "Uur"
+
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+msgid "How did you travel today?"
+msgstr "Hoe hebt u vandaag gereisd?"
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+msgid "How much do you weight?"
+msgstr "Hoeveel weegt u?"
+
+#: public/templates/recovery/lost.html
+msgid "I don't know my password"
+msgstr "Ik weet mijn wachtwoord niet"
+
+#: public/templates/signup.html public/templates/contacts/one.html
+msgid "I'm a"
+msgstr "Ik ben een"
+
+#: public/templates/profile/basic.html public/templates/profile/main.html
+msgid "Informations"
+msgstr "Inlichtingen"
+
+#: public/templates/dashboard/cards/insulin.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Insulin"
+msgstr "Insuline"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Insulin intake"
+msgstr ""
+
+#: languages/extraDictionary.html
+msgid "Intelligent Assistant"
+msgstr ""
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/asks/directives/ask_activity.html
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Intensity"
+msgstr "Intensiteit"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Intermediate"
+msgstr ""
+
+#: public/js/controllers/SigninCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+#: public/js/controllers/recovery/ResetCtrl.js
+msgid "Internal Server Error"
+msgstr "Interne serverfout"
+
+#: public/js/controllers/ProfileCtrl.js
+msgid "Invalid birthdate"
+msgstr "Ongeldige geboortedatum"
+
+#: public/templates/recovery/lost.html
+msgid "Issue"
+msgstr "Punt"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "January"
+msgstr "Januari"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "July"
+msgstr "Juli"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "June"
+msgstr "Juni"
+
+#: public/templates/signup.html public/templates/settings/main.html
+msgid "Language"
+msgstr "Taal"
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "Language changed!"
+msgstr "Taal veranderd"
+
+#: public/templates/dashboard/add.html
+msgid "Less"
+msgstr ""
+
+#: public/templates/signup.html public/templates/recovery/lost.html
+msgid "Loading"
+msgstr "Loading"
+
+#: public/templates/agenda/event.html
+msgid "Location"
+msgstr "Plaats"
+
+#: public/templates/sign.html public/templates/signin.html
+msgid "Log In"
+msgstr "Log In"
+
+#: public/templates/signin.html
+msgid "Log in with your <strong>Eglé</strong> Account"
+msgstr "Log in met uw Eglé account"
+
+#: public/templates/sidebar.html public/templates/navbar/user.html
+msgid "Log out"
+msgstr "Log out"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Long"
+msgstr ""
+
+#: languages/extraDictionary.html
+msgid "Lunch"
+msgstr "Lunch"
+
+#: public/js/controllers/ProfileCtrl.js public/js/appFilters.js
+msgid "Male"
+msgstr "Mannelijk"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "March"
+msgstr "Maart"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Max"
+msgstr "Max"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "May"
+msgstr "Mei"
+
+#: public/templates/dashboard/cards/meal.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Meal"
+msgstr ""
+
+#: languages/extraDictionary.html public/js/controllers/dashboard/AddCtrl.js
+msgid "Meals"
+msgstr "Maaltijden"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "Measured value"
+msgstr ""
+
+#: public/templates/patient/medicalRecord.html
+msgid "Medical record"
+msgstr "Medisch dossier"
+
+#: public/templates/chats/new.html public/templates/chats/one.html
+#: public/templates/dashboard/cards/directives/frequent_contacts.html
+#: public/templates/navbar/messages.html
+msgid "Messages"
+msgstr "Berichten"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Midday"
+msgstr "Middag"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Min"
+msgstr "Min"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Mixed"
+msgstr ""
+
+#: languages/extraDictionary.html
+#: public/templates/dashboard/cards/mobility.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/MobilityChartDirective.js
+msgid "Mobility"
+msgstr "Mobiliteit"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Monday"
+msgstr "Maandag"
+
+#: public/templates/dashboard/cards/meal.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Monitoring"
+msgstr ""
+
+#: public/templates/dashboard/add.html
+msgid "More"
+msgstr "Meer"
+
+#: public/templates/tips/one.html
+msgid "More details"
+msgstr "Meer details"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Morning"
+msgstr "Ochtend"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Motor vehicule"
+msgstr "Motorvoertuig"
+
+#: public/templates/sidebar.html public/templates/navbar/user.html
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+msgid "My Contacts"
+msgstr "Mijn Contacten"
+
+#: public/templates/contacts/main.html
+msgid "My contacts"
+msgstr "Mijn contacten"
+
+#: public/templates/patient/medicalRecord.html
+msgid "Name"
+msgstr "Naam"
+
+#: public/templates/signin.html
+msgid "Need help?"
+msgstr "Hulp nodig?"
+
+#: public/templates/settings/password.html
+msgid "New"
+msgstr "Nieuw"
+
+#: public/templates/chats/new.html
+msgid "New convers."
+msgstr "Nieuwe convers."
+
+#: public/templates/dashboard/cards/directives/chart.html
+msgid "New entry"
+msgstr "Nieuwe invoer"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "New event"
+msgstr "Nieuw evenement"
+
+#: public/js/controllers/PatientCtrl.js
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "No Data"
+msgstr "Nieuwe data"
+
+#: public/js/controllers/HeaderCtrl.js
+msgid "No Internet Connection."
+msgstr "Geen Internet verbinding."
+
+#: public/js/controllers/recovery/LostCtrl.js
+msgid "No account found with that email address."
+msgstr "Geen account gevonden die met dat e-mailadres overeenkomt."
+
+#: public/js/controllers/contacts/ContactsCtrl.js
+msgid "No contact yet?"
+msgstr ""
+
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "No conversation yet?"
+msgstr "Nog geen gesprek?"
+
+#: public/js/directives/FrequentContactsDirective.js
+msgid "No frequent contacts yet?"
+msgstr "Nog geen reguliere contacten?"
+
+#: public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+msgid "No recent notification!"
+msgstr "Geen recente notificatie!"
+
+#: public/js/controllers/chats/ChatsCtrl.js
+#: public/js/controllers/contacts/ContactsCtrl.js
+#: public/js/directives/SearchPatientsDirective.js
+msgid "No results for"
+msgstr "Geen resultaten voor"
+
+#: public/templates/navbar/notifications.html
+msgid "Notifications"
+msgstr "Bekendmakingen"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "November"
+msgstr "November"
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/templates/dashboard/cards/glycaemia.html
+#: public/templates/dashboard/cards/sport.html
+#: public/templates/dashboard/cards/weight.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Objective"
+msgstr "Doel"
+
+#: languages/extraDictionary.html public/js/controllers/HeaderCtrl.js
+#: public/js/controllers/NotificationsCtrl.js
+msgid "Objectives"
+msgstr "Doelen"
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "October"
+msgstr "Oktober"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "Office"
+msgstr "Kantoor"
+
+#: public/templates/tips/one.html
+msgid "Official resources"
+msgstr "Officiële ressourcen"
+
+#: public/templates/signin.html public/templates/signup.html
+#: public/templates/recovery/reset.html public/templates/settings/main.html
+#: public/templates/settings/password.html
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: public/templates/modals/signReset.html
+msgid "Password resetted"
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js public/js/appFilters.js
+msgid "Patient"
+msgstr "Patiënt"
+
+#: public/templates/patient/patient.html
+msgid "Patient file"
+msgstr "Patiëntendossier"
+
+#: public/templates/contacts/main.html
+msgid "Pending contact requests"
+msgstr ""
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Personal"
+msgstr "Persoonlijk"
+
+#: public/templates/patient/profile.html public/templates/profile/contact.html
+#: public/templates/profile/main.html
+msgid "Phone"
+msgstr "Telefoon"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Please choose a valid date range."
+msgstr "Kies een geldige datum range."
+
+#: public/js/directives/AskMealDirective.js
+msgid "Please describe your breakfast"
+msgstr ""
+
+#: public/js/directives/AskMealDirective.js
+msgid "Please describe your dinner"
+msgstr ""
+
+#: public/js/directives/AskMealDirective.js
+msgid "Please describe your lunch"
+msgstr ""
+
+#: public/js/directives/AskActivityDirective.js
+msgid "Please select an intensity"
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js
+msgid "Please verify your email address."
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js
+msgid "Please verify your username."
+msgstr ""
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Please, fill out the form correctly"
+msgstr ""
+
+#: public/js/controllers/ProfileCtrl.js public/js/controllers/SettingsCtrl.js
+#: public/js/controllers/SignupCtrl.js
+#: public/js/controllers/recovery/LostCtrl.js
+#: public/js/controllers/recovery/ResetCtrl.js
+msgid "Please, fill out the form correctly."
+msgstr ""
+
+#: public/js/controllers/SettingsCtrl.js public/js/controllers/SignupCtrl.js
+msgid "Please, use at least 6 characters for your password."
+msgstr ""
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Professional"
+msgstr ""
+
+#: public/templates/sidebar.html public/templates/contacts/one.html
+#: public/templates/navbar/user.html public/templates/profile/avatar.html
+#: public/templates/profile/basic.html public/templates/profile/contact.html
+msgid "Profile"
+msgstr "Profiel"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Public transports"
+msgstr "Openbaar vervoer"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Rapid"
+msgstr ""
+
+#: public/templates/signup.html public/templates/recovery/reset.html
+msgid "Re-enter Password"
+msgstr "Wachtwoord opnieuw invoeren"
+
+#: public/templates/settings/password.html
+msgid "Re-type new"
+msgstr ""
+
+#: languages/extraDictionary.html
+msgid ""
+"Remember to drink water more often! At least <b>1,5 liters of water</b> per "
+"day."
+msgstr ""
+
+#: public/templates/contacts/main.html
+msgid "Requests sent"
+msgstr ""
+
+#: public/templates/modals/signSent.html
+msgid "Reset password"
+msgstr ""
+
+#: public/templates/recovery/reset.html
+msgid "Reset your password"
+msgstr ""
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Saturday"
+msgstr "Zaterdag"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Save"
+msgstr "Sparen"
+
+#: public/templates/dashboard/cards/insulin.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Schema"
+msgstr ""
+
+#: public/js/directives/MealChartDirective.js
+msgid "Score"
+msgstr ""
+
+#: public/templates/contacts/add.html
+msgid "Search for Eglé users"
+msgstr ""
+
+#: public/templates/chats/new.html
+msgid "Search for contacts"
+msgstr "Zoeken naar contactpersonen"
+
+#: public/templates/dashboard/cards/directives/search_patients.html
+msgid "Search for patients"
+msgstr "Zoeken voor patiënten"
+
+#: public/templates/navbar/messages.html
+#: public/templates/navbar/notifications.html
+msgid "See All"
+msgstr "Alles Zien"
+
+#: public/templates/chats/one.html public/templates/contacts/add.html
+msgid "Send"
+msgstr "Sturen"
+
+#: public/templates/chats/one.html
+msgid "Send message..."
+msgstr "Verstuur bericht ..."
+
+#: languages/extraDictionary.html
+msgid "Sent you a contact request."
+msgstr ""
+
+#: public/js/directives/SportChartDirective.js public/js/appFilters.js
+msgid "September"
+msgstr "September"
+
+#: public/templates/sidebar.html
+#: public/templates/dashboard/cards/directives/todo.html
+#: public/templates/navbar/user.html public/templates/settings/password.html
+msgid "Settings"
+msgstr "Instellingen"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Short"
+msgstr ""
+
+#: public/templates/dashboard/asks/directives/ask_activity.html
+#: public/templates/dashboard/asks/directives/ask_meal.html
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+#: public/templates/dashboard/asks/directives/ask_weight.html
+msgid "Skip"
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Slow sugars"
+msgstr ""
+
+#: languages/extraDictionary.html
+msgid "Snack 10am"
+msgstr "Snack 10u"
+
+#: languages/extraDictionary.html
+msgid "Snack 4pm"
+msgstr "Snack 16u"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "Social"
+msgstr "Sociaal"
+
+#: public/js/controllers/SettingsCtrl.js public/js/controllers/SignupCtrl.js
+msgid "Sorry, but passwords don't match."
+msgstr ""
+
+#: public/js/controllers/ErrorCtrl.js
+msgid "Sorry, this content isn't available right now"
+msgstr ""
+
+#: public/js/controllers/ErrorCtrl.js
+msgid "Sorry, this page isn't available"
+msgstr "Sorry, deze pagina is niet beschikbaar"
+
+#: public/templates/dashboard/cards/sport.html
+#: public/js/controllers/agenda/EventCtrl.js
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/AskActivityDirective.js
+msgid "Sport"
+msgstr "Sport"
+
+#: public/js/controllers/SigninCtrl.js
+msgid "Stay signed in"
+msgstr "Blijf ingelogd"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Sunday"
+msgstr "Zondag"
+
+#: public/js/directives/AskWeightDirective.js
+msgid "Target value must be greater than 1"
+msgstr ""
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+msgid "Targeted weight"
+msgstr ""
+
+#: public/templates/modals/signActivation.html
+msgid "Thank you for registering with Eglé!"
+msgstr "Dank u voor het registreren met Eglé"
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "The current password you entered is incorrect"
+msgstr ""
+
+#: public/js/controllers/SigninCtrl.js
+msgid "The email or password is empty"
+msgstr ""
+
+#: public/js/controllers/SigninCtrl.js
+msgid "The email or password you entered is incorrect"
+msgstr ""
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "The entry has been removed"
+msgstr ""
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "The event has been deleted"
+msgstr ""
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "The feature Diet Monitoring helps you to eat well"
+msgstr ""
+
+#: public/js/controllers/ErrorCtrl.js
+msgid "The link you followed may be broken, or the page may have been removed."
+msgstr ""
+"De gevolgde link kan worden verbroken, of de pagina kan zijn verwijderd."
+
+#: public/js/controllers/ErrorCtrl.js
+msgid ""
+"The link you followed may have expired, or the page may only be visible to "
+"an audience you're not in."
+msgstr ""
+
+#: public/js/controllers/SigninCtrl.js
+msgid "The link you used to activate your account is invalid."
+msgstr ""
+
+#: public/js/controllers/recovery/ResetCtrl.js
+msgid "The link you used to reset your password is invalid or has expired."
+msgstr ""
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "The minimum cannot be larger than the maximum"
+msgstr ""
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "These passwords don't match."
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js
+msgid ""
+"This email is already used. Please use 'Need Help?' link on sign in page to "
+"retrieve your account."
+msgstr ""
+
+#: public/js/controllers/SignupCtrl.js
+msgid "This username is already used. Please pick another one."
+msgstr ""
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Thursday"
+msgstr "Donderdag"
+
+#: public/templates/dashboard/add.html
+msgid "Time"
+msgstr "Uur"
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Tip has been added to favorites"
+msgstr ""
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Tip has been deleted from favorites"
+msgstr ""
+
+#: public/templates/tips/one.html
+msgid "Tips"
+msgstr "Tips"
+
+#: languages/extraDictionary.html
+msgid "Tips & Tricks"
+msgstr ""
+
+#: public/templates/agenda/event.html
+msgid "Title"
+msgstr "titel"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/cards/audit.html
+msgid "To"
+msgstr "Naar"
+
+#: public/templates/settings/main.html
+msgid "To turn off a card, slide its switch to the left."
+msgstr ""
+
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/js/directives/InsulinChartDirective.js
+msgid "Today"
+msgstr "Vandaag"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+#: public/templates/agenda/event.html
+#: public/templates/dashboard/objective.html
+msgid "Type"
+msgstr "Type"
+
+#: public/templates/chats/one.html
+msgid "Unarchive"
+msgstr ""
+
+#: public/templates/dashboard/objective.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/InsulinChartDirective.js
+msgid "Unit(s)"
+msgstr ""
+
+#: public/js/directives/FrequentContactsDirective.js
+msgid "Use Messages, to begin a conversation."
+msgstr ""
+
+#: public/templates/signup.html public/templates/recovery/reset.html
+#: public/templates/settings/password.html
+msgid "Use at least 6 characters"
+msgstr ""
+
+#: public/js/controllers/HeaderCtrl.js
+msgid "Use the button See All to begin one."
+msgstr ""
+
+#: public/js/controllers/chats/ChatsCtrl.js
+msgid "Use the green button to begin one"
+msgstr ""
+
+#: public/js/controllers/TipsCtrl.js
+msgid "Use the heart to add to favorites"
+msgstr ""
+
+#: public/js/controllers/contacts/ContactsCtrl.js
+msgid "Use the input above to find one"
+msgstr ""
+
+#: public/templates/signup.html public/templates/contacts/one.html
+#: public/templates/patient/profile.html public/templates/settings/main.html
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "Vacation"
+msgstr "Verlof"
+
+#: public/templates/assistant.html public/templates/dashboard/objective.html
+#: public/templates/dashboard/asks/directives/ask_activity.html
+#: public/templates/dashboard/asks/directives/ask_meal.html
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/templates/recovery/lost.html public/templates/recovery/reset.html
+msgid "Validate"
+msgstr "Bevestigen"
+
+#: public/templates/techentry.html public/templates/dashboard/objective.html
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+msgid "Value"
+msgstr "Waarde"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "Value must be greater than 1."
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMobilityDirective.js
+msgid "Walking"
+msgstr "Wandelen"
+
+#: public/templates/modals/warning.html
+msgid "Warning"
+msgstr "Waarschuwing"
+
+#: public/js/directives/InsulinChartDirective.js public/js/appFilters.js
+msgid "Wednesday"
+msgstr "Woensdag"
+
+#: public/templates/agenda/main.html
+msgid "Week"
+msgstr "Week"
+
+#: languages/extraDictionary.html
+#: public/templates/dashboard/asks/directives/ask_weight.html
+#: public/templates/dashboard/cards/weight.html
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/WeightChartDirective.js
+msgid "Weight"
+msgstr "Gewicht"
+
+#: public/templates/sign.html
+msgid "Welcome to"
+msgstr "Welkom bij"
+
+#: public/templates/dashboard/asks/directives/ask_activity.html
+msgid "What have you done today?"
+msgstr "Wat hebt u vandaag gedaan?"
+
+#: public/templates/agenda/event.html
+msgid "Where"
+msgstr "Waar"
+
+#: public/js/appFilters.js
+msgid "Yesterday"
+msgstr "Gisteren"
+
+#: public/js/controllers/dashboard/DashboardCtrl.js
+msgid "You can add dashboard cards from Settings."
+msgstr ""
+
+#: public/js/controllers/agenda/EventCtrl.js
+msgid "You cannot create an event that ends before it starts"
+msgstr ""
+
+#: public/js/controllers/chats/ChatCtrl.js
+msgid "You cannot reply to this conversation"
+msgstr ""
+
+#: public/js/controllers/SigninCtrl.js
+msgid "You need to activate your account."
+msgstr "U moet uw account activeren."
+
+#: public/templates/chats/one.html
+msgid "You were on a call"
+msgstr "U was in gesprek."
+
+#: public/js/controllers/SigninCtrl.js
+msgid "Your account has been activated! You can now sign in."
+msgstr "Uw account werd geactiveerd. U kan nu sign in."
+
+#: public/templates/modals/signActivation.html
+msgid ""
+"Your account has been created and a verification email has been sent to your "
+"registered email address.<br><br><strong>Please click on the verification "
+"link included in the email to activate your account</strong>."
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Your last meal has a low energy intake. Be careful."
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "Your last meal has a rich trend. Be careful."
+msgstr ""
+
+#: public/js/controllers/SettingsCtrl.js
+msgid "Your password was changed with success."
+msgstr "Je wachtwoord is gewijzigd met succes."
+
+#: public/templates/modals/signReset.html
+msgid "Your password was changed with success. You can now sign in."
+msgstr ""
+
+#: public/js/directives/AskActivityDirective.js
+msgid "be sitting, TV/PC, reading, video games"
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "bread"
+msgstr "brood"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "butter"
+msgstr "boter"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "dressed"
+msgstr "gekleed"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "e.g."
+msgstr "bijv."
+
+#: public/js/directives/AskActivityDirective.js
+msgid "family, friends, professional network"
+msgstr "familie, vrienden, professioneel netwerk"
+
+#: public/js/controllers/dashboard/ObjectiveCtrl.js
+#: public/js/directives/SportChartDirective.js
+msgid "h/week"
+msgstr "uur/week"
+
+#: public/js/directives/SportChartDirective.js
+msgid "hours"
+msgstr "uren"
+
+#: public/js/directives/SportChartDirective.js
+msgid "hours per week"
+msgstr "uren per week"
+
+#: public/js/directives/AskActivityDirective.js
+msgid "jogging, swimming, tennis, golf"
+msgstr "joggen, zwemmen, tennis, golf"
+
+#: public/templates/dashboard/add.html
+#: public/templates/dashboard/asks/directives/ask_mobility.html
+msgid "min."
+msgstr "min."
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "missed meal"
+msgstr "gemiste maaltijd"
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/patient/chart_glycaemia.html
+msgid "month"
+msgstr "maand"
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/patient/chart_glycaemia.html
+#: public/js/directives/SportChartDirective.js
+msgid "months"
+msgstr "maanden"
+
+#: public/js/directives/MealChartDirective.js
+#: public/js/directives/SportChartDirective.js
+#: public/js/directives/WeightChartDirective.js
+msgid "obj."
+msgstr "obj."
+
+#: public/templates/dashboard/cards/directives/chart.html
+#: public/templates/modals/deleteEntry.html
+msgid "skipped"
+msgstr ""
+
+#: public/js/controllers/dashboard/AddCtrl.js
+#: public/js/directives/AskMealDirective.js
+msgid "soda"
+msgstr "frisdrank"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "swimming"
+msgstr ""
+
+#: public/js/controllers/PatientCtrl.js public/js/controllers/ProfileCtrl.js
+#: public/js/appFilters.js
+msgid "unknown"
+msgstr "onbekend"
+
+#: public/js/controllers/dashboard/AddCtrl.js
+msgid "value"
+msgstr ""
+
+#: public/js/directives/SportChartDirective.js
+msgid "weeks"
+msgstr "weken"
+
+#: public/templates/dashboard/cards/directives/chart.html
+msgid "year"
+msgstr "Jaar"
+
+#~ msgid "Accepted your contact request."
+#~ msgstr "Aanvardde uw contact aanvraag."
+
+#~ msgid "Amber"
+#~ msgstr "Amber"
+
+#~ msgid ""
+#~ "An email will be sent to your email address that includes a password "
+#~ "reset link."
+#~ msgstr ""
+#~ "U ontvangt een email met een activatielink om uw wachtwoord in te vullen. "
+
+#~ msgid "Cyan"
+#~ msgstr "Cyaan"
+
+#~ msgid "Default"
+#~ msgstr "Standaard"
+
+#~ msgid "Lime"
+#~ msgstr "Limoen"
+
+#~ msgid "Pink"
+#~ msgstr "Roze"
+
+#~ msgid "Purple"
+#~ msgstr "Purper"
+
+#~ msgid "Standard day"
+#~ msgstr "Standaarde dag"
+
+#~ msgid "Modify"
+#~ msgstr "Veranderen"
+
+#~ msgid "Other"
+#~ msgstr "Ander"
+
+#~ msgid "Account deleted"
+#~ msgstr "Account verwijderd"
+
+#~ msgid "No contacts yet?"
+#~ msgstr "Nog geen contacten?"
+
+#~ msgid "Update"
+#~ msgstr "Update"
+
+#~ msgid "id"
+#~ msgstr "id"
+
+#~ msgid "!"
+#~ msgstr "!"
+
+#~ msgid "Delete this conversation"
+#~ msgstr "Verwijder dit gesprek"
+
+#~ msgid "None"
+#~ msgstr "Geen"
+
+#~ msgid "Reset"
+#~ msgstr "Resetten"
+
+#~ msgid "The minimum value is 1."
+#~ msgstr "De minimale waarde is 1."
+
+#~ msgid "Tip"
+#~ msgstr "Tip"
+
+#~ msgid "kg"
+#~ msgstr "kg"
+
+#~ msgid "Account created. You can now login."
+#~ msgstr "Account aangemaakt. U kunt nu inloggen."
+
+#~ msgid "Account type"
+#~ msgstr "Account type"
+
+#~ msgid "Alcoholic beverages"
+#~ msgstr "Alcoholische dranken"
+
+#~ msgid "Basic informations"
+#~ msgstr "Basis informatie"
+
+#~ msgid "Blood pressure"
+#~ msgstr "Bloeddruk"
+
+#~ msgid "Call"
+#~ msgstr "Telefoontje"
+
+#~ msgid "Caught up with everything!"
+#~ msgstr "Ingehaald met alles!"
+
+#~ msgid "Charts"
+#~ msgstr "Grafiek"
+
+#~ msgid "Confirm password"
+#~ msgstr "Bevestig wachtwoord"
+
+#~ msgid "Consultation"
+#~ msgstr "Overleg"
+
+#~ msgid "Contact informations"
+#~ msgstr "Contact informatie"
+
+#~ msgid "Create an account"
+#~ msgstr "Maak een account aan"
+
+#~ msgid "Current password"
+#~ msgstr "Huidig wachtwoord"
+
+#~ msgid "Daily tracking"
+#~ msgstr "Dagelijks volgen"
+
+#~ msgid "Dairy products"
+#~ msgstr "Zuivelproducten"
+
+#~ msgid "Delete account"
+#~ msgstr "Account verwijderen"
+
+#~ msgid "Description"
+#~ msgstr "Beschrijving"
+
+#~ msgid "Divorced"
+#~ msgstr "Gescheiden"
+
+#~ msgid ""
+#~ "Enter a new password for your Eglé account. We highly recommend you "
+#~ "create a unique password (one that you don't use for any other websites)."
+#~ msgstr ""
+#~ "Voer een nieuw wachtwoord voor uw Eglé rekening. .Kies een sterk "
+#~ "wachtwoord en gebruik dit niet voor andere accounts."
+
+#~ msgid "Enter the first name or the last name of a patient"
+#~ msgstr "Voer de voornaam of de achternaam van een patiënt"
+
+#~ msgid "Fill out the form correctly"
+#~ msgstr "Vul het formulier correct"
+
+#~ msgid "First name"
+#~ msgstr "Voornaam"
+
+#~ msgid "Fish & meat"
+#~ msgstr "Vis & vlees"
+
+#~ msgid "Fruits & vegetables"
+#~ msgstr "Groenten & fruit"
+
+#~ msgid "General Account Settings"
+#~ msgstr "Algemene accountinstellingen"
+
+#~ msgid "Glucose"
+#~ msgstr "Glucose"
+
+#~ msgid "Hang Up"
+#~ msgstr "Ophangen"
+
+#~ msgid "Hot drinks"
+#~ msgstr "Hete drankjes"
+
+#~ msgid "Ignore"
+#~ msgstr "Negeren"
+
+#~ msgid "Intensive sports"
+#~ msgstr "Intensief sporten"
+
+#~ msgid "Last name"
+#~ msgstr "Achternaam"
+
+#~ msgid "Log Out"
+#~ msgstr "Uitloggen"
+
+#~ msgid "Logsbook"
+#~ msgstr "Dagboek"
+
+#~ msgid "Marital status"
+#~ msgstr "Burgerlijke staat"
+
+#~ msgid "Married"
+#~ msgstr "Getrouwd"
+
+#~ msgid "Maximum file size is 5MB."
+#~ msgstr "Maximale bestandsgrootte is 5MB."
+
+#~ msgid "Month"
+#~ msgstr "Maand"
+
+#~ msgid "My Eglé account"
+#~ msgstr "Mijn Eglé-account"
+
+#~ msgid "New conversation"
+#~ msgstr "Nieuw gesprek"
+
+#~ msgid "New password"
+#~ msgstr "Nieuw paswoord"
+
+#~ msgid "Nibbling"
+#~ msgstr "Knabbelen"
+
+#~ msgid "No entries for the moment."
+#~ msgstr "Geen data beschikbaar."
+
+#~ msgid "No notifications for this period."
+#~ msgstr "Geen meldingen voor deze periode."
+
+#~ msgid "Previously read"
+#~ msgstr "Eerder gelezen"
+
+#~ msgid "Profile picture"
+#~ msgstr "Profielfoto"
+
+#~ msgid "Read more"
+#~ msgstr "Meer lezen"
+
+#~ msgid "Separated"
+#~ msgstr "gescheiden"
+
+#~ msgid "Sign In"
+#~ msgstr "Aanmelden"
+
+#~ msgid "Sign Up"
+#~ msgstr "Registreren"
+
+#~ msgid "Sign in with your <strong>Eglé</strong> Account"
+#~ msgstr "Log in met uw <strong>Eglé</strong>-account"
+
+#~ msgid "Single"
+#~ msgstr "Single"
+
+#~ msgid "Starchy"
+#~ msgstr "Zetmeelrijke"
+
+#~ msgid "The event id must be known"
+#~ msgstr "Het evenement id moet bekend zijn"
+
+#~ msgid "The image you uploaded is too large. Maximum file size is 5MB."
+#~ msgstr ""
+#~ "De afbeelding die je hebt geüpload is te groot. Maximale bestandsgrootte "
+#~ "is 5MB."
+
+#~ msgid "The password you entered is incorrect."
+#~ msgstr "Het door u ingevoerde wachtwoord is onjuist."
+
+#~ msgid "The username or password is empty."
+#~ msgstr "De gebruikersnaam of wachtwoord is leeg."
+
+#~ msgid "The username or password you entered is incorrect."
+#~ msgstr "De gebruikersnaam of ingevoerde wachtwoord is onjuist."
+
+#~ msgid "This month"
+#~ msgstr "Deze maand"
+
+#~ msgid "This username is already used. Please pick a new one."
+#~ msgstr "Deze gebruikersnaam wordt al gebruikt. Gelieve kies een nieuwe."
+
+#~ msgid "This week"
+#~ msgstr "Deze week"
+
+#~ msgid "Tip of the day"
+#~ msgstr "Tip van de dag"
+
+#~ msgid ""
+#~ "Use at least 6 characters. Don’t use a password from another site, or "
+#~ "something too obvious like your pet’s name."
+#~ msgstr ""
+#~ "Gebruik minimaal 6 karakters. Geen wachtwoord te gebruiken van een andere "
+#~ "site, of iets te voor de hand, zoals de naam van uw huisdier."
+
+#~ msgid "Use the button"
+#~ msgstr "Gebruik de knop"
+
+#~ msgid "Use the green button"
+#~ msgstr "Gebruik de groene knop"
+
+#~ msgid "Water"
+#~ msgstr "Water"
+
+#~ msgid "Widowed"
+#~ msgstr "Weduwe"
+
+#~ msgid "Work address"
+#~ msgstr "Werkadres"
+
+#~ msgid "Year"
+#~ msgstr "Jaar"
+
+#~ msgid "You can use letters, numbers and full stops."
+#~ msgstr "U kunt letters, cijfers en volledige stops te gebruiken."
+
+#~ msgid "Your notifications"
+#~ msgstr "Uw meldingen"
+
+#~ msgid "Your water consumption"
+#~ msgstr "Uw waterverbruik"
+
+#~ msgid "calories"
+#~ msgstr "calorieën"
+
+#~ msgid "glasses"
+#~ msgstr "glazen"
+
+#~ msgid "minutes"
+#~ msgstr "notulen"
+
+#~ msgid "portions"
+#~ msgstr "gedeelten"
+
+#~ msgid "to begin one!"
+#~ msgstr "één beginnen!"
+
+#~ msgid "All entries"
+#~ msgstr "Alle inzendingen"
+
+#~ msgid "Allergy"
+#~ msgstr "Allergie"
+
+#~ msgid "Change your password"
+#~ msgstr "Wijzig je wachtwoord"
+
+#~ msgid "Chart"
+#~ msgstr "Grafieken"
+
+#~ msgid "Comment"
+#~ msgstr "Commentaar"
+
+#~ msgid "Language changed"
+#~ msgstr "Taal gewijzigd"
+
+#~ msgid "LogsBook"
+#~ msgstr "Dagboek"
+
+#~ msgid "Reload"
+#~ msgstr "Opnieuw laden"
+
+#~ msgid "Show"
+#~ msgstr "Tonen"
+
+#~ msgid "Submit"
+#~ msgstr "Voorleggen"
+
+#~ msgid "Type of entry"
+#~ msgstr "Soort van binnenkomst"
+
+#~ msgid "View"
+#~ msgstr "Uitzicht"
+
+#~ msgid "Your language is now"
+#~ msgstr "Uw taal is nu"
+
+#~ msgid "Your primary language is now"
+#~ msgstr "Uw primaire taal is nu "
+
+#~ msgid "All"
+#~ msgstr "Alle"
+
+#~ msgid "Choose your username"
+#~ msgstr "Kies je gebruikersnaam"
+
+#~ msgid "Change Password"
+#~ msgstr "Wachtwoord wijzigen"
+
+#~ msgid "Change password..."
+#~ msgstr "Wachtwoord wijzigen..."
+
+#~ msgid "Support"
+#~ msgstr "Support"
