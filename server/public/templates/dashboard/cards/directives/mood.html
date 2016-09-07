@@ -1,0 +1,18 @@
+
+<div class="panel panel-white card" style="border: solid #2196F3 2px;">
+    <div class="panel-heading" style="border-top-right-radius: 0;border-top-left-radius: 0;">
+        <div class="panel-title">
+            <div class="col-xs-7" style="padding: 0;">Comment vous sentez-vous?</div>
+            
+        </div>
+    </div>
+    <div class="panel-body" style="padding: 2px; ">
+        <div class="text-center">
+        <span data-ng-repeat="button in mood">
+        	<button data-ng-style="button.img"  style="height: 64px;width: 64px; border-color:transparent;" data-ng-click="selectMood(button);"></button>
+        </span>
+        <p>{{currentMood}}</p>
+        </div>
+        
+    </div>
+</div>

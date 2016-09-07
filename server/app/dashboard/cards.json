@@ -22,6 +22,14 @@
         "condition": ["d1","d2"],
         "enabled": true
     },{
+        "name": "mood",
+        "title": "Mood",
+        "type": 2,
+        "order": 1,
+        "roles": [3],
+        "condition": ["d1","d2"],
+        "enabled": true
+    },{
         "name": "glycaemia",
         "title": "Glycaemia",
         "type": 2,
