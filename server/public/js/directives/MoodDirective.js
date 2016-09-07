@@ -39,6 +39,7 @@ angular.module('MoodDirective', []).directive('mood', function(gettextCatalog, $
             			}
             		}
                // });
+            		
         	};
             
         }
