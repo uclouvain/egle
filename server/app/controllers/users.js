@@ -198,7 +198,7 @@ exports.signin = function(req, res) {
                                                'The user tried to sign in but the password was incorrect');
                                 return res.sendStatus(401);
                             } else {
-                                var token = jsonwebtoken.sign({id: user._id}, tokenSecret, { expiresInMinutes: expiration });
+                                var token = jsonwebtoken.sign({id: user._id, condition : user.condition}, tokenSecret, { expiresInMinutes: expiration });
                                 audit.logEvent(user.username, 'Users', 'Sign in', 'used email', email, 'succeed',
                                                'The user has successfully signed in to his account');
                                 
@@ -281,6 +281,7 @@ exports.signup = function(req, res) {
             return res.sendStatus(401); 
         } else { 
             verifyRecaptcha(captcha, function(success) {
+            	
                 if (success) {
                     var user = new db.userModel();
                     user.email = email;
@@ -310,6 +311,7 @@ exports.signup = function(req, res) {
                                     audit.logEvent(user.username, 'Users', 'Sign up', 'username', user.username, 'succeed',
                                                    'The user has successfully created an account');
                                     var rep = [['[name]', user.username], ['[link]', "https://" + req.headers.host + "/signin/activation/" + token]];
+                                    //console.log("rep: " + JSON.stringify(rep));
                                     replaceInFile('./emails/' + user.language + '_activation.html', rep, function (err, result) {
                                         if (err) {
                                             console.log(err);
@@ -691,6 +693,7 @@ exports.getUsername = function getUsername(userID, callback){
 
 function sendMail(mail, callback) {
     var smtpTransport = nodemailer.createTransport({
+    	
         host: mailerConfig.host,
         port: mailerConfig.port,
         secure: true,
@@ -698,6 +701,7 @@ function sendMail(mail, callback) {
             user: mailerConfig.auth.user,
             pass: mailerConfig.auth.pass
         }
+        
     });
 
     var mailOptions = {

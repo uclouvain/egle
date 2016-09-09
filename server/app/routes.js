@@ -35,6 +35,7 @@ var audit           = require('./audit-log');
 var controllers = {};
 controllers.users = require('./controllers/users');
 controllers.entries = require('./controllers/entries');
+controllers.hemoglobin = require('./controllers/hemoglobin');
 controllers.patients = require('./controllers/patients');
 controllers.chats = require('./controllers/chats');
 controllers.notifications = require('./controllers/notifications');
@@ -236,6 +237,16 @@ var routes = [
         access: _.findWhere(aclRoutes, {id: 20}).roles
     },
 
+    // === GLYCATED HEMOGLOBIN ROUTE ==========================================
+    
+    // Retrieve the estimated glycated hemoglobin
+    {
+        path: _.findWhere(aclRoutes, {id: 64}).uri,
+        httpMethod: _.findWhere(aclRoutes, {id: 64}).method,
+        middleware: [jwt({secret: secret}), tokenManager.verifyToken, controllers.hemoglobin.computeValue],
+        access: _.findWhere(aclRoutes, {id: 64}).roles
+    },
+
     // === CHAT ROUTES ========================================================
     // Get the list of my chats
     {
@@ -381,6 +392,15 @@ var routes = [
         httpMethod: _.findWhere(aclRoutes, {id: 4}).method,
         middleware: [jwt({secret: secret}), tokenManager.verifyToken, controllers.charts.build],
         access: _.findWhere(aclRoutes, {id: 4}).roles,
+        verifyRelationship: true
+    },
+    
+    // Retrieve the estimated glycated hemoglobin value of a specified patient (doctor view)
+    {
+        path: _.findWhere(aclRoutes, {id: 65}).uri,
+        httpMethod: _.findWhere(aclRoutes, {id: 65}).method,
+        middleware: [jwt({secret: secret}), tokenManager.verifyToken, controllers.hemoglobin.computeValue],
+        access: _.findWhere(aclRoutes, {id: 65}).roles,
         verifyRelationship: true
     },
     

@@ -65,6 +65,7 @@ exports.verifyToken = function (req, res, next) {
             return res.sendStatus(500);
         } else {
             var decoded = jsonwebtoken.decode(token);
+            
             var remainingTime = -(Math.floor(new Date().getTime()/1000) - decoded.exp);
             
             // keep sending blank tokens even if there is no new token to send. This clears the client-side cached token, otherwise,
@@ -93,7 +94,7 @@ exports.verifyToken = function (req, res, next) {
             } else { //reply===null
                 if  (remainingTime < TOKEN_EXPIRATION_SEC *2/3) {
                     expireToken(token, true);
-                    var newToken = jsonwebtoken.sign({id: decoded.id}, tokenSecret, { expiresInMinutes: TOKEN_EXPIRATION });
+                    var newToken = jsonwebtoken.sign({id: decoded.id, condition: decoded.condition}, tokenSecret, { expiresInMinutes: TOKEN_EXPIRATION });
 //                    console.log('created token at ' + Math.floor(new Date().getTime()/1000) + ' ' + JSON.stringify(jsonwebtoken.decode(newToken)));
                     res.set('Authorization', 'Bearer ' + newToken);
                 }

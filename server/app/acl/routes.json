@@ -350,5 +350,17 @@
         "uri": "/api/chats/webrtc",
         "method": "POST",
         "roles": [2,3]
+    },
+    {
+        "id": 64,
+        "uri": "/api/hemoglobin",
+        "method": "GET",
+        "roles": [2,3]
+    },
+    {
+        "id": 65,
+        "uri": "/api/patients/:username/hemoglobin",
+        "method": "GET",
+        "roles": [2,3]
     }
 ]

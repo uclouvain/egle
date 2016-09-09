@@ -27,6 +27,10 @@ angular.module('PatientService', []).factory('Patient', function($http) {
         entries: function(config) {
             return $http.get('/api/patients/'+config.username+'/entries/'+config.type);
         },
+
+        glycHemoglobin: function(config) {
+            return $http.get('/api/patients/'+config.username+'/hemoglobin');
+        },
         
         chart: function(config) {
             return $http.get('/api/patients/'+config.username+'/charts/'+config.type+'/from/'+config.from+'/to/'+config.to);
