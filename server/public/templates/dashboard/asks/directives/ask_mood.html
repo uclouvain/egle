@@ -1,0 +1,26 @@
+
+<div class="panel panel-default card" style="border: solid #fff 2px;">
+    <form data-ng-submit="answer();">
+        <div class="panel-heading" style="padding:0;">
+            <h3 class="panel-title">
+                <button type="button" class="close" data-ng-click="skip('mood');"><i class="mdi-navigation-close"></i></button>
+                <span>Comment vous sentez-vous ?</span>
+            </h3>
+        </div>
+	    <div class="panel-body" style="padding: 2px; ">
+	        <div class="text-center">
+	        <div data-ng-repeat="button in mood" style="display: inline-block;">
+	        	<button type="button" data-ng-style="button.img"  style="height: 64px;width: 64px; border-color:transparent;" data-ng-click="selectMood(button);"></button>
+	        	<p data-ng-style="button.text">{{button.shortForm}}</p>
+	        </div>
+	        </div>
+	        
+	    </div>
+	    <div class="text-right" style="padding: 0px 5px 5px 5px;">
+	        <button class="btn btn-flat btn-default" style="margin: 0px 1px;"
+	                type="button" data-ng-click="skip('mood');" translate>Skip</button>
+	        <button class="btn btn-flat btn-primary" style="margin: 0px 1px;" type="submit"
+	                data-ng-disabled="!currentMood" translate>Validate</button>
+	    </div>
+    </form>
+</div>

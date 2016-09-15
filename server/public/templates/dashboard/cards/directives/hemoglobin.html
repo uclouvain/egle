@@ -7,21 +7,21 @@
         </div>
     </div>
     <div class="panel-body text-center" style="padding: 2px; ">
-        <h3 ng-show="!glycHemo.isGood" style="color: #ff5722;">{{glycHemo.value | number : 2}} %   
+        <h3 data-ng-if="!glycHemo.isGood" style="color: #ff5722;">{{glycHemo.value | number : 2}} %   
         <span class="avatar" style="margin-bottom: 7px; line-height: 25px;font-size:20px; height: 24px; width:24px;background-color:#ff5722;">!</span>
         <br>
         <span style="font-size:0.7em;">({{IFCCValue | number : 2}}  mmol/mol)</span>    
         </h3>
         
-        <h3 ng-show="glycHemo.isGood" style="color: #4caf50;">{{glycHemo.value | number : 2}} %      
+        <h3 data-ng-if="glycHemo.isGood" style="color: #4caf50;">{{glycHemo.value | number : 2}} %      
         <span class="avatar mdi-action-done" style="margin-bottom: 7px; line-height: 25px;font-size:20px; height: 24px; width:24px;background-color:#4caf50;"></span>
         <br>
         <span style="font-size:0.7em;">({{IFCCValue | number : 2}}  mmol/mol)</span>  
         </h3>
-        <p style="color: red;" ng-show="!glycHemo.isGood && glycHemo.condition == 'd1'">
+        <p style="color: red;" data-ng-if="!glycHemo.isGood && glycHemo.condition == 'd1'">
         Votre HbA1c devrait être inférieur à 8 %</p>
-        <p style="color: red;" ng-show="!glycHemo.isGood && glycHemo.condition == 'd2'">
-        votre HbA1c devrait être inférieur à 6.5 % et supérieure à 6 %</p>
+        <p style="color: red;" data-ng-if="!glycHemo.isGood && glycHemo.condition == 'd2'">
+        votre HbA1c devrait être inférieur à 6.5 % </p>
         <p>Estimation: {{nbDays}} jours - {{glycHemo.nbEntries}} entrées</p>
     </div>
 </div>

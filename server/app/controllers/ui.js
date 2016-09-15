@@ -613,6 +613,14 @@ function chooseAsk(user, ask, callback){
                     return;
                 }
             break;
+            case 'ask_mood'://once a day at 2 pm 
+                if((since >= new Date().setHours(13, 55, 0) )){
+                	since.setMinutes(since.getMinutes() - 1);
+                } else {
+                    callback(null, null);
+                    return;
+                }
+            break;
             case 'ask_weight'://once a month
                 since.setMonth(since.getMonth() - 1);
             break;

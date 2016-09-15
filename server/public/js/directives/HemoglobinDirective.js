@@ -16,7 +16,7 @@ angular.module('HemoglobinDirective', []).directive('hemoglobin', function(gette
 	                $scope.nbDays = $scope.nbDays - (new Date($scope.glycHemo.start).getTime());
 	                $scope.nbDays = parseInt($scope.nbDays / (1000*60*60*24));
 	                // NGSP = [0.09148 * IFCC] + 2.152)
-	                $scope.IFCCValue = ($scope.glycHemo.value - 2.15 ) / 0.0915;
+	                $scope.IFCCValue = ($scope.glycHemo.value - 2.152 ) / 0.09148;
 	                
 	            }).error(function(status, data) {
 	                $rootScope.rootAlerts.push({

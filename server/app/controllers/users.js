@@ -281,8 +281,7 @@ exports.signup = function(req, res) {
             return res.sendStatus(401); 
         } else { 
             verifyRecaptcha(captcha, function(success) {
-            	
-                if (success) {
+            	if (success) {
                     var user = new db.userModel();
                     user.email = email;
                     user.username = username;

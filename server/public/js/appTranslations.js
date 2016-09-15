@@ -720,10 +720,24 @@ angular.module('gettext').run(['gettextCatalog',function(gettextCatalog) {
 						"entries for the moment." : "entrées pour le moment.",
 						"entries." : "entrées.",
 						"Mood" : "Humeur",
-						"I feel bad" : "Je ne me sens pas bien",
-						"I feel okay" : "Ca va",
-						"I feel great" : "Je suis en pleine forme",
-						"I feel weird" : "Je me sens bizarre"
+						"I am afraid" : "J'ai peur",
+						"I am okay" : "Je vais bien",
+						"I am upset" : "Je suis énervé",
+						"I am worried" : "Je suis inquiet",
+						"I am angry" : "Je suis en colère",
+						"I am sad" : "Je suis triste",
+						"I am unhappy" : "Je ne vais pas bien",
+						"I am feeling great" : "Je suis très content",
+						"I am proud" : "Je suis fier",
+						"Afraid" : "Apeuré",
+						"Okay" : "Bien",
+						"Upset" : "Enervé",
+						"Worried" : "Inquiet",
+						"Angry" : "Fâché",
+						"Sad" : "Triste",
+						"Unhappy" : "Mal",
+						"Great" : "Heureux",
+						"Proud" : "Fier"
 					});
 	gettextCatalog.setStrings('nl_BE',
 					{

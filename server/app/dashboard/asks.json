@@ -26,5 +26,12 @@
         "order": 4,
         "roles": [3],
         "condition": ["d1","d2"]
+    },
+    {
+        "name": "ask_mood",
+        "cards": "mood",
+        "order": 5,
+        "roles": [3],
+        "condition": ["d1","d2"]
     }
 ]
