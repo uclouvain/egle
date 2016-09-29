@@ -20,18 +20,19 @@
 
 angular.module('SignupCtrl', [[
     'css/templates/sign.css'
-]]).controller('SignupController', function($scope, $state, $window, gettextCatalog, $ocLazyLoad, $injector) {
+]]).controller('SignupController', function($scope, $log, $state, $window, gettextCatalog, $ocLazyLoad, $injector) {
     $scope.alert = {};
     $scope.loading = false;
     $scope.patEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
     $scope.rolesList = [
-        {name:gettextCatalog.getString('Patient'), value:'3'}/*,
-        {name:gettextCatalog.getString('Caregiver'), value:'2'}*/
+        {name:gettextCatalog.getString('Patient'), value:'3'},
+        //{name:gettextCatalog.getString('Caregiver'), value:'2'}
     ];
     $scope.conditionsList = [
-        {name:gettextCatalog.getString('Diabetes Type 1'), value:'d1'},
-        {name:gettextCatalog.getString('Diabetes Type 2'), value:'d2'}/*,
-        {name:gettextCatalog.getString("Alzheimer's Disease"), value:'a'}*/
+        {name:gettextCatalog.getString('Diabetes Type 1'), value:'d1', checked: false},
+        {name:gettextCatalog.getString('Diabetes Type 2'), value:'d2', checked: false},
+        {name:gettextCatalog.getString('Heart Failure'), value:'hf', checked: false}/*,
+        {name:gettextCatalog.getString("Alzheimer's Disease"), value:'a', checked: false}*/
     ];
     $scope.languagesList = [
         {name:'English', value:'EN'},
@@ -71,8 +72,13 @@ angular.module('SignupCtrl', [[
                             language: $scope.language
                         }
                         if(body.role == 3) {
-                            body.condition = $scope.condition;
+                            body.condition = [];
+                        	for(var i = 0; i < $scope.conditionsList.length; ++i){
+                        		if($scope.conditionsList[i].checked)
+                        			body.condition.push($scope.conditionsList[i].value);
+                        	}
                         }
+                       
                         $scope.loading = true;
                         User.signup(body).success(function(data) {
                             $scope.loading = false;

@@ -39,11 +39,13 @@
                         </div>
                     </div>
                     <div class="form-group" data-ng-show="profile.condition">
-                        <label for="condition" class="col-xs-4 control-label" translate>Condition</label>
+                        <label for="condition" class="col-xs-4 control-label" translate>Condition(s)</label>
                         <div class="col-xs-8">
-                            <select class="form-control" data-ng-init="condition = condition || conditionsList[0].value" data-ng-model="profile.condition" 
+                        	<label class="checkbox-inline" ng-repeat="condition in profile.conditions"><input type="checkbox" value="{{condition.value}}" ng-model="condition.checked">{{condition.name}}</label>
+                            
+                            <!-- <select class="form-control" data-ng-init="condition = condition || conditionsList[0].value" data-ng-model="profile.condition" 
                                             data-ng-options="condition.value as condition.name for condition in conditionsList">
-                            </select>
+                            </select> -->
                         </div>
                     </div>
                     <div class="form-group">

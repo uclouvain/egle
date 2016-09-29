@@ -282,6 +282,7 @@ exports.signup = function(req, res) {
         } else { 
             verifyRecaptcha(captcha, function(success) {
             	if (success) {
+            	//if (true) {
                     var user = new db.userModel();
                     user.email = email;
                     user.username = username;
@@ -706,10 +707,11 @@ function sendMail(mail, callback) {
     var mailOptions = {
         to: mail.to,
         from: mailerConfig.sender.name + ' <' + mailerConfig.sender.address + '>',
+        //from: 'noReply@egle.com',
         subject: mail.subject,
         html: mail.html
     };
-    
+    //console.log("mail: " + JSON.stringify(mailOptions));
     smtpTransport.sendMail(mailOptions, function(err) {
         if(err){
             console.log(err);

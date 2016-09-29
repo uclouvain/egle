@@ -42,9 +42,10 @@ angular.module('ProfileCtrl', [[
             {name: gettextCatalog.getString('Female'), value: '2'}
         ];
         $scope.conditionsList = [
-            {name: gettextCatalog.getString('Diabetes Type 1'), value: 'd1'},
-            {name: gettextCatalog.getString('Diabetes Type 2'), value: 'd2'},
-            {name: gettextCatalog.getString("Alzheimer's Disease"), value: 'a'}
+             {name:gettextCatalog.getString('Diabetes Type 1'), value:'d1', checked: false},
+             {name:gettextCatalog.getString('Diabetes Type 2'), value:'d2', checked: false},
+             {name:gettextCatalog.getString('Heart Failure'), value:'hf', checked: false}/*,
+             {name:gettextCatalog.getString("Alzheimer's Disease"), value:'a', checked: false}*/
         ];
         $scope.colors = ['#bebebe','#E91E63','#9C27B0','#00BCD4','#CDDC39','#FFC107'];
         
@@ -74,9 +75,22 @@ angular.module('ProfileCtrl', [[
                     data.birthdate = gettextCatalog.getString('unknown');
                 }
             }
-            
+            // Select the right conditions
+            if(data.condition){
+            	var len = $scope.conditionsList.length;
+                var conditions = []
+                for(var i = 0; i < len; ++i){
+                	if(data.condition.indexOf($scope.conditionsList[i].value) > -1){
+                		$scope.conditionsList[i].checked = true;
+                	} else{
+                		$scope.conditionsList[i].checked = false;
+                	}              		
+                	
+                }
+            }
             // Add it to the scope
             $scope.profile = data;
+            $scope.profile.conditions = $scope.conditionsList;
         }).error(function (status, data) {
             $rootScope.rootAlerts.push({
                 type:'danger',
@@ -122,11 +136,20 @@ angular.module('ProfileCtrl', [[
                     birthdate = new Date($scope.birthdate).setHours(5);
                 }
                 
+                // Conditions
+                var len = $scope.profile.conditions.length;
+                var conditions = []
+                for(var i = 0; i < len; ++i){
+                	if($scope.profile.conditions[i].checked){
+                		conditions.push($scope.profile.conditions[i].value);
+                	}
+                }
+                
                 // Update
                 User.update({
                     birthdate: birthdate,
                     gender: $scope.profile.gender,
-                    condition: $scope.profile.condition
+                    condition: conditions
                 }).success(function (data) {
                     // Go to main profile page and reload it
                     $state.go("home.profile.main", {}, {reload: true});

@@ -69,11 +69,12 @@
                             </div>
                         </div>
                         <div class="form-group" data-ng-show="rolesList[0].value == role">
-                            <label for="accountType" class="col-xs-3 control-label" translate>Condition</label>
+                            <label for="accountType" class="col-xs-3 control-label" translate>Condition(s)</label>
                             <div class="col-xs-9">
-                                <select data-ng-init="condition = condition || conditionsList[0].value" data-ng-model="condition" data-ng-required="true"
+                            	<label class="checkbox-inline" ng-repeat="condition in conditionsList"><input type="checkbox" value="{{condition.value}}" ng-model="condition.checked">{{condition.name}}</label>
+                                <!-- <select data-ng-init="condition = condition || conditionsList[0].value" data-ng-model="condition" data-ng-required="true"
                                         class="form-control" data-ng-options="condition.value as condition.name for condition in conditionsList">
-                                </select>
+                                </select>  -->
                             </div>
                         </div>
                         <div class="form-group">
@@ -91,7 +92,8 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <div style="display: inline-block;" vc-recaptcha key="'6LfzkAkTAAAAAKEtbEQDCx9ZNhVJTFDuXkp_1_tP'" data-ng-model="response"></div>
+                            <div style="display: inline-block;" vc-recaptcha key="'6LepcikTAAAAAKzKEkmwoAaO7MIDqHaiNyC7fVZi'" data-ng-model="response"></div>
+                            <!-- <div style="display: inline-block;" vc-recaptcha key="'6LfzkAkTAAAAAKEtbEQDCx9ZNhVJTFDuXkp_1_tP'" data-ng-model="response"></div> -->
                         </div>
                         <div class="form-group" style="margin-bottom:0;padding-right: 10px;padding-left: 10px;">
                             <button class="btn btn-default btn-raised pull-left" ui-sref="sign" translate>Back</button>

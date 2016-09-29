@@ -37,9 +37,11 @@
                     <div class="col-xs-4" style="font-weight: bold;" translate>Gender</div>
                     <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.gender | gender}}</div>
                 </div>
-                <div class="row" style="padding-top: 10px;" data-ng-show="profile.condition">
-                    <div class="col-xs-4" style="font-weight: bold;" translate>Condition</div>
-                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">{{profile.condition | condition}}</div>
+                <div class="row" style="padding-top: 10px;" data-ng-show="profile.conditions">
+                    <div class="col-xs-4" style="font-weight: bold;" translate>Condition(s)</div>
+                    <div class="col-xs-8" style="overflow: hidden;text-overflow: ellipsis;">
+                    <span ng-repeat="c in profile.conditions | filter:{checked:true} ">{{c.name}} <br> </span>                    
+                    </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-xs-4" style="font-weight: bold;" translate>Birthday</div>

@@ -20,6 +20,7 @@
 
 var dbUser  = require('../models/user');
 var audit   = require('../audit-log');
+var fs		= require('fs');
 
 // Retrieve a patient
 exports.read = function(req, res) {

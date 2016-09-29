@@ -44,7 +44,12 @@ exports.list = function (req, res) {
                 console.log(err);
             } else {
                 var tipsToReturn = _.filter(tips, function (tip){
-                    return tip.condition.indexOf(user.condition) > -1;
+                	var conditionOk = false;
+                	for(var i = 0; i < tip.condition.length; ++i){
+                		if(user.condition.indexOf(tip.condition[i]) > -1)
+                			conditionOk = true;
+                	}
+                    return conditionOk;
                 });
                 for (i=0; i<tipsToReturn.length; i++) {
                     if (user.preferences.tips.indexOf(tipsToReturn[i].id) > -1) {

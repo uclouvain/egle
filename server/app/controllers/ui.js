@@ -119,7 +119,13 @@ exports.settings = function(req,res){
                 var role =  parseInt(user.role);
                 var items = JSON.parse(JSON.stringify(_.filter(cardsList, function (item){
                     if (item.condition) {
-                        return item.roles.indexOf(role) > -1 && item.condition.indexOf(user.condition) > -1 && item.type === 2;
+                    	var conditionOk = false;
+                    	for(var i = 0; i < item.condition.length; ++i){
+                    		if(user.condition.indexOf(item.condition[i]) > -1)
+                    			conditionOk = true;
+                    	}
+                    	
+                        return item.roles.indexOf(role) > -1 && conditionOk && item.type === 2;
                     } else {
                         return item.roles.indexOf(role) > -1 && item.type === 2;
                     }
@@ -520,7 +526,12 @@ function buildAsk(user, callback){
     var role =  parseInt(user.role);
     var asks = JSON.parse(JSON.stringify(_.filter(asksList, function (ask){
         if (ask.condition) {
-            return ask.roles.indexOf(role) > -1 && ask.condition.indexOf(user.condition) > -1;
+        	var conditionOk = false;
+        	for(var i = 0; i < ask.condition.length; ++i){
+        		if(user.condition.indexOf(ask.condition[i]) > -1)
+        			conditionOk = true;
+        	}
+            return ask.roles.indexOf(role) > -1 && conditionOk;
         } else {
             return ask.roles.indexOf(role) > -1;
         }
@@ -670,7 +681,12 @@ function buildCards(user, callback){
     var role =  parseInt(user.role);
     var cards = JSON.parse(JSON.stringify(_.filter(cardsList, function (card){
         if (card.condition) {
-            return card.roles.indexOf(role) > -1 && card.condition.indexOf(user.condition) > -1;
+        	var conditionOk = false;
+        	for(var i = 0; i < card.condition.length; ++i){
+        		if(user.condition.indexOf(card.condition[i]) > -1)
+        			conditionOk = true;
+        	}
+            return card.roles.indexOf(role) > -1 && conditionOk;
         } else {
             return card.roles.indexOf(role) > -1;
         }
