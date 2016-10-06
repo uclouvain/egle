@@ -22,7 +22,7 @@ angular.module('ProfileCtrl', [[
     'bower_components/pickadate/lib/themes/classic.css',
     'bower_components/pickadate/lib/themes/classic.date.css',
     'bower_components/pickadate/lib/themes/classic.time.css'
-]]).controller('ProfileController', function ($scope, gettextCatalog, $location, $state, $ocLazyLoad, $injector, $filter, $rootScope) {
+]]).controller('ProfileController', function ($scope, gettextCatalog, $window, $location, $state, $ocLazyLoad, $injector, $filter, $rootScope) {
     $ocLazyLoad.load('js/services/UserService.js').then(function () {
         var User = $injector.get('User'), minDate = new Date('1900-01-01'), maxDate = new Date().setDate(new Date().getDate() - 1);
         
@@ -151,6 +151,9 @@ angular.module('ProfileCtrl', [[
                     gender: $scope.profile.gender,
                     condition: conditions
                 }).success(function (data) {
+                	if(data.activated)
+                        $window.localStorage.token = data.token;
+                    
                     // Go to main profile page and reload it
                     $state.go("home.profile.main", {}, {reload: true});
                 }).error(function (status, data) {

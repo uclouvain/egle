@@ -362,5 +362,11 @@
         "uri": "/api/patients/:username/hemoglobin",
         "method": "GET",
         "roles": [2,3]
+    },
+    {
+        "id": 66,
+        "uri": "/api/entries/last/type/:type/subtype/:subtype",
+        "method": "GET",
+        "roles": [2,3]
     }
 ]

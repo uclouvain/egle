@@ -1,41 +1,42 @@
 {
-    "name": "egle-app",
-    "private": true,
-    "dependencies": {
-        "angular": "1.*",
-        "angular-fullscreen": "*",
-        "angular-gettext": "*",
-        "angular-jwt": "*",
-        "angular-recaptcha": "*",
-        "angular-ui-router": "0.2.13",
-        "arrive": "*",
-        "bootstrap": "3.1.1",
-        "bootstrap-material-design": "0.3.0",
-        "fullcalendar": "*",
-        "highcharts-release": "4.1.7",
-        "jquery": "*",
-        "moment": "*",
-        "normalize.css": "*",
-        "ocLazyLoad": "1.0.1",
-        "angularjs-scroll-glue": "*",
-        "angular-ui-calendar": "*",
-        "underscore": "*",
-        "pickadate": "*",
-        "ng-pickadate": "*",
-        "animate.css": "*",
-        "ngmap": "1.13.14",
-        "angular-modal-service": "*"
-    },
-    "overrides": {
-        "pickadate": {
-            "main": [
-                "lib/picker.js",
-                "lib/picker.date.js",
-                "lib/picker.time.js",
-                "lib/themes/default.css",
-                "lib/themes/default.date.css",
-                "lib/themes/default.time.css"
-            ]
-        }
+  "name": "egle-app",
+  "private": true,
+  "dependencies": {
+    "angular": "1.*",
+    "angular-fullscreen": "*",
+    "angular-gettext": "*",
+    "angular-jwt": "*",
+    "angular-recaptcha": "*",
+    "angular-ui-router": "0.2.13",
+    "arrive": "*",
+    "bootstrap": "3.1.1",
+    "bootstrap-material-design": "0.3.0",
+    "fullcalendar": "*",
+    "highcharts-release": "4.1.7",
+    "jquery": "*",
+    "moment": "*",
+    "normalize.css": "*",
+    "ocLazyLoad": "1.0.1",
+    "angularjs-scroll-glue": "*",
+    "angular-ui-calendar": "*",
+    "underscore": "*",
+    "pickadate": "*",
+    "ng-pickadate": "*",
+    "animate.css": "*",
+    "ngmap": "1.13.14",
+    "angular-modal-service": "*",
+    "angularjs-slider": "^5.5.1"
+  },
+  "overrides": {
+    "pickadate": {
+      "main": [
+        "lib/picker.js",
+        "lib/picker.date.js",
+        "lib/picker.time.js",
+        "lib/themes/default.css",
+        "lib/themes/default.date.css",
+        "lib/themes/default.time.css"
+      ]
     }
+  }
 }

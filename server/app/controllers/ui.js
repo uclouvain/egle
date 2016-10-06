@@ -617,7 +617,8 @@ function chooseAsk(user, ask, callback){
         var since = new Date();
         switch(ask.name){
             case 'ask_meal'://3 times per day - for breakfast/lunch/dinner
-                if((since >= new Date().setHours(7, 0, 0) && since <= new Date().setHours(10, 0, 0)) || (since >= new Date().setHours(12, 0, 0) && since <= new Date().setHours(14, 0, 0)) || (since >= new Date().setHours(18, 0, 0) && since <= new Date().setHours(22, 0, 0))){
+            case 'ask_salt'://3 times per day - for breakfast/lunch/dinner
+                if((since >= new Date().setHours(7, 0, 0) && since <= new Date().setHours(10, 0, 0)) || (since >= new Date().setHours(12, 0, 0) && since <= new Date().setHours(15, 0, 0)) || (since >= new Date().setHours(18, 0, 0) && since <= new Date().setHours(22, 0, 0))){
                     since.setHours(since.getHours() - 2);
                 } else {
                     callback(null, null);
@@ -626,17 +627,46 @@ function chooseAsk(user, ask, callback){
             break;
             case 'ask_mood'://once a day at 2 pm 
                 if((since >= new Date().setHours(13, 55, 0) )){
-                	since.setMinutes(since.getMinutes() - 1);
+                	since.setDate(since.getDate() - 1);
                 } else {
                     callback(null, null);
                     return;
                 }
             break;
-            case 'ask_weight'://once a month
-                since.setMonth(since.getMonth() - 1);
+            case 'ask_dyspnea'://once every 15 days
+            case 'ask_fatigue':
+            case 'ask_swellings' :
+            case 'ask_abdomen':
+                since.setDate(since.getDate() - 15);
+            break;
+            case 'ask_weight':
+            	// every days if the user has heart failure
+            	if(user.condition.indexOf("hf") > -1)
+                	since.setDate(since.getDate() - 3);
+            	else //once a month
+            		since.setMonth(since.getMonth() - 1);
+            break;
+            case 'ask_height':
+            	if(user.birthdate){
+            		var year = new Date().getFullYear();
+            		var age = year - user.birthdate.getFullYear();
+            		// if older than 27, ask once every 5 years
+            		if(age > 27)
+            			since.setFullYear(since.getFullYear() - 5);
+            		// if boy between 12 and 17, ask every 6 month
+            		else if(user.gender && user.gender == '1' && age < 18 && age > 11)
+                		since.setMonth(since.getMonth() - 6);
+            		else
+            			since.setMonth(since.getMonth() - 12);
+            		
+            	}else {            
+            		// once a year
+            		since.setMonth(since.getMonth() - 12);
+            	}
             break;
             case 'ask_activity'://once a day - by the end of the day
             case 'ask_mobility'://once a day - by the end of the day
+            case 'ask_steps'://once a day - by the end of the day
                 if(since >= new Date().setHours(17, 0, 0)){
                     since.setDate(since.getDate() - 1);
                 } else {

@@ -18,10 +18,12 @@
         <br>
         <span style="font-size:0.7em;">({{IFCCValue | number : 2}}  mmol/mol)</span>  
         </h3>
-        <p style="color: red;" data-ng-if="!glycHemo.isGood && glycHemo.condition == 'd1'">
+        <p style="color: red;" data-ng-if="!glycHemo.isGood && glycHemo.condition.indexOf('d1') > -1">
         Votre HbA1c devrait être inférieur à 8 %</p>
-        <p style="color: red;" data-ng-if="!glycHemo.isGood && glycHemo.condition == 'd2'">
-        votre HbA1c devrait être inférieur à 6.5 % </p>
+        <p style="color: red;" data-ng-if="!glycHemo.isGood && glycHemo.condition.indexOf('d2') > -2">
+        Votre HbA1c devrait être inférieur à 6.5 % </p>
+        <p style="color: red;" data-ng-if="glycHemo.value < 6">
+        Votre HbA1c devrait être supérieure à 6 % </p>
         <p>Estimation: {{nbDays}} jours - {{glycHemo.nbEntries}} entrées</p>
     </div>
 </div>

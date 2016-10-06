@@ -20,7 +20,7 @@
 
 var mongoose        = require('mongoose');
 var uniqueValidator = require('mongoose-unique-validator');
-var bcrypt          = require('bcrypt');
+//var bcrypt          = require('bcrypt');
 
 var SALT_WORK_FACTOR = 10;
 var Schema = mongoose.Schema;
@@ -65,7 +65,7 @@ User.plugin(uniqueValidator);
 User.pre('save', function(next) {
     var user = this;
     if (!user.isModified('password')) return next();
-    
+    /*
     bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
         if (err) return next(err);
         bcrypt.hash(user.password, salt, function(err, hash) {
@@ -74,19 +74,19 @@ User.pre('save', function(next) {
             next();
         });
     });
-    
+    */
     next();
 });
 
 //Password verification
 User.methods.comparePassword = function(password, cb) {
 	cb(password == this.password);
-	
+	/*
     bcrypt.compare(password, this.password, function(err, isMatch) {
         if (err) return cb(err);
         cb(isMatch);
     });
-    
+    */
 };
 
 

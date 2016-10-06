@@ -31,9 +31,11 @@ var _               = require('underscore');
 exports.build = function(req, res) {
     var token = tokenManager.getToken(req.headers);
     if(token !== null){
-        var actorID = jsonwebtoken.decode(token).id;
+    	var user = jsonwebtoken.decode(token);
+        var actorID = user.id;
         if (req.originalUrl.indexOf("/charts") === 4) {
-            //The actor is the patient
+            //The actor is the patientvar 
+        	var patientCondition = user.condition;
             if(req.params.type !== undefined && req.params.from !== undefined && req.params.to !== undefined){
                 if(req.params.type === 'glycaemia'){
                     standardDay(actorID, actorID, {type: req.params.type, from: req.params.from, to: req.params.to}, function(err, chart){
@@ -52,7 +54,7 @@ exports.build = function(req, res) {
                         }
                     });
                 } else if(req.params.type === 'meal'){
-                    meals(actorID, actorID, {from: req.params.from, to: req.params.to, type: req.params.type}, function(err, chart){
+                    meals(actorID, actorID, patientCondition, {from: req.params.from, to: req.params.to, type: req.params.type}, function(err, chart){
                         if (err){
                             res.status(500).send(err);
                         } else {
@@ -69,6 +71,14 @@ exports.build = function(req, res) {
                     });
                 } else if(req.params.type === 'mobility'){
                     mobility(actorID, actorID, {from: req.params.from, to: req.params.to}, function(err, chart){
+                        if (err){
+                            res.status(500).send(err);
+                        } else {
+                            return res.json(chart);
+                        }
+                    });
+                }else if(req.params.type === 'symptoms'){
+                    symptoms(actorID, actorID, {from: req.params.from, to: req.params.to}, function(err, chart){
                         if (err){
                             res.status(500).send(err);
                         } else {
@@ -232,6 +242,21 @@ var weight = function(actorID, patientID, config, callback) {
             callback(null, [average / chart.length]);
         }
     });
+}
+
+//Build a steps chart
+var steps = function(actorID, patientID, config, callback) {
+ classic(actorID, patientID, {type: 'steps', from: config.from, to: config.to}, function(err, chart){
+     if (err){
+         callback(err);
+     } else {
+         var average = 0;
+         for(var i=0; i < chart.length; i++){
+             average += chart[i][1];
+         }
+         callback(null, [average / chart.length]);
+     }
+ });
 }
 
 // Build a sport chart
@@ -460,7 +485,7 @@ var sport = function(actorID, patientID, config, callback) {
 }
 
 // Build a meal chart
-var meals = function(actorID, patientID, config, callback) {
+var meals = function(actorID, patientID, condition, config, callback) {
     dbEntry.entryModel.find({
         userID : patientID,
         type : 'meal',
@@ -480,61 +505,80 @@ var meals = function(actorID, patientID, config, callback) {
         } else {
             var result = {
                 categories: ['Morning', 'Midday', 'Evening'],
-                series: [{
+                series: []
+            };
+            if(condition.indexOf('d1') > -1 || condition.indexOf('d2') > -1){
+            	result.series.push({
                     name: 'Fats',
                     data: [0,0,0],
                     color: '#B2EBF2',
+                    stack: 'calorie',
                     score: 1
-                },{
+                });
+            	result.series.push({
                     name: 'Fast sugars',
                     data: [0,0,0],
                     color: '#00BCD4',
+                    stack: 'calorie',
                     score: 1
-                },{
+                });
+            	result.series.push({
                     name: 'Slow sugars',
                     data: [0,0,0],
                     color: '#00838F',
+                    stack: 'calorie',
                     score: 2
-                }]
-            };
+                });
+            }
+            
+            if(condition.indexOf('hf') > -1){
+            	result.series.push({
+            		name: 'Salt',
+            		data: [0,0,0],
+            		color: '#bdbdbd',
+                    stack: 'salt',
+            		score: 1
+            	});
+            }
             
             if(entries.length > 0){
                 var totalMorning = 0, totalMidday = 0, totalEvening = 0;
                 var from, to;
                 for(i=0;i<entries.length;i++){
+                	var isMorning = false;
+                	var isMidday = false;
+                	var isEvening = false;
                     if(entries[i].datetimeAcquisition >= new Date(entries[i].datetimeAcquisition).setHours(0, 0, 0) && entries[i].datetimeAcquisition < new Date(entries[i].datetimeAcquisition).setHours(11, 0, 0)){
-                        for(j=0;j<entries[i].values.length;j++){
-                            if(entries[i].values[j].type === 'slow'){
-                                result.series[2].data[0] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            } else if (entries[i].values[j].type === 'fast'){
-                                result.series[1].data[0] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            } else if (entries[i].values[j].type === 'fats'){
-                                result.series[0].data[0] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            }
-                        }
-                        totalMorning++;
-                    } else if(entries[i].datetimeAcquisition >= new Date(entries[i].datetimeAcquisition).setHours(11, 0, 0) && entries[i].datetimeAcquisition < new Date(entries[i].datetimeAcquisition).setHours(15, 0, 0)){
-                        for(j=0;j<entries[i].values.length;j++){
-                            if(entries[i].values[j].type === 'slow'){
-                                result.series[2].data[1] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            } else if (entries[i].values[j].type === 'fast'){
-                                result.series[1].data[1] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            } else if (entries[i].values[j].type === 'fats'){
-                                result.series[0].data[1] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            }
-                        }
-                        totalMidday++;
+                    	isMorning = true;
+                    	totalMorning++;
+                    }else if(entries[i].datetimeAcquisition >= new Date(entries[i].datetimeAcquisition).setHours(11, 0, 0) && entries[i].datetimeAcquisition < new Date(entries[i].datetimeAcquisition).setHours(15, 0, 0)){
+                    	isMidday = true;
+                    	totalMidday++;
                     } else if(entries[i].datetimeAcquisition >= new Date(entries[i].datetimeAcquisition).setHours(15, 0, 0) && entries[i].datetimeAcquisition < new Date(entries[i].datetimeAcquisition).setHours(23, 59, 59)){
-                        for(j=0;j<entries[i].values.length;j++){
-                            if(entries[i].values[j].type === 'slow'){
-                                result.series[2].data[2] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            } else if (entries[i].values[j].type === 'fast'){
-                                result.series[1].data[2] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            } else if (entries[i].values[j].type === 'fats'){
-                                result.series[0].data[2] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
-                            }
+                    	isEvening = true;
+                    	totalEvening++;
+                    }
+                    for(j=0;j<entries[i].values.length;j++){
+                    	var k = -1;
+                        if((condition.indexOf('d1') > -1 || condition.indexOf('d2') > -1) && entries[i].values[j].type === 'slow'){
+                            k = 2;
+                        } else if ((condition.indexOf('d1') > -1 || condition.indexOf('d2') > -1)&& entries[i].values[j].type === 'fast'){
+                        	k = 1;
+                        } else if ((condition.indexOf('d1') > -1 || condition.indexOf('d2') > -1) && entries[i].values[j].type === 'fats'){
+                        	k = 0;
+                        } else if (condition.indexOf('hf') > -1 && entries[i].values[j].type === 'salt'){
+                            if(condition.indexOf('d1') > -1 || condition.indexOf('d2') > -1)
+                            	k = 3;  
+                            else k = 0;
                         }
-                        totalEvening++;
+                        if(k > -1 && k < result.series.length){
+	                        if(isMorning)
+	                        	result.series[k].data[0] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
+	                        else if(isMidday)
+	                        	result.series[k].data[1] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
+	                        else if(isEvening)
+	                        	result.series[k].data[2] += isNaN(parseInt(entries[i].values[j].value)) ? 0 : parseInt(entries[i].values[j].value);
+                        }  
                     }
                 }
 
@@ -558,6 +602,76 @@ var meals = function(actorID, patientID, config, callback) {
     });
 }
 
+var symptoms = function(actorID, patientID, config, callback) {
+	var symptomsTypes = ['dyspnea','fatigue','swellings','weight','abdomen'];
+	dbEntry.entryModel.find({
+        userID : patientID,
+        type : { $in: symptomsTypes },
+        datetimeAcquisition: {
+            $gt: new Date(config.from), 
+            $lt: new Date(config.to).setHours(23,59,59,999)
+        }
+    }, {
+        'values': 1, 'datetimeAcquisition': 1, _id:0
+    })
+    .sort({"datetimeAcquisition" : 1})
+    .exec(function(err, entries) {
+        if (err){
+            console.log(err);
+            audit.logEvent('[mongodb]', 'Charts', 'Build symptoms', '', '', 'failed', 'Mongodb attempted to retrieve entries');
+            callback(err);
+        } else {
+        	var result = {
+    			series : [{
+	                name: 'Symptoms',
+	                data: [0, 0, 0, 0, 0],
+	                pointPlacement: 'on'
+	            }],
+	            categories: ['Dyspnea','Fatigue','Swellings','Weight','Abdominal Pain']
+        	};
+        	 if(entries.length > 0){
+        		 // Compute the mean for each type
+        		 // (and the standard deviation for the weight)
+                 var totals = [0, 0, 0, 0, 0];
+                 var from, to;
+                 // sum
+                 for(var i = 0; i < entries.length; i++){
+                	 var k = symptomsTypes.indexOf(entries[i].type);
+                	 if(k > -1){
+                		 result.series[0].data[k] += entries[i].value;
+                		 totals[k]++;
+                	 }
+                 }
+                 // mean
+                 for(var i = 0; i < result.series[0].data; ++i)
+                	 if(totals[i] > 0)
+                		 result.series[0].data[i] = result.series[0].data[i] / totals[i];
+                 
+                 // now the standard deviation
+                 var sd = 0;
+                 // variance
+                 for(var i = 0; i < entries.length; i++){
+                	 if(entries.type == 'weight'){
+                		 var temp = entries.value - result.series[0].data[3];
+                		 sd += (temp * temp);
+                	 }
+                 }
+                 if(totals[3] > 1)
+                	 sd = sd / (totals[3] - 1);
+                 // standard deviation
+                 sd = Math.sqrt(sd);
+                 
+                 // now find what % of the mean weight the sd represent
+                 var percent = (sd / result.series[0].data[3]) * 100;
+                 
+                 // let's say 25% is the worst possible and 1% is good
+                 result.series[0].data[3] = percent * 4;
+                 
+                 callback(null, result);
+        	 }        	
+        }
+    });
+};
 
 // Build an insulin chart
 var insulin = function(actorID, patientID, config, callback) {

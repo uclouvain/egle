@@ -36,6 +36,9 @@
             <form class="form-horizontal" data-ng-submit="add();">
                 <div class="panel-body">
                     <div class="col-sm-offset-2 col-sm-8" style="float:none;">
+                    
+  <!-- ========================================= MEAL =============================================== -->
+  
                         <div class="icons-group-selected" data-ng-repeat="button in radios.meal.buttons" style="padding: 0;" data-ng-show="config.name == 'meal'">
                             <div class="row">
                                 <div class="col-xs-1" style="padding-left:0;">
@@ -66,6 +69,11 @@
                             </div>
                             <hr class="col-sm-12" style="margin-top: 0;margin-bottom: 0;">
                         </div>
+                        
+  <!-- ============================================================================================== -->
+  
+  <!-- ===================================== MOBILITY =============================================== -->
+  
                         <div class="icons-group-selected" data-ng-repeat="button in radios.mobility.buttons" style="padding: 0;" data-ng-show="config.name == 'mobility'">
                             <div class="row">
                                 <div class="col-xs-1" style="padding-left:0;">
@@ -93,13 +101,32 @@
                             </div>
                             <hr class="col-sm-12" style="margin-top: 0;margin-bottom: 0;" data-ng-if="!$last">
                         </div>
-                        <div class="row text-center" data-ng-hide="config.name == 'sport' || config.name == 'meal' || config.name == 'mobility'">
+                        
+  <!-- ============================================================================================== -->
+  
+  <!-- ==================================== NUMBER OF STEPS ========================================= -->
+  
+                        <div class="row text-center" data-ng-if="config.name == 'steps'">
+                            <div style="padding-left: 0;">
+                                <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
+                                    {{config.input}} : {{$parent.value}}
+                                </h4>
+                                <div class="text-center">
+                                	<rzslider rz-slider-model="$parent.value" rz-slider-options="config.sliderOptions"></rzslider>
+                            	</div>
+                            </div>
+                            
+                        </div>
+  <!-- ============================== NOT MOBILITY, SPORT OR MEAL =================================== -->
+  
+                        <div class="row text-center" data-ng-hide="config.name == 'sport' || config.name == 'meal' || config.name == 'mobility' || config.name == 'steps'">
                             <div data-ng-class="{'col-xs-6': config.name == 'insulin'}" style="padding-left: 0;">
                                 <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">
                                     {{config.input}}
                                 </h4>
                                 <input type="number" class="form-control text-center" data-ng-model="value" placeholder="{{config.inputPlaceholder}}" step="0.1" min="0">
                             </div>
+  <!-- ====================================== (insulin) ============================================= -->
                             <div class="col-xs-6" style="padding-right: 0;" data-ng-show="config.name == 'insulin'">
                                 <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;" translate>
                                     Acting
@@ -109,6 +136,10 @@
                                 </select>
                             </div>
                         </div>
+                        
+  <!-- ============================================================================================== -->
+  <!-- ======================================== DURATION ============================================ -->
+  
                         <div class="row text-center" data-ng-show="config.duration">
                             <h4 class="text-center" style="margin-top: 0;margin-bottom: 5px;">{{config.duration}}</h4>
                             <div class="row" style="display: inline-block;" data-ng-hide="more">
@@ -123,6 +154,11 @@
                                 <input type="text" class="form-control text-center" pick-a-time="advancedDuration" pick-a-time-options="{ format: 'HH:i', interval: 1}" data-ng-hide="checkDateInput()">
                             </div>
                         </div>
+                        
+  <!-- ============================================================================================== -->
+  <!-- ======================================= INTENSITY ============================================ -->
+  <!-- ======================================== (sport) ============================================= -->
+  
                         <div class="row text-center" data-ng-show="config.intensity">
                             <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;">{{config.intensity}}</h4>
                             <div class="row" style="display: inline-block;">
@@ -134,6 +170,10 @@
                                 <strong class="pull-left" style="margin-left: 10px;">+</strong>
                             </div>
                         </div>
+                        
+  <!-- ============================================================================================== -->
+  <!-- ========================================== DATE ============================================== -->
+  
                         <div class="row text-center" style="margin-top:10px;">
                             <div data-ng-hide="checkDateInput()">
                                 <div data-ng-class="{'col-xs-6': config.name != 'mobility', 'col-xs-12': config.name == 'mobility'}" style="padding-left: 0;">
@@ -159,6 +199,9 @@
                             </div>
                         </div>
                     </div>
+  <!-- ============================================================================================== -->
+  <!-- ===================================== COMMENTS =============================================== -->
+  
                     <div class="col-sm-offset-2 col-sm-8 text-center" style="float:none;" data-ng-show="more">
                         <div class="row" style="margin-top:15px;">
                             <h4 class="text-center" style="margin-top: 5px;margin-bottom: 5px;"><span translate>Comments</span></h4>
@@ -174,6 +217,9 @@
                             <i data-ng-class="{'mdi-navigation-expand-more': !more,'mdi-navigation-expand-less': more}" style="font-size:18px;"></i>
                         </button>
                     </div>
+                    
+  <!-- ============================================================================================== -->
+  
                     <div class="pull-right" style="padding-bottom: 5px;">
                         <button type="button" class="btn btn-default btn-flat" style="margin: 0px 1px" ui-sref="home.dashboard.main" translate>Cancel</button>
                         <button type="submit" class="btn btn-primary btn-flat" style="margin: 0px 1px" 

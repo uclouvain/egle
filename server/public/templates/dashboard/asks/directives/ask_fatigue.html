@@ -1,0 +1,28 @@
+<div class="panel panel-default card" style="border: solid #fff 2px;">
+    <form data-ng-submit="answer();">
+        <h3 class="panel-title">
+            <button type="button" class="close" data-ng-click="skip('fatigue');">
+                <i class="mdi-navigation-close"></i>
+            </button>
+            <span translate>Fatigue level</span>
+        </h3>
+        <div class="panel-body text-center" style="padding-top: 10px;padding-bottom: 10px;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group col-xs-offset-1 col-xs-10" style="padding:0;margin-bottom:0;">
+                        <label class="control-label" translate>Today</label>
+                        <div class="text-center">
+                        	<rzslider rz-slider-model="fatigue" rz-slider-options="sliderOptions"></rzslider>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right" style="padding: 0px 5px 5px 5px;">
+            <button class="btn btn-flat btn-default" style="margin: 0px 1px;"
+                    type="button" data-ng-click="skip('fatigue');" translate>Skip</button>
+            <button class="btn btn-flat btn-primary" style="margin: 0px 1px;" type="submit" 
+                    translate>Validate</button>
+        </div>
+    </form>
+</div>

@@ -78,6 +78,16 @@ angular.module('ObjectiveCtrl', [[
                     placeholder: gettextCatalog.getString("Value")
                 };
             break;
+            case 'steps':
+                $scope.config = {
+                    name: 'steps',
+                    objective: gettextCatalog.getString("Objective"),
+                    title: gettextCatalog.getString("Number of steps"),
+                    unit: gettextCatalog.getString("Steps"),
+                    value : {name: gettextCatalog.getString("Number of steps"), value: ''},
+                    placeholder: gettextCatalog.getString("Value")
+                };
+            break;
             case 'meal':
                 $scope.config = {
                     name: 'meal',

@@ -23,11 +23,27 @@
         "enabled": true
     },{
         "name": "hemoglobin",
-        "title": "Hémoglobine glyquée",
+        "title": "Glycated Hemoglobin",
         "type": 2,
         "order": 1,
         "roles": [2,3],
         "condition": ["d1","d2"],
+        "enabled": true
+    },{
+        "name": "steps",
+        "title": "Number of steps",
+        "type": 2,
+        "order": 1,
+        "roles": [2,3],
+        "condition": ["hf"],
+        "enabled": true
+    },{
+        "name": "symptoms",
+        "title": "Symptoms",
+        "type": 2,
+        "order": 1,
+        "roles": [2,3],
+        "condition": ["hf"],
         "enabled": true
     },{
         "name": "glycaemia",
@@ -199,7 +215,7 @@
         "type": 2,
         "order": 4,
         "roles": [3],
-        "condition": ["d1","d2"],
+        "condition": ["d1","d2", "hf"],
         "subitems":[{
             "name":"breakfast",
             "title":"Breakfast",
@@ -253,7 +269,7 @@
         "type": 2,
         "order": 6,
         "roles": [3],
-        "condition": ["d1","d2"],
+        "condition": ["d1","d2", "hf"],
         "enabled": true
     },{
         "name": "mobility",

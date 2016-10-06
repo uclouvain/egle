@@ -23,6 +23,10 @@ angular.module('EntryService', []).factory('Entry', function($http) {
         list: function(config) {
             return $http.get('/api/entries/type/'+ config.type + '/subtype/' + config.subType);
         },
+
+        last: function(config) {
+            return $http.get('/api/entries/last/type/'+ config.type + '/subtype/' + config.subType);
+        },
         
         create: function(entry) {
             return $http.post('/api/entries', entry);

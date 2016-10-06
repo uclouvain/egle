@@ -228,6 +228,14 @@ var routes = [
         middleware: [jwt({secret: secret}), tokenManager.verifyToken, controllers.entries.list],
         access: _.findWhere(aclRoutes, {id: 46}).roles
     },
+
+    // Retrieve entries of a specified type (patient view)
+    {
+        path: _.findWhere(aclRoutes, {id: 66}).uri,
+        httpMethod: _.findWhere(aclRoutes, {id: 66}).method,
+        middleware: [jwt({secret: secret}), tokenManager.verifyToken, controllers.entries.last],
+        access: _.findWhere(aclRoutes, {id: 66}).roles
+    },
     
     // Delete an entry
     {

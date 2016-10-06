@@ -119,11 +119,11 @@ var computeValue = function(actorID, patientID, patientCondition, callback){
 		    	 glycHemo = (mean + 46.7) / 28.7;
 	    	}
 	    	// Is the value good ?
-	    	if(patientCondition.indexOf("d1") > 1){
+	    	if(patientCondition.indexOf("d1") > -1){
 	    		if(glycHemo < 8.0)
 	    			isValueGood = true;
 	    	}
-	    	if(patientCondition.indexOf("d2") > 1){
+	    	if(patientCondition.indexOf("d2") > -1){
 	    		if(glycHemo < 6.5 && glycHemo > 6.0)
 	    			isValueGood = true;
 	    	}

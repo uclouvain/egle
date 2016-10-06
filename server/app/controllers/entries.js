@@ -24,6 +24,64 @@ var audit           = require('../audit-log');
 var tokenManager    = require('../token_manager');
 var jsonwebtoken    = require('jsonwebtoken');
 
+// Retrieve last entry
+exports.last = function(req, res) {
+	var token = tokenManager.getToken(req.headers);
+    if(token != null){
+        var actorID = jsonwebtoken.decode(token).id;
+        if (req.originalUrl.indexOf("/entries") === 4) {
+            //The actor is the patient
+            if(req.params.type !== undefined){
+                last(actorID, actorID, {type: req.params.type, subType: req.params.subtype}, function(err, entry){
+                    if (err){
+                        res.status(500).send(err);
+                    } else {
+                        return res.json(entry);
+                    }
+                });
+            } else {
+                audit.logEvent(actorID, 'Entries', 'Last', '', '', 'failed',
+                               'The user could not retrieve the entry because one or more params of the request was not defined');
+                return res.sendStatus(400); 
+            }
+        } else {
+            //The actor is the doctor
+            if(!req.forbidden){
+                if(req.params.type !== undefined && req.params.username !== undefined){
+                    dbUser.userModel.findOne({
+                        username : req.params.username
+                    }, {_id:1})
+                    .exec(function(err, user) {
+                        if (err){
+                            console.log(err);
+                            audit.logEvent('[mongodb]', 'Entries', 'Last', '', '', 'failed', 'Mongodb attempted to retrieve a user');
+                            res.status(500).send(err);
+                        }
+                        else{  
+                            last(actorID, user._id, {type: req.params.type, subType: req.params.subtype}, function(err, entry){
+                                if (err){
+                                    res.status(500).send(err);
+                                } else {
+                                    return res.json(entry);
+                                }
+                            });
+                        }
+                     });
+                }
+                else{
+                    audit.logEvent(actorID, 'Entries', 'Last', '', '', 'failed',
+                                   'The user could not retrieve the entry because one or more params of the request was not defined');
+                    return res.sendStatus(400); 
+                }
+            } else {
+                return res.sendStatus(403);
+            }
+        }
+    } else {
+        audit.logEvent('[anonymous]', 'Entries', 'Last', '', '', 'failed','The user was not authenticated');
+        return res.sendStatus(401); 
+    }
+}
 
 // Retrieve entries
 exports.list = function(req, res) {
@@ -106,6 +164,29 @@ var list = function(actorID, patientID, config, callback){
             callback(null, entries);
         }
     });
+}
+
+var last = function(actorID, patientID, config, callback){
+    var query = {
+        userID : patientID,
+        type: config.type
+    };
+
+    if(config.subType !== undefined && config.subType !== 'undefined'){
+        query.subType = config.subType;
+    }
+
+    db.entryModel.findOne(query)
+    .sort({"datetimeAcquisition" : -1})
+    .exec(function(err, entry) {
+        if (err){
+            console.log(err);
+            audit.logEvent('[mongodb]', 'Entries', 'Last', '', '', 'failed', 'Mongodb attempted to retrieve entries');
+            callback(err);
+        } else {
+            callback(null, entry);
+        }
+    });    
 }
 
 // Add a new entry

@@ -20,6 +20,14 @@
 
 angular.module('TokenInterceptorService', []).factory('TokenInterceptor', function($rootScope, $q, $window, $location, jwtHelper) {
     return {
+    	decode: function(){
+    		var token = $window.localStorage.token;
+    		var decoded = null;
+            if (token) {
+                decoded = jwtHelper.decodeToken(token);
+            }
+            return decoded;
+    	},
         request: function (config) {
             config.headers = config.headers || {};
             var token = $window.localStorage.token;

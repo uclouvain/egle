@@ -281,8 +281,8 @@ exports.signup = function(req, res) {
             return res.sendStatus(401); 
         } else { 
             verifyRecaptcha(captcha, function(success) {
-            	if (success) {
-            	//if (true) {
+            	//if (success) {
+            	if (true) {
                     var user = new db.userModel();
                     user.email = email;
                     user.username = username;
@@ -590,14 +590,21 @@ exports.update = function(req, res) {
                                                 console.log(err);
                                                 return res.status(500).send(err);
                                             } else {
-                                                user.save(function(err) {
+                                                user.save(function(err, savedUser) {
                                                     if (err) {
                                                         console.log(err);
                                                         audit.logEvent('[mongodb]', 'Users', 'Update', "username", user.username, 'failed',
                                                                        "Mongodb attempted to save the new user");
                                                         return res.status(500).send(err);
                                                     } else {
-                                                        return res.sendStatus(200);
+                                                    	if(toUpdate.condition){
+                                                    	 var expiration = tokenManager.TOKEN_EXPIRATION;
+                                                    	 var token = jsonwebtoken.sign({id: user._id, condition : toUpdate.condition}, tokenSecret, { expiresInMinutes: expiration });
+
+                                                    	 return res.status(200).json({activated:true,token:token,language: user.language});
+                                                    	}else{
+                                                    		return res.sendStatus(200);
+                                                    	}
                                                     }
                                                 });
                                             }
@@ -613,14 +620,21 @@ exports.update = function(req, res) {
                                 console.log(err);
                                 return res.status(500).send(err);
                             } else {
-                                user.save(function(err) {
+                                user.save(function(err, savedUser) {
                                     if (err) {
                                         console.log(err);
                                         audit.logEvent('[mongodb]', 'Users', 'Update', "username", user.username, 'failed',
                                                        "Mongodb attempted to save the new user");
                                         return res.status(500).send(err);
                                     } else {
-                                        return res.sendStatus(200);
+                                    	if(toUpdate.condition){
+                                       	 var expiration = tokenManager.TOKEN_EXPIRATION;
+                                       	 var token = jsonwebtoken.sign({id: user._id, condition : toUpdate.condition}, tokenSecret, { expiresInMinutes: expiration });
+
+                                       	 return res.status(200).json({activated:true,token:token,language: user.language});
+                                       	}else{
+                                       		return res.sendStatus(200);
+                                       	}
                                     }
                                 });
                             }
@@ -632,14 +646,21 @@ exports.update = function(req, res) {
                                 console.log(err);
                                 return res.status(500).send(err);
                             } else {
-                                user.save(function(err) {
+                                user.save(function(err, savedUser) {
                                     if (err) {
                                         console.log(err);
                                         audit.logEvent('[mongodb]', 'Users', 'Update', "username", user.username, 'failed',
                                                        "Mongodb attempted to save the new user");
                                         return res.status(500).send(err);
                                     } else {
-                                        return res.sendStatus(200);
+                                    	if(toUpdate.condition){
+                                       	 var expiration = tokenManager.TOKEN_EXPIRATION;
+                                       	 var token = jsonwebtoken.sign({id: user._id, condition : toUpdate.condition}, tokenSecret, { expiresInMinutes: expiration });
+
+                                       	 return res.status(200).json({activated:true,token:token,language: user.language});
+                                       	}else{
+                                       		return res.sendStatus(200);
+                                       	}
                                     }
                                 });
                             }
@@ -693,7 +714,7 @@ exports.getUsername = function getUsername(userID, callback){
 
 function sendMail(mail, callback) {
     var smtpTransport = nodemailer.createTransport({
-    	
+    	/*
         host: mailerConfig.host,
         port: mailerConfig.port,
         secure: true,
@@ -701,17 +722,17 @@ function sendMail(mail, callback) {
             user: mailerConfig.auth.user,
             pass: mailerConfig.auth.pass
         }
-        
+        */
     });
 
     var mailOptions = {
         to: mail.to,
-        from: mailerConfig.sender.name + ' <' + mailerConfig.sender.address + '>',
-        //from: 'noReply@egle.com',
+        //from: mailerConfig.sender.name + ' <' + mailerConfig.sender.address + '>',
+        from: 'noReply@egle.com',
         subject: mail.subject,
         html: mail.html
     };
-    //console.log("mail: " + JSON.stringify(mailOptions));
+    console.log("mail: " + JSON.stringify(mailOptions));
     smtpTransport.sendMail(mailOptions, function(err) {
         if(err){
             console.log(err);

@@ -24,8 +24,9 @@ angular.module('AddCtrl', [[
     'bower_components/pickadate/lib/themes/classic.time.css',
     'css/templates/dashboard.css'
 ]])
-.controller('AddController', function($scope, gettextCatalog, $ocLazyLoad, $injector, $stateParams, $state, $rootScope, ModalService) {
-    
+.controller('AddController', function($scope, gettextCatalog, $ocLazyLoad, $injector, $stateParams, $state, $rootScope, ModalService, TokenInterceptor) {
+
+    var conditions = TokenInterceptor.decode().condition;       
     // Check if input type 'date' is supported by the current browsers
     $scope.checkDateInput = function () {
         var input = document.createElement('input');
@@ -83,28 +84,7 @@ angular.module('AddCtrl', [[
             }
         },
         meal: {
-            buttons: [{
-                type: 'slow',
-                title: gettextCatalog.getString('Slow sugars'),
-                desc: gettextCatalog.getString('bread'),
-                img: {'background': 'url(./img/slow.jpg) no-repeat center center', 'background-size': 'cover'},
-                value: undefined,
-                score: 2
-            },{
-                type: 'fast',
-                title: gettextCatalog.getString('Fast sugars'),
-                desc: gettextCatalog.getString('soda'),
-                img: {'background': 'url(./img/fast.jpg) no-repeat center center', 'background-size': 'cover'},
-                value: undefined,
-                score: 1
-            },{
-                type: 'fats',
-                title: gettextCatalog.getString('Fats'),
-                desc: gettextCatalog.getString('butter'),
-                img: {'background': 'url(./img/fats.jpg) no-repeat center center', 'background-size': 'cover'},
-                value: undefined,
-                score: 1
-            }],
+            buttons: [],
             levels: [1,2,3,4,5]
         },
         mobility: {
@@ -152,7 +132,62 @@ angular.module('AddCtrl', [[
         }
     };
     
+    var colorFct = function(value){
+    	if(value <= 1000)
+			return '#d50000';
+        if (value <= 3000)
+            return '#ff3d00';
+        if (value <= 5000)
+            return '#ff9100';
+        if(value <= 6000)
+        	return '#ffc400';
+        if (value <= 9000)
+            return '#ffea00';
+        if (value <= 12000)
+        	return '#c6ff00';
+        return '#76ff03';
+    };
+         
     
+    if(conditions.indexOf('d1') > -1 || conditions.indexOf('d2') > -1){
+    	$scope.radios.meal.buttons.push({
+            type: 'slow',
+            title: gettextCatalog.getString('Slow sugars'),
+            desc: gettextCatalog.getString('bread'),
+            img: {'background': 'url(./img/slow.jpg) no-repeat center center', 'background-size': 'cover'},
+            value: undefined,
+            score: 2
+        });
+    	$scope.radios.meal.buttons.push({
+            type: 'fast',
+            title: gettextCatalog.getString('Fast sugars'),
+            desc: gettextCatalog.getString('soda'),
+            img: {'background': 'url(./img/fast.jpg) no-repeat center center', 'background-size': 'cover'},
+            value: undefined,
+            score: 1
+        });
+    	$scope.radios.meal.buttons.push({
+            type: 'fats',
+            title: gettextCatalog.getString('Fats'),
+            desc: gettextCatalog.getString('butter'),
+            img: {'background': 'url(./img/fats.jpg) no-repeat center center', 'background-size': 'cover'},
+            value: undefined,
+            score: 1
+        });
+    }
+    if(conditions.indexOf('hf') > -1){
+    	$scope.radios.meal.buttons.push({
+            type: 'salt',
+            title: gettextCatalog.getString('Salt'),
+            desc: gettextCatalog.getString('salty food'),
+            img: {'background': 'url(./img/salt.jpg) no-repeat center center', 'background-size': 'cover'},
+            value: undefined,
+            score: 1
+        });
+    }
+    
+
+
     switch($stateParams.card){
         case 'glycaemia':
             $scope.config = {
@@ -200,6 +235,27 @@ angular.module('AddCtrl', [[
                 inputPlaceholder: 'kg',
                 commentsPlaceholder: gettextCatalog.getString('e.g.') + ' ' + gettextCatalog.getString('dressed') + '...'
             };
+        break;
+        case 'steps':
+            $scope.config = {
+                name: 'steps',
+                title : gettextCatalog.getString("Number of steps"),
+                subtitle: gettextCatalog.getString("Number of steps"),
+                input: gettextCatalog.getString("Steps taken"),
+                inputPlaceholder: 'nb',
+                sliderOptions: {
+                	floor: 100, 
+                	ceil: 15000,                 
+                	step: 1000, 
+                	showSelectionBar: true,
+                	getSelectionBarColor: colorFct,
+                	getPointerColor: colorFct,
+                	showTicks: true,
+                    getTickColor: colorFct                    
+                },
+                commentsPlaceholder: gettextCatalog.getString('e.g.') + ' ' + gettextCatalog.getString('Uphill') + '...'
+            };
+            $scope.value = 6000;
         break;
         case 'meal':
             $scope.config = {
@@ -407,7 +463,7 @@ angular.module('AddCtrl', [[
             break;
             default:
                 entry.type = $stateParams.card;
-                entry.value = $scope.value;
+                entry.value = $scope.value;                
                 addEntry(entry, function(){
                     $state.go("home.dashboard.main");
                 });
@@ -440,4 +496,5 @@ angular.module('AddCtrl', [[
         }
         $scope.more = !$scope.more;
     }
+    
 });

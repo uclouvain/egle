@@ -4,14 +4,14 @@
         "card": "meal",
         "order": 1,
         "roles": [3],
-        "condition": ["d1","d2"]
+        "condition": ["d1","d2", "hf"]
     },
     {
         "name": "ask_weight",
         "card": "weight",
         "order": 2,
         "roles": [3],
-        "condition": ["d1","d2"]
+        "condition": ["d1","d2","hf"]
     },
     {
         "name": "ask_mobility",
@@ -32,6 +32,48 @@
         "cards": "mood",
         "order": 5,
         "roles": [3],
-        "condition": ["d1","d2"]
+        "condition": ["d1","d2","hf"]
+    },
+    {
+        "name": "ask_steps",
+        "cards": "steps",
+        "order": 6,
+        "roles": [3],
+        "condition": ["hf"]
+    },
+    {
+        "name": "ask_height",
+        "cards": "height",
+        "order": 7,
+        "roles": [3],
+        "condition": ["hf"]
+    },
+    {
+        "name": "ask_dyspnea",
+        "cards": "dyspnea",
+        "order": 8,
+        "roles": [3],
+        "condition": ["hf"]
+    },
+    {
+        "name": "ask_fatigue",
+        "cards": "fatigue",
+        "order": 9,
+        "roles": [3],
+        "condition": ["hf"]
+    },
+    {
+        "name": "ask_swellings",
+        "cards": "swellings",
+        "order": 10,
+        "roles": [3],
+        "condition": ["hf"]
+    },
+    {
+        "name": "ask_abdomen",
+        "cards": "abdomen",
+        "order": 11,
+        "roles": [3],
+        "condition": ["hf"]
     }
 ]
