@@ -75,5 +75,12 @@
         "order": 11,
         "roles": [3],
         "condition": ["hf"]
+    },
+    {
+        "name": "ask_symptoms",
+        "cards": "symptoms",
+        "order": 11,
+        "roles": [3],
+        "condition": ["hf"]
     }
 ]

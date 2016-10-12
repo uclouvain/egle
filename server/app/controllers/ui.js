@@ -637,7 +637,9 @@ function chooseAsk(user, ask, callback){
             case 'ask_fatigue':
             case 'ask_swellings' :
             case 'ask_abdomen':
-                since.setDate(since.getDate() - 15);
+                // since.setMinutes(since.getMinutes() - 5);
+            	// since.setDate(since.getDate() - 15);
+            	since.setFullYear(since.getFullYear() - 2);
             break;
             case 'ask_weight':
             	// every days if the user has heart failure

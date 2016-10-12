@@ -9,7 +9,9 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
             objective: '@'
         },
         link: function($scope, $element, $attrs) {
+        	
             $ocLazyLoad.load('additional_components/highcharts-ng/dist/highcharts-ng.min.js').then(function () {
+                              
                 $scope.fractionSize = 1;
                 $scope.view = '';
                 $scope.unit = gettextCatalog.getString('Degree');
@@ -21,8 +23,8 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                 $scope.chart = JSON.parse(JSON.stringify($scope.$parent.aChart));
                 
                 // Define chart type
-                $scope.chart.options.chart.type = 'line';
-                $scope.chart.options.chart.polar = true;
+                //$scope.chart.options.chart.type = 'line';
+                $scope.chart.options.chart.polar = true;                
 
                 // Create a personalized tooltip
                 $scope.chart.options.tooltip.enabled = false;
@@ -32,8 +34,8 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                 	categories: [gettextCatalog.getString('Dyspnea'), 
                 	             gettextCatalog.getString('Fatigue'), 
                 	             gettextCatalog.getString('Swellings'), 
-                	             gettextCatalog.getString('Weight'),
-                	             gettextCatalog.getString('Abdominal Pain') 
+                	             gettextCatalog.getString('Abdominal Pain'),
+                	             /*gettextCatalog.getString('Weight')*/
                                 ],
                      tickmarkPlacement: 'on',
                      lineWidth: 0
@@ -43,7 +45,8 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                 $scope.chart.yAxis = {
                     gridLineInterpolation: 'polygon',
                     lineWidth: 0,
-                    min: 0
+                    min: 0,
+                    max: 100
                 };
                 
                 //Size
@@ -79,6 +82,7 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                                 from: from,
                                 to: new Date
                             }).success(function(data) {
+                            	
                                 for(var i=0; i< data.categories.length; i++){
                                     data.categories[i] = gettextCatalog.getString(data.categories[i]);
                                 }
@@ -95,12 +99,13 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                                 });
                             });
                         });
-                    } else {
+                    } 
+                    /*else {
                         $scope.$parent.buildList({type: 'meal'}, function(data){
                             console.log(data);
                             $scope.list = data;
                         });
-                    }
+                    }*/
                 }
                 
                 // First build

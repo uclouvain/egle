@@ -603,7 +603,7 @@ var meals = function(actorID, patientID, condition, config, callback) {
 }
 
 var symptoms = function(actorID, patientID, config, callback) {
-	var symptomsTypes = ['dyspnea','fatigue','swellings','weight','abdomen'];
+	var symptomsTypes = ['dyspnea','fatigue','swellings','abdomen'/*,'weight'*/];
 	dbEntry.entryModel.find({
         userID : patientID,
         type : { $in: symptomsTypes },
@@ -611,8 +611,6 @@ var symptoms = function(actorID, patientID, config, callback) {
             $gt: new Date(config.from), 
             $lt: new Date(config.to).setHours(23,59,59,999)
         }
-    }, {
-        'values': 1, 'datetimeAcquisition': 1, _id:0
     })
     .sort({"datetimeAcquisition" : 1})
     .exec(function(err, entries) {
@@ -624,10 +622,10 @@ var symptoms = function(actorID, patientID, config, callback) {
         	var result = {
     			series : [{
 	                name: 'Symptoms',
-	                data: [0, 0, 0, 0, 0],
+	                data: [0, 0, 0, 0/*, 0*/],
 	                pointPlacement: 'on'
 	            }],
-	            categories: ['Dyspnea','Fatigue','Swellings','Weight','Abdominal Pain']
+	            categories: ['Dyspnea','Fatigue','Swellings','Abdominal Pain'/*,'Weight'*/]
         	};
         	 if(entries.length > 0){
         		 // Compute the mean for each type
@@ -636,36 +634,41 @@ var symptoms = function(actorID, patientID, config, callback) {
                  var from, to;
                  // sum
                  for(var i = 0; i < entries.length; i++){
-                	 var k = symptomsTypes.indexOf(entries[i].type);
-                	 if(k > -1){
-                		 result.series[0].data[k] += entries[i].value;
-                		 totals[k]++;
+                	 if(!entries[i].isSkipped && entries[i].value){
+	                	 
+	                	 var k = symptomsTypes.indexOf(entries[i].type);
+	                	
+	                	 if(k > -1){
+	                		 result.series[0].data[k] += Number(entries[i].value);
+	                		 totals[k]++;
+	                	 }
                 	 }
                  }
                  // mean
-                 for(var i = 0; i < result.series[0].data; ++i)
+                 for(var i = 0; i < result.series[0].data.length; ++i)
                 	 if(totals[i] > 0)
                 		 result.series[0].data[i] = result.series[0].data[i] / totals[i];
-                 
+                 /*
                  // now the standard deviation
                  var sd = 0;
                  // variance
                  for(var i = 0; i < entries.length; i++){
                 	 if(entries.type == 'weight'){
-                		 var temp = entries.value - result.series[0].data[3];
+                		 var temp = entries.value - result.series[0].data[4];
                 		 sd += (temp * temp);
                 	 }
                  }
-                 if(totals[3] > 1)
-                	 sd = sd / (totals[3] - 1);
+                 if(totals[4] > 1)
+                	 sd = sd / (totals[4] - 1);
                  // standard deviation
                  sd = Math.sqrt(sd);
                  
                  // now find what % of the mean weight the sd represent
-                 var percent = (sd / result.series[0].data[3]) * 100;
+                 var percent = (sd / result.series[0].data[4]) * 100;
                  
                  // let's say 25% is the worst possible and 1% is good
-                 result.series[0].data[3] = percent * 4;
+                 result.series[0].data[4] = percent * 4;
+                 */                 
                  
                  callback(null, result);
         	 }        	
