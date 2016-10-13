@@ -45,6 +45,8 @@
                                 <span data-ng-if="!entry.isSkipped"><strong>{{entry.value}}</strong> <small>{{unit}}</small></span>
                                 <i data-ng-if="entry.isSkipped" translate>skipped</i>
                                 <i data-ng-repeat="icon in entry.icons" class="{{icon.i}}" style="font-size:16px;"></i>
+                                <div data-ng-repeat="btn in entry.buttons" class="text-center" ng-style="btn.img" style="margin: 1px;padding: 1px;height: 16px;width: 16px;display: inline-block;">
+			            	</div>
                             </td>
                         </tr>
                     </tbody>

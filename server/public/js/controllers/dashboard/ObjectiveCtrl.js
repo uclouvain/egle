@@ -96,6 +96,14 @@ angular.module('ObjectiveCtrl', [[
                     help: gettextCatalog.getString("The feature Diet Monitoring helps you to eat well")
                 };
             break;
+            case 'symptoms':
+                $scope.config = {
+                    name: 'symptoms',
+                    objective: gettextCatalog.getString("Monitoring"),
+                    title: gettextCatalog.getString("Symptoms"),
+                    help: gettextCatalog.getString("The feature Symptoms Monitoring helps you understand your symptoms")
+                };
+            break;
         }
         
 
@@ -123,6 +131,9 @@ angular.module('ObjectiveCtrl', [[
                         }
                     break;
                     case 'meal':
+                        $scope.position = true;
+                    break;
+                    case 'symptoms':
                         $scope.position = true;
                     break;
                     default:
@@ -166,6 +177,8 @@ angular.module('ObjectiveCtrl', [[
                 break;
                 case 'meal':
                 break;
+                case 'symptoms':
+                    break;
                 default:
                     if(!$scope.config.value.value){
                         ok = false;
@@ -220,6 +233,23 @@ angular.module('ObjectiveCtrl', [[
                         }
                     break;
                     case 'meal':
+                        if($scope.position){
+                            values.push({value: 1});
+                        } else {
+                            if($scope.config.id){
+                                Objective.delete({id: $scope.config.id}).success(function(data){
+                                    $state.go("home.dashboard.main");
+                                }).error(function(status, data) {
+                                    $rootScope.rootAlerts.push({
+                                        type:'danger',
+                                        msg: gettextCatalog.getString('An error occurred, please try again later'),
+                                        priority: 2
+                                    });
+                                });
+                            }
+                        }
+                    break;
+                    case 'symptoms':
                         if($scope.position){
                             values.push({value: 1});
                         } else {

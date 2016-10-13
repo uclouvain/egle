@@ -117,6 +117,27 @@
                             </div>
                             
                         </div>
+                        
+  <!-- ============================================================================================== -->
+  
+  <!-- ======================================= SYMPTOMS ============================================= -->
+  						<div class="text-center" data-ng-if="config.name == 'symptoms'">
+                            <div ng-repeat="symptom in symptoms">
+				            	<h4 class="text-center">{{symptom.title}}</h4>
+				            	<div class="text-center" ng-click="select(0, symptom)" 
+				            	ng-style="symptom.buttons[0].img" style="margin: 5px;padding: 5px;height: 48px;width: 48px;cursor: pointer; display: inline-block;">
+				            	</div>
+				            	<div class="text-center" ng-click="select(1, symptom)" 
+				            	ng-style="symptom.buttons[1].img" style="margin: 5px;padding: 5px;height: 48px;width: 48px;cursor: pointer; display: inline-block;">
+				            	</div>
+				            	<div class="text-center" ng-click="select(2, symptom)" 
+				            	ng-style="symptom.buttons[2].img" style="margin: 5px;padding: 5px;height: 48px;width: 48px;cursor: pointer; display: inline-block;">
+				            	</div>
+				            </div>
+                            
+                        </div>
+  
+  <!-- ============================================================================================== -->
   <!-- ============================== NOT MOBILITY, SPORT OR MEAL =================================== -->
   
                         <div class="row text-center" data-ng-hide="config.name == 'sport' || config.name == 'meal' || config.name == 'mobility' || config.name == 'steps'">

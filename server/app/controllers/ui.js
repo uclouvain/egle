@@ -641,6 +641,11 @@ function chooseAsk(user, ask, callback){
             	// since.setDate(since.getDate() - 15);
             	since.setFullYear(since.getFullYear() - 2);
             break;
+            case 'ask_symptoms':
+                // since.setMinutes(since.getMinutes() - 5);
+            	since.setDate(since.getDate() - 15);
+            	// since.setFullYear(since.getFullYear() - 2);
+            break;
             case 'ask_weight':
             	// every days if the user has heart failure
             	if(user.condition.indexOf("hf") > -1)

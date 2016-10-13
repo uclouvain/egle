@@ -603,12 +603,18 @@ var meals = function(actorID, patientID, condition, config, callback) {
 }
 
 var symptoms = function(actorID, patientID, config, callback) {
-	var symptomsTypes = ['dyspnea','fatigue','swellings','abdomen'/*,'weight'*/];
+	var symptomsTypes = ['dyspnea', 'sleep', 'swellings', 'palpitations','dizziness', 'fatigue'];
+	var fourMonthsAgo = new Date();
+	fourMonthsAgo.setMonth(fourMonthsAgo.getMonth() - 4);
+	var twoMonthsAgo = new Date();
+	twoMonthsAgo.setMonth(twoMonthsAgo.getMonth() - 2);
+	var oneMonthAgo = new Date();
+	oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
 	dbEntry.entryModel.find({
         userID : patientID,
-        type : { $in: symptomsTypes },
+        type : 'symptoms',
         datetimeAcquisition: {
-            $gt: new Date(config.from), 
+            $gt: fourMonthsAgo, 
             $lt: new Date(config.to).setHours(23,59,59,999)
         }
     })
@@ -621,54 +627,86 @@ var symptoms = function(actorID, patientID, config, callback) {
         } else {
         	var result = {
     			series : [{
-	                name: 'Symptoms',
-	                data: [0, 0, 0, 0/*, 0*/],
+	                name: '4 months',
+	                data: [0, 0, 0, 0, 0, 0],
+                    color: '#B2EBF2',
+	                pointPlacement: 'on'
+	            },{
+	                name: '2 months',
+	                data: [0, 0, 0, 0, 0, 0],
+                    color: '#00BCD4',
+	                pointPlacement: 'on'
+	            },{
+	                name: '1 month',
+	                data: [0, 0, 0, 0, 0, 0],
+                    color: '#00838F',
 	                pointPlacement: 'on'
 	            }],
-	            categories: ['Dyspnea','Fatigue','Swellings','Abdominal Pain'/*,'Weight'*/]
+	            categories: symptomsTypes
         	};
         	 if(entries.length > 0){
         		 // Compute the mean for each type
         		 // (and the standard deviation for the weight)
-                 var totals = [0, 0, 0, 0, 0];
+                 var totals = [[0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0]];
                  var from, to;
                  // sum
                  for(var i = 0; i < entries.length; i++){
-                	 if(!entries[i].isSkipped && entries[i].value){
-	                	 
-	                	 var k = symptomsTypes.indexOf(entries[i].type);
-	                	
-	                	 if(k > -1){
-	                		 result.series[0].data[k] += Number(entries[i].value);
-	                		 totals[k]++;
-	                	 }
+                	 if(!entries[i].isSkipped && entries[i].values){
+                		 if(entries[i].datetimeAcquisition < twoMonthsAgo ){
+		                	 for(var k = 0; k < symptomsTypes.length; ++k){	                		 
+		                		 result.series[0].data[k] += Number(entries[i].values[k].value);
+		                		 totals[0][k]++;
+		                	 }
+                		 }
+                		 else if(entries[i].datetimeAcquisition < oneMonthAgo ){
+		                	 for(var k = 0; k < symptomsTypes.length; ++k){	                		 
+		                		 result.series[0].data[k] += Number(entries[i].values[k].value);
+		                		 result.series[1].data[k] += Number(entries[i].values[k].value);
+		                		 totals[0][k]++;
+		                		 totals[1][k]++;
+		                	 }
+                		 }else{
+		                	 for(var k = 0; k < symptomsTypes.length; ++k){	                		 
+		                		 result.series[0].data[k] += Number(entries[i].values[k].value);
+		                		 result.series[1].data[k] += Number(entries[i].values[k].value);
+		                		 result.series[2].data[k] += Number(entries[i].values[k].value);
+		                		 totals[0][k]++;
+		                		 totals[1][k]++;
+		                		 totals[2][k]++;
+		                	 }                			 
+                		 }
                 	 }
                  }
                  // mean
-                 for(var i = 0; i < result.series[0].data.length; ++i)
-                	 if(totals[i] > 0)
-                		 result.series[0].data[i] = result.series[0].data[i] / totals[i];
-                 /*
-                 // now the standard deviation
-                 var sd = 0;
-                 // variance
-                 for(var i = 0; i < entries.length; i++){
-                	 if(entries.type == 'weight'){
-                		 var temp = entries.value - result.series[0].data[4];
-                		 sd += (temp * temp);
+                 for(var i = 0; i < result.series[0].data.length; ++i){
+                	 if(totals[0][i] > 0){
+                		 result.series[0].data[i] = result.series[0].data[i] / totals[0][i];
+                		 /*
+                		 if(result.series[0].data[i] > 0.6 && result.series[0].data[i] <= 1.5)
+                			 result.series[0].data[i] = { y: result.series[0].data[i], color: '#ffc400'};
+                		 else if(result.series[0].data[i] > 1.5)
+                			 result.series[0].data[i] = { y: result.series[0].data[i], color: '#d50000'};
+                		*/
+                	 }
+                	 if(totals[1][i] > 0){
+                		 result.series[1].data[i] = result.series[1].data[i] / totals[1][i];
+                		 /*
+                		 if(result.series[1].data[i] > 0.6 && result.series[1].data[i] <= 1.5)
+                			 result.series[1].data[i] = { y: result.series[1].data[i], color: '#ffc400'};
+                		 else if(result.series[1].data[i] > 1.5)
+                			 result.series[1].data[i] = { y: result.series[1].data[i], color: '#d50000'};
+                		*/
+                	 }
+                	 if(totals[2][i] > 0){
+                		 result.series[2].data[i] = result.series[2].data[i] / totals[2][i];
+                		 /*
+                		 if(result.series[2].data[i] > 0.6 && result.series[2].data[i] <= 1.5)
+                			 result.series[2].data[i] = { y: result.series[2].data[i], color: '#ffc400'};
+                		 else if(result.series[2].data[i] > 1.5)
+                			 result.series[2].data[i] = { y: result.series[2].data[i], color: '#d50000'};
+                		*/
                 	 }
                  }
-                 if(totals[4] > 1)
-                	 sd = sd / (totals[4] - 1);
-                 // standard deviation
-                 sd = Math.sqrt(sd);
-                 
-                 // now find what % of the mean weight the sd represent
-                 var percent = (sd / result.series[0].data[4]) * 100;
-                 
-                 // let's say 25% is the worst possible and 1% is good
-                 result.series[0].data[4] = percent * 4;
-                 */                 
                  
                  callback(null, result);
         	 }        	

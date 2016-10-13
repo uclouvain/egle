@@ -22,7 +22,7 @@
         <div class="panel-title">
             <div data-ng-class="{'col-xs-5': objective, 'col-xs-7': !objective}" style="padding: 0;">{{title}}</div>
             <div class="pull-right">
-                <button class="btn btn-primary btn-raised btn-objectives btn-xs" data-ng-if="objective" ui-sref="home.dashboard.objective({card: name})">
+                <button class="btn btn-primary btn-raised btn-objectives btn-xs" data-ng-if="objective && name != 'symptoms'" ui-sref="home.dashboard.objective({card: name})">
                     {{objective}}
                 </button>
                 <button class="btn btn-primary btn-raised btn-objectives btn-xs" style="padding-right:5px;padding-left:5px;" 
@@ -34,7 +34,7 @@
     </div>
     <div class="panel-body" style="padding: 0px 10px;">
         <div class="row" style="padding: 0px 15px;">
-            <div class="pull-left">
+            <div class="pull-left"  data-ng-if="name != 'symptoms'">
                 <div class="btn-group" data-ng-if="name != 'glycaemia' && name != 'insulin' && name != 'weight' && name != 'meal'">
                     <button class="btn btn-xs btn-white" data-ng-class="{'active': view == ''}" data-ng-click="build('');" style="padding: 4px 10px;">
                         1 <span translate>month</span>
@@ -104,6 +104,8 @@
                         <td>{{entry.datetimeAcquisition | date: 'HH:mm'}}</td>
                         <td class = "logValue">
                             <span data-ng-if="!entry.isSkipped"><strong>{{entry.value | number : fractionSize}}</strong> <small>{{unit}}</small></span>
+                            <div data-ng-if="name == 'symptoms'" data-ng-repeat="btn in entry.buttons" class="text-center" ng-style="btn.img" style="margin: 1px;padding: 1px;height: 16px;width: 16px;display: inline-block;">
+			            	</div>
                             <i data-ng-if="entry.isSkipped" translate>skipped</i>
                             <i data-ng-repeat="icon in entry.icons" class="{{icon.i}}" style="font-size:16px;"></i>
                         </td>

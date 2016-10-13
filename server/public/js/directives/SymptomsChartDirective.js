@@ -14,7 +14,7 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                               
                 $scope.fractionSize = 1;
                 $scope.view = '';
-                $scope.unit = gettextCatalog.getString('Degree');
+                //$scope.unit = gettextCatalog.getString('Degree');
                 
                 // Global configuration
                 Highcharts.setOptions({global: {useUTC : false}});
@@ -23,20 +23,21 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                 $scope.chart = JSON.parse(JSON.stringify($scope.$parent.aChart));
                 
                 // Define chart type
-                //$scope.chart.options.chart.type = 'line';
+                $scope.chart.options.chart.type = 'line';
                 $scope.chart.options.chart.polar = true;                
 
                 // Create a personalized tooltip
                 $scope.chart.options.tooltip.enabled = false;
                 
+                $scope.chart.options.legend.enabled = true;
+                $scope.chart.options.legend.reversed = true;
+                
                 //Define X axis
                 $scope.chart.xAxis = {
-                	categories: [gettextCatalog.getString('Dyspnea'), 
-                	             gettextCatalog.getString('Fatigue'), 
-                	             gettextCatalog.getString('Swellings'), 
-                	             gettextCatalog.getString('Abdominal Pain'),
-                	             /*gettextCatalog.getString('Weight')*/
-                                ],
+                	categories: [ gettextCatalog.getString('Dyspnea'), gettextCatalog.getString('Sleep')
+                         		, gettextCatalog.getString('Swellings'), gettextCatalog.getString('Palpitations')
+                        		, gettextCatalog.getString('Dizziness'), gettextCatalog.getString('Fatigue')
+                        		],
                      tickmarkPlacement: 'on',
                      lineWidth: 0
                  };
@@ -46,7 +47,12 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                     gridLineInterpolation: 'polygon',
                     lineWidth: 0,
                     min: 0,
-                    max: 100
+                    max: 2,
+                    plotLines: [{
+                        color: '#cfd8dc', // Color value
+                        value: 1, // Value of where the line will appear
+                        width: 1 // Width of the line    
+                      }]
                 };
                 
                 //Size
@@ -55,22 +61,11 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                 // Build the chart
                 $scope.build = function(view) {
                     switch(view){
-                        case '2m':
-                            $scope.view = '2m';
-                            from = new Date(new Date().setDate(new Date().getDate() - 60));
-                        break;
-                        case '3m':
-                            $scope.view = '3m';
-                            from = new Date(new Date().setDate(new Date().getDate() - 90));
-                        break;
-                        /*
                         case 'list':
                             $scope.view = 'list';                            
-                        break;
-                        */
+                        break;                        
                         default:
                             $scope.view = '';
-                            from = new Date(new Date().setDate(new Date().getDate() - 30));
                         break;
                     }
                     
@@ -79,7 +74,7 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                             var Chart = $injector.get('Chart');
                             Chart.build({
                                 type: 'symptoms',
-                                from: from,
+                                from: null,
                                 to: new Date
                             }).success(function(data) {
                             	
@@ -89,7 +84,7 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                                 for(var i=0; i< data.series.length; i++){
                                     data.series[i].name = gettextCatalog.getString(data.series[i].name);
                                 }
-                                $scope.chart.xAxis.categories = data.categories;
+                                //$scope.chart.xAxis.categories = data.categories;
                                 $scope.chart.series = data.series;
                             }).error(function(status, data) {
                                 $rootScope.rootAlerts.push({
@@ -100,12 +95,34 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                             });
                         });
                     } 
-                    /*else {
-                        $scope.$parent.buildList({type: 'meal'}, function(data){
-                            console.log(data);
+                    else {
+                        $scope.$parent.buildList({type: 'symptoms'}, function(data){
+                            console.log(data);                           
+                            
+                            for(var i = 0; i < data.length; ++i){
+                            	data[i].buttons = [];
+                            	for(var k = 0; k < data[i].values.length; ++k)
+                            		if(data[i].values[k].value == 0){
+                            			data[i].buttons.push({
+                                            title: gettextCatalog.getString('Good'),
+                                            img: {'background': 'url(./img/good.png) no-repeat center center', 'background-size': 'cover', 'opacity' : '1.0'},                                            
+                                        });
+                            		}else if(data[i].values[k].value == 1){
+                            			data[i].buttons.push({
+                                            title: gettextCatalog.getString('NotWell'),
+                                            img: {'background': 'url(./img/notWell.png) no-repeat center center', 'background-size': 'cover', 'opacity' : '1.0'},                                            
+                                        });                            			
+                            		}else{
+                            			data[i].buttons.push({
+                                            title: gettextCatalog.getString('Bad'),
+                                            img: {'background': 'url(./img/bad.png) no-repeat center center', 'background-size': 'cover', 'opacity' : '1.0'},                                            
+                                        }); 
+                            		}                            	
+                            }
+                            
                             $scope.list = data;
                         });
-                    }*/
+                    }
                 }
                 
                 // First build
