@@ -9,12 +9,9 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
             objective: '@'
         },
         link: function($scope, $element, $attrs) {
-        	
-            $ocLazyLoad.load('additional_components/highcharts-ng/dist/highcharts-ng.min.js').then(function () {
-                              
+        	                              
                 $scope.fractionSize = 1;
                 $scope.view = '';
-                //$scope.unit = gettextCatalog.getString('Degree');
                 
                 // Global configuration
                 Highcharts.setOptions({global: {useUTC : false}});
@@ -97,7 +94,6 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                     } 
                     else {
                         $scope.$parent.buildList({type: 'symptoms'}, function(data){
-                            console.log(data);                           
                             
                             for(var i = 0; i < data.length; ++i){
                             	data[i].buttons = [];
@@ -127,7 +123,7 @@ angular.module('SymptomsChartDirective', []).directive('symptomschart', function
                 
                 // First build
                 $scope.build();
-            });
+            
         }
     }
 });

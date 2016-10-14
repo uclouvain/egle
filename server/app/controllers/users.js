@@ -281,8 +281,8 @@ exports.signup = function(req, res) {
             return res.sendStatus(401); 
         } else { 
             verifyRecaptcha(captcha, function(success) {
-            	//if (success) {
-            	if (true) {
+            	if (success) {
+            	//if (true) {
                     var user = new db.userModel();
                     user.email = email;
                     user.username = username;
@@ -714,7 +714,7 @@ exports.getUsername = function getUsername(userID, callback){
 
 function sendMail(mail, callback) {
     var smtpTransport = nodemailer.createTransport({
-    	/*
+    	
         host: mailerConfig.host,
         port: mailerConfig.port,
         secure: true,
@@ -722,13 +722,13 @@ function sendMail(mail, callback) {
             user: mailerConfig.auth.user,
             pass: mailerConfig.auth.pass
         }
-        */
+        
     });
 
     var mailOptions = {
         to: mail.to,
-        //from: mailerConfig.sender.name + ' <' + mailerConfig.sender.address + '>',
-        from: 'noReply@egle.com',
+        from: mailerConfig.sender.name + ' <' + mailerConfig.sender.address + '>',
+        //from: 'noReply@egle.com',
         subject: mail.subject,
         html: mail.html
     };
