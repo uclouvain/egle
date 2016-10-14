@@ -304,6 +304,7 @@ angular.module('gettext').run(['gettextCatalog',function(gettextCatalog) {
 						"Weight" : "Poids",
 						"Welcome to" : "Bienvenue sur",
 						"What have you done today?" : "Qu'avez-vous fait aujourd'hui ?",
+						"What's your blood pressure?" : "Quelle est votre tension artérielle?",
 						"Where" : "Lieu",
 						"Yesterday" : "Hier",
 						"You can add dashboard cards from Settings." : "Vous pouvez ajouter des cartes au tableau de bord à partir des Paramètres.",

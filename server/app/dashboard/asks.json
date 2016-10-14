@@ -82,5 +82,12 @@
         "order": 11,
         "roles": [3],
         "condition": ["hf"]
+    },
+    {
+        "name": "ask_bloodpressure",
+        "cards": "bloodpressure",
+        "order": 12,
+        "roles": [3],
+        "condition": ["hf"]
     }
 ]

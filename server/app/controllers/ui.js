@@ -671,6 +671,9 @@ function chooseAsk(user, ask, callback){
             		since.setMonth(since.getMonth() - 12);
             	}
             break;
+            case 'ask_bloodpressure' : //once a day
+            	since.setHours(since.getHours() - 20);
+            break;
             case 'ask_activity'://once a day - by the end of the day
             case 'ask_mobility'://once a day - by the end of the day
             case 'ask_steps'://once a day - by the end of the day

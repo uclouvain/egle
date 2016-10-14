@@ -1,5 +1,5 @@
 
-angular.module('StepsChartDirective', []).directive('stepschart', function(gettextCatalog, $ocLazyLoad, $injector, $rootScope, $window, $filter, $state, ModalService) {
+angular.module('StepsChartDirective', []).directive('stepschart', function(gettextCatalog, $ocLazyLoad, $injector, $rootScope, $window, $filter, $state, $log, ModalService) {
     return {
         restrict: 'E',
         templateUrl: 'templates/dashboard/cards/directives/chart.html',
@@ -46,6 +46,7 @@ angular.module('StepsChartDirective', []).directive('stepschart', function(gette
                 // Define Y axis
                 $scope.chart.yAxis.plotLines[0].label.text = gettextCatalog.getString('obj.');
                 $scope.chart.yAxis.title.text = $scope.unit;
+                $scope.chart.yAxis.max = 11000;
                 
                 //Size
                 if($window.innerWidth<535){
@@ -59,6 +60,9 @@ angular.module('StepsChartDirective', []).directive('stepschart', function(gette
                         if (data) {
                             $scope.chart.yAxis.plotLines[0].value = data.values[0].value;
                             $scope.chart.yAxis.plotLines[0].label.text = $scope.chart.yAxis.plotLines[0].label.text + " (" + data.values[0].value + $scope.unit + ")";
+
+                            $scope.chart.yAxis.min = 0; 
+                            $scope.chart.yAxis.max = data.values[0].value * 1.5; 
                         }
                     }).error(function(status, data) {
                         $rootScope.rootAlerts.push({
@@ -99,6 +103,12 @@ angular.module('StepsChartDirective', []).directive('stepschart', function(gette
                         $scope.chart.xAxis.min = from.getTime();
                         $scope.$parent.buildChart($scope.chart, {from: from, to: new Date}, function(data){
                             $scope.chart.series[0].data = data;
+                            
+                            for(var i = 0; i < data.length; ++i){
+                            	if(data[i] > $scope.chart.yAxis.max){
+                            		$scope.chart.yAxis.max = data[i][1];
+                            	}
+                            }
                         });
                     } else {
                         $scope.$parent.buildList({type: 'steps'}, function(data){

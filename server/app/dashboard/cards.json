@@ -38,6 +38,14 @@
         "condition": ["hf"],
         "enabled": true
     },{
+        "name": "bloodpressure",
+        "title": "Blood pressure",
+        "type": 2,
+        "order": 1,
+        "roles": [2,3],
+        "condition": ["hf"],
+        "enabled": true
+    },{
         "name": "symptoms",
         "title": "Symptoms",
         "type": 2,

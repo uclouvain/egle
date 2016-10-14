@@ -85,6 +85,14 @@ exports.build = function(req, res) {
                             return res.json(chart);
                         }
                     });
+                }else if(req.params.type === 'bloodpressure'){
+                    bloodpressure(actorID, actorID, {from: req.params.from, to: req.params.to}, function(err, chart){
+                        if (err){
+                            res.status(500).send(err);
+                        } else {
+                            return res.json(chart);
+                        }
+                    });
                 } else {
                     classic(actorID, actorID, {type: req.params.type, from: req.params.from, to: req.params.to}, function(err, chart){
                         if (err){
@@ -240,6 +248,46 @@ var weight = function(actorID, patientID, config, callback) {
                 average += chart[i][1];
             }
             callback(null, [average / chart.length]);
+        }
+    });
+}
+
+//Build a blood pressure chart
+var bloodpressure = function(actorID, patientID, config, callback) {
+	dbEntry.entryModel.find({
+        userID : patientID,
+        type : 'bloodpressure',
+        datetimeAcquisition: {
+        	$gt: new Date(config.from), 
+            $lt: new Date(config.to).setHours(23,59,59,999)
+        }
+    })
+    .sort({"datetimeAcquisition" : 1})
+    .exec(function(err, entries) {
+        if (err){
+            console.log(err);
+            audit.logEvent('[mongodb]', 'Charts', 'Build blood pressure', '', '', 'failed', 'Mongodb attempted to retrieve entries');
+            callback(err);
+        } else {
+        	var result = {
+    			series : [{
+	                name: 'Systolic',
+	                data: [],
+                    color: '#6200ea',
+	                pointPlacement: 'on'
+	            },{
+	                name: 'Diastolic',
+	                data: [],
+                    color: '#00BCD4',
+	                pointPlacement: 'on'
+	            }]
+	            
+        	};
+        	for(var i = 0 ; i < entries.length; ++i){
+        		result.series[0].data.push([new Date(entries[i].datetimeAcquisition).getTime(), Number(entries[i].values[0].value)]);
+        		result.series[1].data.push([new Date(entries[i].datetimeAcquisition).getTime(), Number(entries[i].values[1].value)]);
+        	}
+        	callback(null, result);
         }
     });
 }

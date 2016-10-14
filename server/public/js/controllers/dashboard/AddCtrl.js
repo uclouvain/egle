@@ -248,6 +248,20 @@ angular.module('AddCtrl', [[
                 commentsPlaceholder: gettextCatalog.getString('e.g.') + ' ' + gettextCatalog.getString('dressed') + '...'
             };
         break;
+        case 'bloodpressure':
+        	 $scope.config = {
+                name: 'bloodpressure',
+                title : gettextCatalog.getString("Blood pressure"),
+                subtitle: gettextCatalog.getString("Blood pressure"),
+                input: gettextCatalog.getString("Measured value"),
+                inputPlaceholder: 'mm Hg',
+                commentsPlaceholder: gettextCatalog.getString('e.g.') + ' ' + '...'
+            };
+            $scope.bp = {
+            		diasto : undefined,
+            		systo : undefined
+            };
+        break;
         case 'steps':
             $scope.config = {
                 name: 'steps',
@@ -405,6 +419,14 @@ angular.module('AddCtrl', [[
                     ok = false;
                 }
             break;
+            case 'bloodpressure':
+                if(!$scope.bp.systo){
+                    ok = false;
+                }
+                if(!$scope.bp.diasto){
+                    ok = false;
+                }
+            break;
             case 'meal':
                 for(i=0;i<$scope.radios.meal.buttons.length;i++){
                     if(!$scope.radios.meal.buttons[i].value){
@@ -471,6 +493,16 @@ angular.module('AddCtrl', [[
                 entry.values = [{type:$scope.insulinType}];
                 addEntry(entry, function(){
                     $state.go("home.dashboard.main");
+                });
+            break;
+            case 'bloodpressure':
+            	entry.type = $stateParams.card;
+            	var values = [];
+            	values.push({type: "systolic", value: ""+$scope.bp.systo+""});
+            	values.push({type: "diastolic", value: ""+$scope.bp.diasto+""});
+            	entry.values = values;
+                addEntry(entry, function(){
+                	$state.go("home.dashboard.main");
                 });
             break;
             case 'symptoms':
